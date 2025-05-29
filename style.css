@@ -112,11 +112,19 @@ transition: transform 0.2s ease;
 
 .collapsible-content {
 display: none;
-font-size: 13px;
+font-size: 18px;
 color: rgb(56, 56, 56);
 padding-top: 13px;
-padding-left: 35px;
+padding-left: 80px;
 }
+
+.collapsible-chapter {
+  display: none;
+  font-size: 14px;
+  color: rgb(56, 56, 56);
+  padding-top: 13px;
+  padding-left: 35px;
+  }
 
 .content-header {
   font-size: 20px;
