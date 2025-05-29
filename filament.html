@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Printorial: Filament</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <p class="title">All about Filaments</p> 
+    <p class="subtitle">Insert text here</p> 
+<!--Chapter 1 -->
+<div class="content_flex">
+    <div class="content-container">
+        <div  class="content-header" onclick="toggleContent('chapter1',this)">
+            <span class="arrow_intro">&gt;</span>
+          Chapter 1: Title
+        </div>
+        <div id='chapter1' class="collapsible-content">
+          <p>This is the content for Subchapter 1.</p>
+        </div>
+      </div>
+<!--Chapter 2 -->
+<div class="content-container">
+    <div  class="content-header" onclick="toggleContent('chapter2',this)">
+        <span class="arrow_intro">&gt;</span>
+      Chapter 2: Title
+    </div>
+    <div id='chapter2' class="collapsible-content">
+      <p>This is the content for Subchapter 2.</p>
+    </div>
+  </div>
+  <!--Chapter 3 -->
+<div class="content-container">
+    <div  class="content-header" onclick="toggleContent('chapter3',this)">
+        <span class="arrow_intro">&gt;</span>
+      Chapter 3: Title
+    </div>
+    <div id='chapter3' class="collapsible-content">
+      <p>This is the content for Subchapter 3.</p>
+    </div>
+  </div>
+  <!--Chapter 4 -->
+<div class="content-container">
+    <div  class="content-header" onclick="toggleContent('chapter4',this)">
+        <span class="arrow_intro">&gt;</span>
+      Chapter 4: Title
+    </div>
+    <div id='chapter2' class="collapsible-content">
+      <p>This is the content for Subchapter 3.</p>
+    </div>
+  </div>
+  <!--Chapter 5 -->
+<div class="content-container">
+    <div  class="content-header" onclick="toggleContent('chapter5',this)">
+        <span class="arrow_intro">&gt;</span>
+      Chapter 5: Title
+    </div>
+    <div id='chapter2' class="collapsible-content">
+      <p>This is the content for Subchapter 5.</p>
+    </div>
+  </div>
+</div>
+      <script>
+        function toggleContent(id, headerElement) {
+          const content = document.getElementById(id);
+          const arrow = headerElement.querySelector('.arrow_intro');
+          const isOpen = content.style.display === 'block';
+        
+          content.style.display = isOpen ? 'none' : 'block';
+        
+          // Toggle the rotated class to rotate the arrow without changing text
+          if (isOpen) {
+            arrow.classList.remove('rotated');
+          } else {
+            arrow.classList.add('rotated');
+          }
+        }
+        </script>
+
+</body>
+

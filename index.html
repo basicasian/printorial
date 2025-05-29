@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Printorial</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+</head>
+    <body>
+      
+      <p class="brand_name">Printorial</p> 
+      <p class="description">Welcome to this 3D tutorial - continue text</p> 
+    
+      <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+          <img src="https://th.bing.com/th/id/OIP.yuKmH-TcueH0qYic9cW48AHaEO?cb=iwc2&rs=1&pid=ImgDetMain" alt="Header Image" />
+          <div class="Main nunito">
+            
+            <div class="hover-bold">
+                <!-- makes the whole box clickable not only the text -->
+             <div onclick="window.location.href='introduction.html'" style="cursor: pointer;">
+                <p style="margin: 0;">Introduction</p>
+             </div>
+            </div>
+    
+            <div class="summary" onclick="toggleContent('content1', this)">
+              <span class="arrow">&gt;</span>15 min | 5 chapters
+            </div>
+            <div id="content1" class="collapsible-content">
+              <ol>
+                <li>Erster Punkt</li>
+                <li>Zweiter Punkt</li>
+                <li>Dritter Punkt | <span style="color: red;font-weight: bold;">advanced</span></li>
+              </ol>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 60%;"></div>
+              </div>
+              <p class="progress-text">3 of 5 chapters completed</p>
+          </div>
+        </div>
+    
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw3VU_8K0ssMEL7fXh0J3LRjX9KnoveTKBtw&s"/>
+          <div class="Main nunito">
+            <div class="hover-bold">
+                <div onclick="window.location.href='3d_models.html'" style="cursor: pointer;">
+                <p>3D Models</p>
+            </div>
+            </div>
+            <div class="summary" onclick="toggleContent('content2', this)">
+              <span class="arrow">&gt;</span>10 min | 3 chapters
+            </div>
+            <div id="content2" class="collapsible-content">
+              <ol>
+                <li>First Topic</li>
+                <li>Second Topic</li>
+                <li>Third Topic | <span style="color: red;font-weight: bold;">advanced</span></li>
+              </ol>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 10%;"></div>
+              </div>
+              <p class="progress-text">1 of 5 chapters completed</p>
+          </div>
+        </div>
+    
+        <!-- Card 3 -->
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJMshlunX05GSsGNwXxsq5uizoKKlaQGTwPA&s" />
+          <div class="Main nunito">
+            <div class="hover-bold">
+                <div onclick="window.location.href='slicing.html'" style="cursor: pointer;">
+                <p>Slicing</p>
+            </div>
+            </div>
+            <div class="summary" onclick="toggleContent('content3', this)">
+              <span class="arrow">&gt;</span>10 min | 3 chapters
+            </div>
+            <div id="content3" class="collapsible-content">
+              <ol>
+                <li>First Topic</li>
+                <li>Second Topic</li>
+                <li>Third Topic | <span style="color: red;font-weight: bold;">advanced</span></li>
+              </ol>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 0%;"></div>
+              </div>
+              <p class="progress-text">not started</p>
+          </div>
+        </div>
+    
+        <!-- Card 4 -->
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmn57J8OLGyVJU-equgP6RL-eAOJlDyNYELA&s" />
+          <div class="Main nunito">
+            <div class="hover-bold">
+                <div onclick="window.location.href='3d_printer.html'" style="cursor: pointer;">
+                <p>3D Printer</p>
+            </div>
+            </div>
+            <div class="summary" onclick="toggleContent('content4', this)">
+              <span class="arrow">&gt;</span>10 min | 3 chapters
+            </div>
+            <div id="content4" class="collapsible-content">
+              <ol>
+                <li>First Topic</li>
+                <li>Second Topic</li>
+                <li>Third Topic | <span style="color: red;font-weight: bold;">advanced</span></li>
+              </ol>
+            </div>
+            <div class="progress-container">
+                <div class="progress-bar" style="width: 0%;"></div>
+              </div>
+              <p class="progress-text">not started</p>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScCthCvPmihFEVFtOq0dmbzql6RdCLkEpqvg&s" />
+            <div class="Main nunito">
+              <div class="hover-bold">
+                <div onclick="window.location.href='filament.html'" style="cursor: pointer;">
+                <p>Filament</p>
+            </div>
+            </div>
+              <div class="summary" onclick="toggleContent('content5', this)">
+                <span class="arrow">&gt;</span>10 min | 3 chapters
+              </div>
+              <div id="content5" class="collapsible-content">
+                <ol>
+                  <li>First Topic</li>
+                  <li>Second Topic</li>
+                  <li>Third Topic | <span style="color: red;font-weight: bold;">advanced</span></li>
+                </ol>
+              </div>
+              <div class="progress-container">
+                <div class="progress-bar" style="width: 0%;"></div>
+              </div>
+              <p class="progress-text">not started</p>
+            </div>
+          </div>
+        <!-- Card 6 -->
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgYw7A64u5WHekMyNqrHnc-IQyVHYWIItE6Q&s" />
+            <div class="Main nunito">
+              <div class="hover-bold">
+                <div onclick="window.location.href='first_print.html'" style="cursor: pointer;">
+                <p>First Print</p>
+            </div>
+            </div>
+              <div class="summary" onclick="toggleContent('content6', this)">
+                <span class="arrow">&gt;</span>10 min | 3 chapters
+              </div>
+              <div id="content6" class="collapsible-content">
+                <ol>
+                  <li>First Topic</li>
+                  <li>Second Topic</li>
+                  <li>Third Topic | <span style="color: red;font-weight: bold;">advanced</span></li>
+                </ol>
+              </div>
+              <div class="progress-container">
+                <div class="progress-bar" style="width: 0%;"></div>
+              </div>
+              <p class="progress-text">not started</p>
+            </div>
+          </div>
+        <!-- Card 7 -->
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEywLQctTXwdT19tLZ6WahWlpc0KZIVN33o2G-bxCdm5cxN5agdeaYWT-DjCE7tS2YS2Y&usqp=CAU" />
+            <div class="Main nunito">
+              <div class="hover-bold">
+                <div onclick="window.location.href='faq.html'" style="cursor: pointer;">
+                <p>FAQs & Troubleshooting</p>
+            </div>
+            </div>
+              <div class="summary" onclick="toggleContent('content7', this)">
+                <span class="arrow">&gt;</span>10 min | 3 chapters
+              </div>
+              <div id="content7" class="collapsible-content">
+                <ol>
+                  <li>First Topic</li>
+                  <li>Second Topic</li>
+                  <li>Third Topic | <span style="color: red;font-weight: bold;">advanced</span></li>
+                </ol>
+              </div>
+              <div class="progress-container">
+                <div class="progress-bar" style="width: 0%;"></div>
+              </div>
+              <p class="progress-text">not started</p>
+            </div>
+          </div>
+        <!-- Card 8 -->
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQA25PqvTpLtBBe2GAXEMLk1usf-ByAIYiyQ&s"/>
+            <div class="Main nunito">
+              <div class="hover-bold">
+                <div onclick="window.location.href='additional.html'" style="cursor: pointer;">
+                <p>Additional Features</p>
+            </div>
+            </div>
+              <div class="summary" onclick="toggleContent('content8', this)">
+                <span class="arrow">&gt;</span>10 min | 3 chapters
+              </div>
+              <div id="content8" class="collapsible-content">
+                <ol>
+                  <li>First Topic</li>
+                  <li>Second Topic</li>
+                  <li>Third Topic | <span style="color: red;font-weight: bold;">advanced</span></li>
+                </ol>
+              </div>
+              <div class="progress-container">
+                <div class="progress-bar" style="width: 0%;"></div>
+              </div>
+              <p class="progress-text">not started</p>
+            </div>
+          </div>
+
+      </div>
+    
+      <script>
+        function toggleContent(id, summaryElement) {
+          const content = document.getElementById(id);
+          const arrow = summaryElement.querySelector('.arrow');
+          const isOpen = content.style.display === 'block';
+    
+          content.style.display = isOpen ? 'none' : 'block';
+          arrow.textContent = isOpen ? '>' : '⌄';
+        }
+      </script>
+</body>
+</html>
