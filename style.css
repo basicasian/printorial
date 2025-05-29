@@ -110,7 +110,7 @@ transition: transform 0.2s ease;
 
 .collapsible-content {
 display: none;
-font-size: 18px;
+font-size: 13px;
 color: rgb(56, 56, 56);
 padding-top: 13px;
 padding-left: 80px;
