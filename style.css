@@ -11,6 +11,16 @@ body {
   
 }
 
+.logo_small{
+  color: #6315ff;
+  font-size: 20px;
+  font-family: 'kavoon', cursive;
+  text-align: left;
+  margin-top: 13px;
+  margin-left: 15px;
+  
+}
+
 .title{
   color: #6315ff;
   font-size: 50px;
