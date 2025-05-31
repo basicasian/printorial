@@ -13,59 +13,59 @@
 
 <body>
 
+  <div class="header">
+    <div onclick="window.location.href='index.html'" style="cursor: pointer;">
+    <p class="logo_small">Printorial</p> 
+  </div>
+  
+  <div class="nav_bar">
+    <ul class="nav_bar_list">
+      <li><a href="introduction.html">Introduction</a></li>
+      <li><a style="font-weight: bold; color: #4202c1; cursor: pointer;" href="3d_models.html">3D Models</a></li>
+      <li><a href="slicing.html">Slicing</a></li>
+      <li><a href="3d_printer.html">3D Printer</a></li>
+      <li><a href="filament.html">Filament</a></li>
+      <li><a href="first_print.html">First Print</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="additional.html">Additional</a></li>
+    </ul>
+  </div>
+  </div>
+
     <p class="title">Get to know 3D Models</p> 
     <p class="subtitle">Insert text here</p> 
 <!--Chapter 1 -->
 <div class="content_flex">
     <div class="content-container">
-        <div  class="content-header" onclick="toggleContent('chapter1',this)">
+        <div  class="content-header" onclick="toggleContent('model1',this)">
             <span class="arrow_intro">&gt;</span>
           Chapter 1: Title
         </div>
-        <div id='chapter1' class="collapsible-content">
+        <div id='model1' class="collapsible-content">
           <p>This is the content for Subchapter 1.</p>
         </div>
       </div>
 <!--Chapter 2 -->
 <div class="content-container">
-    <div  class="content-header" onclick="toggleContent('chapter2',this)">
+    <div  class="content-header" onclick="toggleContent('model2',this)">
         <span class="arrow_intro">&gt;</span>
       Chapter 2: Title
     </div>
-    <div id='chapter2' class="collapsible-content">
+    <div id='model2' class="collapsible-content">
       <p>This is the content for Subchapter 2.</p>
     </div>
   </div>
   <!--Chapter 3 -->
 <div class="content-container">
-    <div  class="content-header" onclick="toggleContent('chapter3',this)">
+    <div  class="content-header" onclick="toggleContent('model3',this)">
         <span class="arrow_intro">&gt;</span>
       Chapter 3: Title
     </div>
-    <div id='chapter3' class="collapsible-content">
+    <div id='model3' class="collapsible-content">
       <p>This is the content for Subchapter 3.</p>
     </div>
   </div>
-  <!--Chapter 4 -->
-<div class="content-container">
-    <div  class="content-header" onclick="toggleContent('chapter4',this)">
-        <span class="arrow_intro">&gt;</span>
-      Chapter 4: Title
-    </div>
-    <div id='chapter4' class="collapsible-content">
-      <p>This is the content for Subchapter 3.</p>
-    </div>
-  </div>
-  <!--Chapter 5 -->
-<div class="content-container">
-    <div  class="content-header" onclick="toggleContent('chapter5',this)">
-        <span class="arrow_intro">&gt;</span>
-      Chapter 5: Title
-    </div>
-    <div id='chapter5' class="collapsible-content">
-      <p>This is the content for Subchapter 5.</p>
-    </div>
-  </div>
+
 </div>
       <script>
         function toggleContent(id, headerElement) {
@@ -82,6 +82,17 @@
             arrow.classList.add('rotated');
           }
         }
+
+        window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1); // remove the '#' symbol
+    if (hash) {
+      const targetHeader = document.querySelector(`[onclick*="${hash}"]`);
+      if (targetHeader) {
+        toggleContent(hash, targetHeader);
+        targetHeader.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
         </script>
 
 </body>

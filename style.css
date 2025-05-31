@@ -2,6 +2,7 @@ body {
   background-color: #f2f0f5;
 }
 
+
 .brand_name{
   color: #6315ff;
   font-size: 70px;
@@ -15,10 +16,6 @@ body {
   color: #6315ff;
   font-size: 20px;
   font-family: 'kavoon', cursive;
-  text-align: left;
-  margin-top: 13px;
-  margin-left: 15px;
-  
 }
 
 .title{
@@ -206,3 +203,42 @@ text-align: right;
 .arrow_intro.rotated {
   transform: rotate(90deg);
 }
+
+
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 13px;
+  margin-left: 50px;
+  margin-right: 80px;
+}
+.nav_bar_list {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+}
+
+.nav_bar_list a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Nunito';
+}
+
+.nav_bar_list a:hover{
+font-style: italic;
+cursor: pointer;
+}
+
+.subchapter_list a{
+  text-decoration: none;
+  color: black;
+}
+
+.subchapter_list a:hover{
+  cursor: pointer;
+  font-weight: 900;
+  color:#4202c1
+}
+
+
