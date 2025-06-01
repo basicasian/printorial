@@ -28,11 +28,13 @@
 }
 
 .description{
-  font-size: 20px;
-  text-align: center;
+  font-size: 18px;
+  text-align: left;
   font-family: 'Nunito';
-  margin-top: 20px;
-  margin-bottom: 50px;
+  margin-top: 25px;
+  margin-bottom: 60px;
+  margin-left: 140px;
+  margin-right: 140px;
 }
 
 .subtitle {
