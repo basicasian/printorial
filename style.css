@@ -150,7 +150,7 @@ text-align: justify;
 
 .content-container {
   padding-bottom: 10px;
-  margin-right: 80px;
+  margin-right: 50px;
   border-radius: 10px;
   border: 1px solid grey;
   margin-left: 50px;
@@ -219,7 +219,7 @@ text-align: right;
   align-items: center;
   margin-top: 13px;
   margin-left: 50px;
-  margin-right: 80px;
+  margin-right: 50px;
 }
 .nav_bar_list {
   display: flex;
