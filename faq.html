@@ -36,51 +36,51 @@
 <!--Chapter 1 -->
 <div class="content_flex">
     <div class="content-container">
-        <div  class="content-header" onclick="toggleContent('chapter1',this)">
+        <div  class="content-header" onclick="toggleContent('faq1',this)">
             <span class="arrow_intro">&gt;</span>
           Chapter 1: Title
         </div>
-        <div id='chapter1' class="collapsible-content">
+        <div id='faq1' class="collapsible-content">
           <p>This is the content for Subchapter 1.</p>
         </div>
       </div>
 <!--Chapter 2 -->
 <div class="content-container">
-    <div  class="content-header" onclick="toggleContent('chapter2',this)">
+    <div  class="content-header" onclick="toggleContent('faq2',this)">
         <span class="arrow_intro">&gt;</span>
       Chapter 2: Title
     </div>
-    <div id='chapter2' class="collapsible-content">
+    <div id='faq2' class="collapsible-content">
       <p>This is the content for Subchapter 2.</p>
     </div>
   </div>
   <!--Chapter 3 -->
 <div class="content-container">
-    <div  class="content-header" onclick="toggleContent('chapter3',this)">
+    <div  class="content-header" onclick="toggleContent('faq3',this)">
         <span class="arrow_intro">&gt;</span>
       Chapter 3: Title
     </div>
-    <div id='chapter3' class="collapsible-content">
+    <div id='faq3' class="collapsible-content">
       <p>This is the content for Subchapter 3.</p>
     </div>
   </div>
   <!--Chapter 4 -->
 <div class="content-container">
-    <div  class="content-header" onclick="toggleContent('chapter4',this)">
+    <div  class="content-header" onclick="toggleContent('faq4',this)">
         <span class="arrow_intro">&gt;</span>
       Chapter 4: Title
     </div>
-    <div id='chapter4' class="collapsible-content">
+    <div id='faq4' class="collapsible-content">
       <p>This is the content for Subchapter 3.</p>
     </div>
   </div>
   <!--Chapter 5 -->
 <div class="content-container">
-    <div  class="content-header" onclick="toggleContent('chapter5',this)">
+    <div  class="content-header" onclick="toggleContent('faq5',this)">
         <span class="arrow_intro">&gt;</span>
       Chapter 5: Title
     </div>
-    <div id='chapter5' class="collapsible-content">
+    <div id='faq5' class="collapsible-content">
       <p>This is the content for Subchapter 5.</p>
     </div>
   </div>
@@ -100,6 +100,17 @@
             arrow.classList.add('rotated');
           }
         }
+
+        window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1); // remove the '#' symbol
+    if (hash) {
+      const targetHeader = document.querySelector(`[onclick*="${hash}"]`);
+      if (targetHeader) {
+        toggleContent(hash, targetHeader);
+        targetHeader.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
         </script>
 
 </body>

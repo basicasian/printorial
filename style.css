@@ -1,6 +1,4 @@
-body {
-  background-color: #f2f0f5;
-}
+
 
 
 .brand_name{
@@ -19,9 +17,9 @@ body {
 }
 
 .title{
-  color: #6315ff;
+  color: rgb(73, 73, 73);
   font-size: 50px;
-  font-family: 'nunito';
+  font-family: 'Nunito';
   font-weight:bold;
   text-align: left;
   margin-top: 50px;
@@ -37,11 +35,10 @@ body {
   margin-bottom: 50px;
 }
 
-.subtitle{
+.subtitle {
   font-size: 20px;
   text-align: left;
   font-family: 'Nunito';
-  font-style: italic;
   margin-top: 20px;
   margin-bottom: 50px;
   padding-left: 50px;
@@ -66,12 +63,11 @@ color: black;
 }
 
 
-
 .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, 250px); /* 4 equal-width columns */
-  gap: 20px;
-  max-width: calc(4 * 250px + 3 * 20px);
+  gap: 30px;
+  max-width: calc(4 * 250px + 3 * 30px);
   justify-content: center;
   align-items: start;
   margin: 0 auto;
@@ -82,7 +78,7 @@ color: black;
 width: 250px;
 overflow: hidden;
 border-radius: 10px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+box-shadow: 0 5px 7px rgba(0, 0, 0, 0.1);
 background: white;
 }
 
@@ -118,11 +114,14 @@ transition: transform 0.2s ease;
 }
 
 .collapsible-content {
+font-family: 'Nunito';
 display: none;
 font-size: 18px;
 color: rgb(56, 56, 56);
 padding-top: 13px;
 padding-left: 80px;
+padding-right: 80px;
+text-align: justify;
 }
 
 .collapsible-chapter {
@@ -206,6 +205,7 @@ text-align: right;
 
 
 .header{
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
