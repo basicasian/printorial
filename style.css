@@ -5,8 +5,10 @@
   color: #6315ff;
   font-size: 70px;
   font-family: 'kavoon', cursive;
-  text-align: center;
-  margin-top: 50px;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 140px;
+  margin-bottom: 0;
   
 }
 
@@ -27,15 +29,6 @@
   
 }
 
-.description{
-  font-size: 18px;
-  text-align: left;
-  font-family: 'Nunito';
-  margin-top: 25px;
-  margin-bottom: 60px;
-  margin-left: 140px;
-  margin-right: 140px;
-}
 
 .subtitle {
   font-size: 20px;
@@ -70,9 +63,10 @@ color: black;
   grid-template-columns: repeat(auto-fit, 250px); /* 4 equal-width columns */
   gap: 30px;
   max-width: calc(4 * 250px + 3 * 30px);
-  justify-content: center;
   align-items: start;
-  margin: 0 auto;
+  justify-content: left;
+  margin-left: 140px; 
+  margin-bottom: 30px;
 }
 
 
@@ -211,6 +205,31 @@ text-align: right;
   transform: rotate(90deg);
 }
 
+.marketing {
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  margin-top: 0;
+  margin-left: 140px;
+  width: 600px;
+  margin-bottom: 60px
+
+}
+
+.marketing_head {
+font-family: 'Nunito';
+font-weight: bold;
+font-size: 60px;
+line-height: 1;
+color: rgb(87, 87, 87);
+}
+
+.marketing_sub {
+  font-family: 'Nunito';
+  font-size: 20px; 
+  text-align: justify;
+
+}
 
 .header{
   height: 70px;
@@ -221,10 +240,31 @@ text-align: right;
   margin-left: 50px;
   margin-right: 50px;
 }
+
+.header_v2{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 .nav_bar_list {
   display: flex;
   gap: 30px;
   list-style-type: none;
+}
+
+.button_about {
+  padding: 10px;
+  font-family: 'Nunito';
+  font-size: 13px;
+  background-color: rgb(6, 230, 6);
+  border-radius: 10px;
+  border-color: rgb(6, 230, 6);
+  display: block;       /* Makes it behave like a block element */
+  margin-right: 0;       /* Align to the left */
+  margin-left: auto; 
 }
 
 .nav_bar_list a {
