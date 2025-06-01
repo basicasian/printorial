@@ -163,6 +163,12 @@ text-align: justify;
   gap: 15px;
 }
 
+.content_flex img {
+  max-width: 500px;
+  height: auto;
+  display: block;
+}
+
 .progress-container {
 background-color: #e0e0e0;
 border-radius: 8px;
