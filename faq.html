@@ -38,10 +38,46 @@
     <div class="content-container">
         <div  class="content-header" onclick="toggleContent('faq1',this)">
             <span class="arrow_intro">&gt;</span>
-          Chapter 1: Title
+          Chapter 1: 3D Models and Modelling
         </div>
         <div id='faq1' class="collapsible-content">
-          <p>This is the content for Subchapter 1.</p>
+          <p><table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  <thead style="background-color: #f0f0f0;">
+    <tr>
+      <th><strong>Issue</strong></th>
+      <th><strong>Possible Cause</strong></th>
+      <th><strong>Solution</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Model won't load in slicer</td>
+      <td>Corrupted or unsupported file</td>
+      <td>Try re-downloading or converting it to <code>.STL</code></td>
+    </tr>
+    <tr>
+      <td>Model is invisible or tiny</td>
+      <td>Incorrect scale or units</td>
+      <td>Rescale the model in slicer (e.g., 10× or 1000×)</td>
+    </tr>
+    <tr>
+      <td>Slicer crashes or freezes</td>
+      <td>Complex/high-poly model</td>
+      <td>Reduce file size using Meshmixer or Blender</td>
+    </tr>
+    <tr>
+      <td>Gaps or missing sections in sliced preview</td>
+      <td>Model has mesh errors</td>
+      <td>Use Netfabb or the slicer's repair tool</td>
+    </tr>
+    <tr>
+      <td>Floating parts or islands</td>
+      <td>Model isn't manifold or has disconnected parts</td>
+      <td>Combine objects or add supports in slicer</td>
+    </tr>
+  </tbody>
+</table>
+.</p>
         </div>
       </div>
 <!--Chapter 2 -->
