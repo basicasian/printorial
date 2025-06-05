@@ -7,147 +7,196 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <div class="header">
     <div onclick="window.location.href='index.html'" style="cursor: pointer;">
-    <p class="logo_small">Printorial</p> 
-  </div>
-  
-  <div class="nav_bar">
-    <ul class="nav_bar_list">
-      <li><a href="introduction.html">Introduction</a></li>
-      <li><a href="3d_models.html">3D Models</a></li>
-      <li><a href="slicing.html">Slicing</a></li>
-      <li><a href="3d_printer.html">3D Printer</a></li>
-      <li><a href="filament.html">Filament</a></li>
-      <li><a href="first_print.html">First Print</a></li>
-      <li><a style="font-weight: bold; color: #4202c1; cursor: pointer;" href="faq.html">FAQ</a></li>
-      <li><a href="additional.html">Additional</a></li>
-    </ul>
-  </div>
+      <p class="logo_small">Printorial</p> 
+    </div>
+
+    <div class="nav_bar">
+      <ul class="nav_bar_list">
+        <li><a href="introduction.html">Introduction</a></li>
+        <li><a href="3d_models.html">3D Models</a></li>
+        <li><a href="slicing.html">Slicing</a></li>
+        <li><a href="3d_printer.html">3D Printer</a></li>
+        <li><a href="filament.html">Filament</a></li>
+        <li><a href="first_print.html">First Print</a></li>
+        <li><a style="font-weight: bold; color: #4202c1; cursor: pointer;" href="faq.html">FAQ</a></li>
+        <li><a href="additional.html">Additional</a></li>
+      </ul>
+    </div>
   </div>
 
-    <p class="title">FAQs and Troubleshooting</p> 
-    <p class="subtitle">Insert text here</p> 
-<!--Chapter 1 -->
-<div class="content_flex">
+  <p class="title">FAQs and Troubleshooting</p> 
+  <p class="subtitle">Insert text here</p> 
+
+  <div class="content_flex">
+    <!-- Chapter 1 -->
     <div class="content-container">
-        <div  class="content-header" onclick="toggleContent('faq1',this)">
-            <span class="arrow_intro">&gt;</span>
-          Chapter 1: 3D Models and Modelling
-        </div>
-        <div id='faq1' class="collapsible-content">
-          <p><table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%;">
-  <thead style="background-color: #f0f0f0;">
-    <tr>
-      <th><strong>Issue</strong></th>
-      <th><strong>Possible Cause</strong></th>
-      <th><strong>Solution</strong></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Model won't load in slicer</td>
-      <td>Corrupted or unsupported file</td>
-      <td>Try re-downloading or converting it to <code>.STL</code></td>
-    </tr>
-    <tr>
-      <td>Model is invisible or tiny</td>
-      <td>Incorrect scale or units</td>
-      <td>Rescale the model in slicer (e.g., 10× or 1000×)</td>
-    </tr>
-    <tr>
-      <td>Slicer crashes or freezes</td>
-      <td>Complex/high-poly model</td>
-      <td>Reduce file size using Meshmixer or Blender</td>
-    </tr>
-    <tr>
-      <td>Gaps or missing sections in sliced preview</td>
-      <td>Model has mesh errors</td>
-      <td>Use Netfabb or the slicer's repair tool</td>
-    </tr>
-    <tr>
-      <td>Floating parts or islands</td>
-      <td>Model isn't manifold or has disconnected parts</td>
-      <td>Combine objects or add supports in slicer</td>
-    </tr>
-  </tbody>
-</table>
-.</p>
-        </div>
+      <div class="content-header" onclick="toggleContent('faq1', this)">
+        <span class="arrow_intro">&gt;</span>
+        Chapter 1: 3D Models and Modelling
       </div>
-<!--Chapter 2 -->
-<div class="content-container">
-    <div  class="content-header" onclick="toggleContent('faq2',this)">
-        <span class="arrow_intro">&gt;</span>
-      Chapter 2: Title
     </div>
-    <div id='faq2' class="collapsible-content">
-      <p>This is the content for Subchapter 2.</p>
-    </div>
-  </div>
-  <!--Chapter 3 -->
-<div class="content-container">
-    <div  class="content-header" onclick="toggleContent('faq3',this)">
-        <span class="arrow_intro">&gt;</span>
-      Chapter 3: Title
-    </div>
-    <div id='faq3' class="collapsible-content">
-      <p>This is the content for Subchapter 3.</p>
-    </div>
-  </div>
-  <!--Chapter 4 -->
-<div class="content-container">
-    <div  class="content-header" onclick="toggleContent('faq4',this)">
-        <span class="arrow_intro">&gt;</span>
-      Chapter 4: Title
-    </div>
-    <div id='faq4' class="collapsible-content">
-      <p>This is the content for Subchapter 3.</p>
-    </div>
-  </div>
-  <!--Chapter 5 -->
-<div class="content-container">
-    <div  class="content-header" onclick="toggleContent('faq5',this)">
-        <span class="arrow_intro">&gt;</span>
-      Chapter 5: Title
-    </div>
-    <div id='faq5' class="collapsible-content">
-      <p>This is the content for Subchapter 5.</p>
-    </div>
-  </div>
-</div>
-      <script>
-        function toggleContent(id, headerElement) {
-          const content = document.getElementById(id);
-          const arrow = headerElement.querySelector('.arrow_intro');
-          const isOpen = content.style.display === 'block';
-        
-          content.style.display = isOpen ? 'none' : 'block';
-        
-          // Toggle the rotated class to rotate the arrow without changing text
-          if (isOpen) {
-            arrow.classList.remove('rotated');
-          } else {
-            arrow.classList.add('rotated');
-          }
-        }
 
-        window.addEventListener('DOMContentLoaded', () => {
-    const hash = window.location.hash.substring(1); // remove the '#' symbol
-    if (hash) {
-      const targetHeader = document.querySelector(`[onclick*="${hash}"]`);
-      if (targetHeader) {
-        toggleContent(hash, targetHeader);
-        targetHeader.scrollIntoView({ behavior: 'smooth' });
+    <!-- Chapter 2 -->
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('faq2', this)">
+        <span class="arrow_intro">&gt;</span>
+        Chapter 2: Title
+      </div>
+      <div id='faq2' class="collapsible-content">
+        <p>This is the content for Subchapter 2.</p>
+      </div>
+    </div>
+
+    <!-- Chapter 3 -->
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('faq3', this)">
+        <span class="arrow_intro">&gt;</span>
+        Chapter 3: Title
+      </div>
+      <div id='faq3' class="collapsible-content">
+        <p>This is the content for Subchapter 3.</p>
+      </div>
+    </div>
+
+    <!-- Chapter 4 -->
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('faq4', this)">
+        <span class="arrow_intro">&gt;</span>
+        Chapter 4: Title
+      </div>
+      <div id='faq4' class="collapsible-content">
+        <p>This is the content for Subchapter 4.</p>
+      </div>
+    </div>
+
+    <!-- Chapter 5 -->
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('faq5', this)">
+        <span class="arrow_intro">&gt;</span>
+        Chapter 5: Title
+      </div>
+      <div id='faq5' class="collapsible-content">
+        <p>This is the content for Subchapter 5.</p>
+      </div>
+    </div>
+
+    <!-- Chapter 6: FAQ Troubleshooting -->
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('faqModelIssues', this)">
+        <span class="arrow_intro">&gt;</span>
+        FAQ: Troubleshooting 3D Models
+      </div>
+      <div id="faqModelIssues" class="collapsible-content">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleAnswer(this)">Model won't load in slicer</button>
+          <div class="faq-answer">
+            <p><strong>Possible Cause:</strong> Corrupted or unsupported file.</p>
+            <p><strong>Solution:</strong> Try re-downloading the file or converting it to <code>.STL</code>.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleAnswer(this)">Model is invisible or tiny</button>
+          <div class="faq-answer">
+            <p><strong>Possible Cause:</strong> Incorrect scale or units.</p>
+            <p><strong>Solution:</strong> Rescale the model in your slicer (e.g., increase size by 10× or 1000×).</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleAnswer(this)">Slicer crashes or freezes</button>
+          <div class="faq-answer">
+            <p><strong>Possible Cause:</strong> Model is too complex or has too many polygons.</p>
+            <p><strong>Solution:</strong> Use Meshmixer or Blender to reduce the file size and simplify the mesh.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleAnswer(this)">Gaps or missing sections in sliced preview</button>
+          <div class="faq-answer">
+            <p><strong>Possible Cause:</strong> Mesh errors such as holes or non-manifold edges.</p>
+            <p><strong>Solution:</strong> Use repair tools in Netfabb or built-in slicer repair functions.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleAnswer(this)">Floating parts or islands</button>
+          <div class="faq-answer">
+            <p><strong>Possible Cause:</strong> Disconnected geometry or model isn't manifold.</p>
+            <p><strong>Solution:</strong> Merge parts in a modeling program or enable supports in the slicer.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function toggleContent(id, headerElement) {
+      const content = document.getElementById(id);
+      const arrow = headerElement.querySelector('.arrow_intro');
+      const isOpen = content.style.display === 'block';
+
+      content.style.display = isOpen ? 'none' : 'block';
+      if (isOpen) {
+        arrow.classList.remove('rotated');
+      } else {
+        arrow.classList.add('rotated');
       }
     }
-  });
-        </script>
 
+    function toggleAnswer(button) {
+      const answer = button.nextElementSibling;
+      answer.style.display = (answer.style.display === "block") ? "none" : "block";
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.substring(1);
+      if (hash) {
+        const targetHeader = document.querySelector(`[onclick*="${hash}"]`);
+        if (targetHeader) {
+          toggleContent(hash, targetHeader);
+          targetHeader.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+  </script>
+
+  <!-- FAQ Styling -->
+  <style>
+    .faq-question {
+      background-color: #e8e8e8;
+      border: none;
+      width: 100%;
+      text-align: left;
+      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 8px;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 10px;
+      border-left: 3px solid #ccc;
+      background-color: #f9f9f9;
+      margin-bottom: 10px;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .faq-question:hover {
+      background-color: #dcdcdc;
+    }
+  </style>
 </body>
-
+</html>
