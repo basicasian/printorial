@@ -28,6 +28,7 @@
       <li><a href="additional.html">Additional</a></li>
     </ul>
   </div>
+  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
   </div>
 
     <p class="title">How to: Slicing</p> 
@@ -110,6 +111,15 @@
       }
     }
   });
+
+  function toggleMenu() {
+  const navList = document.querySelector('.nav_bar_list');
+  if (navList.style.display === 'flex') {
+    navList.style.display = 'none';
+  } else {
+    navList.style.display = 'flex';
+  }
+}
         </script>
 
 

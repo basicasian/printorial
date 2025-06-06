@@ -30,6 +30,7 @@
       <li><a style="font-weight: bold; color: #4202c1; cursor: pointer;" href="additional.html">Additional</a></li>
     </ul>
   </div>
+  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
   </div>
 
     <p class="title">Additional Features</p> 
@@ -112,6 +113,14 @@
       }
     }
   });
+  function toggleMenu() {
+  const navList = document.querySelector('.nav_bar_list');
+  if (navList.style.display === 'flex') {
+    navList.style.display = 'none';
+  } else {
+    navList.style.display = 'flex';
+  }
+}
         </script>
 
 </body>

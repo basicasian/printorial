@@ -29,18 +29,20 @@
         <li><a href="additional.html">Additional</a></li>
       </ul>
     </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
   </div>
 
   <p class="title">FAQs and Troubleshooting</p> 
   <p class="subtitle">Insert text here</p> 
 
-  <!-- Chapter 2 -->
+  <div class="content_flex">
+  <!-- Chapter 1 -->
     <div class="content-container">
-      <div class="content-header" onclick="toggleContent('faq2', this)">
+      <div class="content-header" onclick="toggleContent('faq1', this)">
         <span class="arrow_intro">&gt;</span>
         Chapter 1: Title
       </div>
-      <div id='faq2' class="collapsible-content">
+      <div id='faq1' class="collapsible-content">
         <p>This is the content for Subchapter 1.</p>
       </div>
     </div>
@@ -89,7 +91,7 @@
       </div>
     </div>
 
-    <!-- Chapter 6: FAQ Troubleshooting -->
+    <!-- Chapter 6: FAQ Troubleshooting  -->
     <div class="content-container">
       <div class="content-header" onclick="toggleContent('faqModelIssues', this)">
         <span class="arrow_intro">&gt;</span>
@@ -136,10 +138,10 @@
             <p><strong>Solution:</strong> Merge parts in a modeling program or enable supports in the slicer.</p>
           </div>
         </div>
-
       </div>
     </div>
-  </div>
+
+
 
   <!-- JavaScript -->
   <script>
@@ -171,6 +173,15 @@
         }
       }
     });
+
+    function toggleMenu() {
+  const navList = document.querySelector('.nav_bar_list');
+  if (navList.style.display === 'flex') {
+    navList.style.display = 'none';
+  } else {
+    navList.style.display = 'flex';
+  }
+}
   </script>
 
   <!-- FAQ Styling -->
@@ -199,6 +210,7 @@
     .faq-question:hover {
       background-color: #dcdcdc;
     }
+    
   </style>
 </body>
 </html>
