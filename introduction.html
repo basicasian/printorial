@@ -135,14 +135,39 @@
     </div>
   </div>
   
-  <!--Chapter 5 -->
+  <!--Interactive Quiz: Basics of 3D Printing -->
 <div class="content-container">
     <div  class="content-header" onclick="toggleContent('intro5',this)">
         <span class="arrow_intro">&gt;</span>
       Quiz: Basics of 3D Priting
     </div>
     <div id='intro5' class="collapsible-content">
-      <p>Test the knowledge you have accumulated from this chapter by completing this interactive Quiz Test!</p>
+      <p>Test the knowledge you have accumulated from this chapter by completing this interactive Quiz Test!</p><br>
+          <form id="quiz-form">
+      <h3>1. Is the following statement true or false? Before designing a digital 3d model
+      with the help of a CAD software, it is important to slice the artifact you want to design
+      with the help of a slicing software.</h3>
+      <label><input type="radio" name="q1" value="a"> a) True</label><br>
+      <label><input type="radio" name="q1" value="b"> b) False</label><br>
+     
+      <p id="feedback-q1" class="feedback"></p>
+
+      <h3>2. Select the correct answers from below with regard to additive manufacturing:</h3>
+      <label><input type="radio" name="q2" value="a"> a) Additive manufacturing is also named formative manufacturing.</label><br>
+      <label><input type="radio" name="q2" value="b"> b) The only existing additive manufacturing procedure is 3D Printing.</label><br>
+      <label><input type="radio" name="q2" value="c"> c) 3D Prining is an innovative manufacturing method belonging to the family of additive manufacturing methods.</label><br>
+      <label><input type="radio" name="q2" value="d"> d) The manufacturing process in 3D Printing is based on adding 3 layers of material at a time and bonding each 3 adjacent layers.</label><br>
+      <p id="feedback-q2" class="feedback"></p>
+
+      <h3>3. Which website is a community-driven platform for free printable models?</h3>
+      <label><input type="radio" name="q3" value="a"> a) YouTube</label><br>
+      <label><input type="radio" name="q3" value="b"> b) Thingiverse</label><br>
+      <label><input type="radio" name="q3" value="c"> c) Google Drive</label><br>
+      <label><input type="radio" name="q3" value="d"> d) Facebook</label><br>
+      <p id="feedback-q3" class="feedback"></p>
+
+      <button type="button" onclick="checkQuiz()">Submit Answers</button>
+    </form>
     </div>
 
 
@@ -173,6 +198,35 @@
       }
     }
   });
+
+
+               function checkQuiz() {
+    // Correct answers
+    const answers = {
+      q1: "b",
+      q2: "c",
+      q3: "b"
+    };
+
+    for (let q in answers) {
+      const selected = document.querySelector(`input[name="${q}"]:checked`);
+      const feedback = document.getElementById(`feedback-${q}`);
+
+      if (!selected) {
+        feedback.textContent = "Please select an answer.";
+        feedback.style.color = "orange";
+      } else if (selected.value === answers[q]) {
+        feedback.textContent = "Correct!";
+        feedback.style.color = "green";
+      } else {
+        feedback.textContent = "Incorrect. Try reviewing the chapter.";
+        feedback.style.color = "red";
+      }
+    }
+  }
+
+
+        
         </script>
 
 </body>
