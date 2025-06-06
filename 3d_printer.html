@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,120 +8,445 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <div class="header">
     <div onclick="window.location.href='index.html'" style="cursor: pointer;">
-    <p class="logo_small">Printorial</p> 
+      <p class="logo_small">Printorial</p>
+    </div>
+
+    <div class="nav_bar">
+      <ul class="nav_bar_list">
+        <li><a href="introduction.html">Introduction</a></li>
+        <li><a href="3d_models.html">3D Models</a></li>
+        <li><a href="slicing.html">Slicing</a></li>
+        <li><a style="font-weight: bold; color: #4202c1; cursor: pointer;" href="3d_printer.html">3D Printer</a></li>
+        <li><a href="filament.html">Filament</a></li>
+        <li><a href="first_print.html">First Print</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="additional.html">Additional</a></li>
+      </ul>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
   </div>
-  
-  <div class="nav_bar">
-    <ul class="nav_bar_list">
-      <li><a href="introduction.html">Introduction</a></li>
-      <li><a href="3d_models.html">3D Models</a></li>
-      <li><a href="slicing.html">Slicing</a></li>
-      <li><a style="font-weight: bold; color: #4202c1; cursor: pointer;" href="3d_printer.html">3D Printer</a></li>
-      <li><a href="filament.html">Filament</a></li>
-      <li><a href="first_print.html">First Print</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="additional.html">Additional</a></li>
+  <p class="title">Get to know 3D printers</p>
+  <div class="subtitle">
+    <p>By the end of this chapter, you will be able to:
+    <ul>
+      <li>Get to know the main hardware components of a 3D printer (Bambu Lab A1 mini)</li>
+      <li>How to properly set up a printer for your first print</li>
+      <li>Try with an AR tutorial to visualize the setup</li>
     </ul>
+    </p>
   </div>
-  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </div>
-    <p class="title">Get to know 3D printers</p> 
-    <p class="subtitle">Insert text here</p> 
-<!--Chapter 1 -->
-<div class="content_flex">
+  <!--Chapter 1 -->
+  <div class="content_flex">
     <div class="content-container">
-        <div  class="content-header" onclick="toggleContent('printer1',this)">
-            <span class="arrow_intro">&gt;</span>
-          Chapter 1: Title
+      <div class="content-header" onclick="toggleContent('printer1',this)">
+        <span class="arrow_intro">&gt;</span>
+        Chapter 1: Hardware of a 3D printer
+      </div>
+      <div id='printer1' class="collapsible-content">
+        <div style="display: flex; align-items: flex-start; gap: 20px;">
+          <!-- Left: Image -->
+          <a href="https://wiki.bambulab.com/en/a1" target="_blank">
+            <img src="3d_printer_resources/a1_mini_glosssary_1.png" alt="3D Printer">
+          </a>
+          <!-- Right: Text -->
+          <div>
+            <h3>Key Components</h3>
+            <p>This diagram shows all major parts of the Bambu Lab 3D printer, including:</p>
+            <ul>
+              <li><b>1. Filament Hub:</b> Holds and feeds the filament into the printer </li>
+              <li><b>2. Toolhead:</b> It contains the Extruder and is the moving unit which melts and lays down the
+                filament </li>
+              <li><b>3. X-axis Linear Rail:</b> Provides smooth motion for the toolhead on the X-axis </li>
+              <li><b>4. Purge Wiper:</b> Helps with removing the purged filament before and during printing, to remove
+                the purged material </li>
+              <li><b>5. Hotend Silicone Sock:</b> Keeps the nozzle insulated to maintain temperature </li>
+              <li><b>6. Build Plate:</b> Is the surface which magnetically attaches to the Heatbed and the model is
+                printed on. </li>
+              <li><b>7. Heatbed:</b> Provides smooth motion for the Heatbed on the Y-axis during printing </li>
+              <li><b>8. Y-axis Linear Rail:</b> Moves on the Y-axis during printing holding the Build Plate magnetically
+                attached </li>
+              <li><b>9. USB-C Cable:</b> Connects the Toolhead to the Mainboard </li>
+              <li><b>10. Filament Cutter Lever:</b> Cuts filament for clean feeding </li>
+              <li><b>11. Camera:</b> Records prints or assists in monitoring remotely </li>
+              <li><b>12. Z-axis Linear Rail:</b> Provides smooth motion for the X-axis on the Z-axis during printing
+              </li>
+              <li><b>13. Part Cooling Fan:</b> Cools the printed layer lines to solidify the filament quickly </li>
+              <li><b>14. Nozzle:</b> Is melting the filament before the printer lays down the layer lines of the 3D
+                printed model </li>
+              <li><b>15. Touchscreen:</b> Controls printer functions and displays status </li>
+              <li><b>16. AMS Ports:</b> Connects to the AMS (Automatic Material System) for multicolor printing </li>
+              <li><b>17. Micro SD Card:</b> Used to load print files</li>
+            </ul>
+          </div>
         </div>
-        <div id='printer1' class="collapsible-content">
-          <p>This is the content for Subchapter 1.</p>
+
+      </div>
+    </div>
+
+
+
+    <!--Chapter 2 -->
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('printer2',this)">
+        <span class="arrow_intro">&gt;</span>
+        Chapter 2: Setting up your 3D printer
+      </div>
+      <div id="printer2" class="collapsible-content">
+
+
+        <div style="display: flex; align-items: flex-start; gap: 2em;">
+          <!-- Left: Text content -->
+          <div style="flex: 1;">
+            <h2>Load the Filament in the Extruder</h2>
+
+            <h4>What is it?</h4>
+            <p>
+              The extruder is responsible for pulling in, heating, and pushing the filament through the nozzle.
+              Before printing, you must properly load the filament into the extruder.
+              <a href="https://wiki.bambulab.com/en/a1/manual/first-print-with-external-spool" target="_blank">More
+                infos here.</a>
+            </p>
+
+            <h4>Steps</h4>
+            <ul>
+              <li>Cut the filament tip at a sharp angle (~45°). This makes it easier to insert.</li>
+              <li>Insert the filament into the filament hub until you feel slight resistance.</li>
+              <li>On the touchscreen, select <strong>Load Filament</strong>. The printer will:
+                <ul>
+                  <li>Heat the nozzle to the correct temperature (based on filament type)</li>
+                  <li>Pull the filament through the tube into the toolhead</li>
+                  <li>Extrude a small amount to confirm it's flowing correctly</li>
+                </ul>
+              </li>
+            </ul>
+
+            <div style="background-color: #f9f9f9; border-left: 4px solid green; padding: 0.5em; margin: 1em 0;">
+              <strong>Pro Tip 1:</strong> Never let go of the filament end when removing a spool! It could cause a knot
+              and jam future prints.
+            </div>
+
+            <div style="background-color: #f9f9f9; border-left: 4px solid green; padding: 0.5em;">
+              <strong>Pro Tip 2:</strong> Always check that the filament is clean and dry. Dust or moisture can cause
+              clogging.
+            </div>
+          </div>
+
+          <!-- Right: Image -->
+          <div style="flex-shrink: 0;">
+            <img src="3d_printer_resources/loadfilament.jpg" alt="Loading filament"
+              style="width: 300px; border-radius: 8px;">
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div style="display: flex; align-items: flex-start; gap: 2em; margin-top: 2em;">
+
+          <!-- Left: Text -->
+          <div style="flex: 1;">
+            <h2>First Calibration</h2>
+            <h4>What is it?</h4>
+            <p>
+              Calibration routines ensure that the printer is operating correctly.
+              On modern printers (like the Bambu Lab A1 mini), important settings like bed leveling, nozzle height,
+              vibration compensation, and motor noise tuning are handled automatically using internal sensors.
+              <a href="https://wiki.bambulab.com/en/general/printer-calibration" target="_blank">More infos here.</a>
+            </p>
+
+            <h4>Steps</h4>
+            <ul>
+              <li>On the touchscreen, go to <strong>Settings → Calibration → First Time Setup</strong> (or similar).
+              </li>
+              <li>The printer will:
+                <ul>
+                  <li>Check bed level and compensate as needed</li>
+                  <li>Test nozzle flow by extruding a small line</li>
+                  <li>Perform a test print pattern to confirm proper adhesion and alignment</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h4>What to watch for during the test pattern:</h4>
+            <ul>
+              <li>The first layer should be slightly squished onto the plate — not too high, not scraping</li>
+              <li>The lines should be continuous and clean</li>
+              <li>No skipping, gaps, or blobs</li>
+            </ul>
+
+            <div class="tip"
+              style="background-color:#f9f9f9; border-left:4px solid #4CAF50; padding: 0.5rem 1rem; margin: 1rem 0;">
+              <strong>Pro Tip:</strong> If the first layer doesn’t look right, re-run the calibration or try “Z-offset
+              adjustment” in the printer menu.
+            </div>
+          </div>
+
+          <!-- Right: Two stacked images -->
+          <div style="display: flex; flex-direction: column; gap: 1em; flex-shrink: 0;">
+            <img src="3d_printer_resources/calibration1.jpg" alt="Calibration Step 1"
+              style="width: 280px; border-radius: 6px;">
+            <img src="3d_printer_resources/calibration2.jpg" alt="Calibration Step 2"
+              style="width: 280px; border-radius: 6px;">
+          </div>
+        </div>
+
+
+
+        <div style="display: flex; align-items: flex-start; gap: 2em; margin-top: 2em;">
+
+          <!-- Left: Text content -->
+          <div style="flex: 1;">
+            <h2>Bed Leveling</h2>
+
+            <h4>What is it?</h4>
+            <p>
+              Bed leveling ensures the nozzle is at the correct and even distance from the build plate across the entire
+              print area.
+              If the bed is uneven, prints may not stick properly or the nozzle may crash into the bed. It is one of the
+              most important calibrations.
+            </p>
+
+            <h4>Automatic Leveling (Recommended – Built-in)</h4>
+            <p>
+              The Bambu Lab A1 mini uses auto bed leveling (ABL) with internal sensors that measure the distance between
+              the
+              nozzle and the bed at several points.
+              The printer creates a “mesh map” and adjusts the nozzle height dynamically. You do not need to manually
+              turn
+              any screws.
+            </p>
+
+            <h4>Manual Leveling (Advanced)</h4>
+            <p>
+              If needed, you can manually level using bed knobs and a piece of paper to match nozzle distance at each
+              corner.
+              <a href="https://wiki.bambulab.com/en/a1-mini/maintenance/manual-bed-tramming" target="_blank">
+                Here to manual bed leveling guide for Bambu A1 mini
+              </a>.
+            </p>
+
+            <h4>Steps</h4>
+            <ul>
+              <li>On the touchscreen, go to <strong>Settings → Calibration → Bed Leveling</strong></li>
+              <li>The printer will probe the bed at multiple points</li>
+              <li>It stores this data and compensates for any unevenness during printing</li>
+            </ul>
+
+            <div class="tip"
+              style="background-color:#f9f9f9; border-left:4px solid #4CAF50; padding: 0.5rem 1rem; margin: 1rem 0;">
+              <strong>Pro Tip:</strong> Do this anytime the printer is moved or if print adhesion issues appear.
+            </div>
+          </div>
+
+          <!-- Right: Two stacked images -->
+          <div style="display: flex; flex-direction: column; gap: 1em; flex-shrink: 0;">
+            <img src="3d_printer_resources/calibration3.jpg" alt="Calibration Step 3"
+              style="width: 280px; border-radius: 6px;">
+            <img src="3d_printer_resources/calibration4.jpg" alt="Calibration Step 4"
+              style="width: 280px; border-radius: 6px;">
+          </div>
+
+        </div>
+
+        <div style="gap: 2em; margin-bottom: 2em;">
+
+          <h2>Maintenance Tips During Setup</h2>
+          <ul>
+            <li>Clean the bed surface before the first print using isopropyl alcohol (IPA). Finger oils can prevent good
+              adhesion.</li>
+            <li>Keep the nozzle clean. If old filament is stuck, use a cold pull or the built-in cleaning cycle.</li>
+            <li>Check the firmware: update via the touchscreen if a new version is available. It may include
+              improvements
+              to calibration or printing.</li>
+          </ul>
         </div>
       </div>
-<!--Chapter 2 -->
-<div class="content-container">
-    <div  class="content-header" onclick="toggleContent('printer2',this)">
-        <span class="arrow_intro">&gt;</span>
-      Chapter 2: Title
     </div>
-    <div id='printer2' class="collapsible-content">
-      <p>This is the content for Subchapter 2.</p>
-    </div>
-  </div>
-  <!--Chapter 3 -->
-<div class="content-container">
-    <div  class="content-header" onclick="toggleContent('printer3',this)">
-        <span class="arrow_intro">&gt;</span>
-      Chapter 3: Title
-    </div>
-    <div id='printer3' class="collapsible-content">
-      <p>This is the content for Subchapter 3.</p>
-    </div>
-  </div>
-  <!--Chapter 4 -->
-<div class="content-container">
-    <div  class="content-header" onclick="toggleContent('printer4',this)">
-        <span class="arrow_intro">&gt;</span>
-      Chapter 4: Title
-    </div>
-    <div id='printer4' class="collapsible-content">
-      <p>This is the content for Subchapter 3.</p>
-    </div>
-  </div>
-  <!--Chapter 5 -->
-<div class="content-container">
-    <div  class="content-header" onclick="toggleContent('printer5',this)">
-        <span class="arrow_intro">&gt;</span>
-      Chapter 5: Title
-    </div>
-    <div id='printer5' class="collapsible-content">
-      <p>This is the content for Subchapter 5.</p>
-    </div>
-  </div>
-</div>
-      <script>
-        function toggleContent(id, headerElement) {
-          const content = document.getElementById(id);
-          const arrow = headerElement.querySelector('.arrow_intro');
-          const isOpen = content.style.display === 'block';
-        
-          content.style.display = isOpen ? 'none' : 'block';
-        
-          // Toggle the rotated class to rotate the arrow without changing text
-          if (isOpen) {
-            arrow.classList.remove('rotated');
-          } else {
-            arrow.classList.add('rotated');
-          }
-        }
 
-        window.addEventListener('DOMContentLoaded', () => {
-    const hash = window.location.hash.substring(1); // remove the '#' symbol
-    if (hash) {
-      const targetHeader = document.querySelector(`[onclick*="${hash}"]`);
-      if (targetHeader) {
-        toggleContent(hash, targetHeader);
-        targetHeader.scrollIntoView({ behavior: 'smooth' });
+
+    <!--Chapter 3 -->
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('printer3',this)">
+        <span class="arrow_intro">&gt;</span>
+        Chapter 3: Try it yourself! AR 3D printer Simulation
+      </div>
+      <div id="printer3" class="collapsible-content">
+
+        <!-- FLEX CONTAINER -->
+        <div style="display: flex; align-items: flex-start; gap: 2em; margin-bottom: 1em;">
+
+          <!-- Left: Text content -->
+          <div style="flex: 1;">
+            <h2>Try it yourself!</h2>
+            <p>Want to walk around the printer virtually and learn setup steps interactively?</p>
+
+            <br>
+            <h4>How to use</h4>
+            <ul>
+              <li>Print the included <strong>Hiro Marker</strong></li>
+              <li>Place the marker on a flat surface</li>
+              <li>Open the app and point your camera at the marker</li>
+              <li>Explore, tap the 3D buttons, and simulate a 3D print!</li>
+            </ul>
+            <br>
+            <p><strong><a href="https://basicasian.itch.io/printorial" target="_blank">Download here (Android
+                  only)</a></strong></p>
+          </div>
+
+          <!-- Right: Image -->
+          <div style="flex-shrink: 0;">
+            <a href="https://basicasian.itch.io/printorial" target="_blank">
+              <img src="3d_printer_resources/printorial.png" alt="Bambu Lab A1 AR demo"
+                style="width: 300px; border-radius: 8px;"> </a>
+          </div>
+
+        </div>
+        <!-- END FLEX CONTAINER -->
+
+      </div>
+    </div>
+
+    <!--Chapter 4 -->
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('printer4',this)">
+        <span class="arrow_intro">&gt;</span>
+        Chapter 4: Summary of Terms
+      </div>
+      <div id='printer4' class="collapsible-content">
+        <p>This is the content for Subchapter 3.</p>
+      </div>
+    </div>
+
+
+
+    <!-- Interactive Quiz-->
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('quiz3', this)">
+        <span class="arrow_intro">&gt;</span>
+        Quiz: About 3D Printers
+      </div>
+      <div id="quiz3" class="collapsible-content">
+        <p>Test the knowledge you have accumulated from this chapter by completing this interactive Quiz Test!</p><br>
+        <form id="quiz-form">
+
+          <h3>1. What does the extruder do?</h3>
+          <label><input type="radio" name="q1" value="a"> Cools the filament</label><br>
+          <label><input type="radio" name="q1" value="b"> Moves the printer bed</label><br>
+          <label><input type="radio" name="q1" value="c"> Feeds and melts the filament</label><br> <!-- ✅ correct -->
+          <p id="feedback-q1" class="feedback"></p>
+
+          <h3>2. Where is the filament inserted?</h3>
+          <label><input type="radio" name="q2" value="a"> Into the nozzle directly</label><br>
+          <label><input type="radio" name="q2" value="b"> Into the filament hub</label><br> <!-- ✅ correct -->
+          <label><input type="radio" name="q2" value="c"> Into the micro SD card slot</label><br>
+          <p id="feedback-q2" class="feedback"></p>
+
+          <h3>3. What should you check before starting a print?</h3>
+          <label><input type="radio" name="q3" value="a"> That the build plate is cold</label><br>
+          <label><input type="radio" name="q3" value="b"> That filament is properly loaded and the bed is
+            level</label><br> <!-- ✅ correct -->
+          <label><input type="radio" name="q3" value="c"> That the printer is unplugged</label><br>
+          <label><input type="radio" name="q3" value="d"> That the nozzle is removed</label><br>
+          <p id="feedback-q3" class="feedback"></p>
+
+          <h3>4. How does the Bambu Lab A2 perform bed leveling?</h3>
+          <label><input type="radio" name="q4" value="a"> It relies on user-defined leveling points</label><br>
+          <label><input type="radio" name="q4" value="b"> It performs automatic mesh bed leveling using
+            sensors</label><br> <!-- ✅ correct -->
+          <label><input type="radio" name="q4" value="c"> It does not level the bed at all</label><br>
+          <p id="feedback-q4" class="feedback"></p>
+
+          <button type="button" onclick="checkQuiz()">Submit Answers</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    function toggleContent(id, headerElement) {
+      const content = document.getElementById(id);
+      const arrow = headerElement.querySelector('.arrow_intro');
+      const isOpen = content.style.display === 'block';
+
+      content.style.display = isOpen ? 'none' : 'block';
+
+      // Toggle the rotated class to rotate the arrow without changing text
+      if (isOpen) {
+        arrow.classList.remove('rotated');
+      } else {
+        arrow.classList.add('rotated');
       }
     }
-  });
-  function toggleMenu() {
-  const navList = document.querySelector('.nav_bar_list');
-  if (navList.style.display === 'flex') {
-    navList.style.display = 'none';
-  } else {
-    navList.style.display = 'flex';
-  }
-}
-        </script>
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.substring(1); // remove the '#' symbol
+      if (hash) {
+        const targetHeader = document.querySelector(`[onclick*="${hash}"]`);
+        if (targetHeader) {
+          toggleContent(hash, targetHeader);
+          targetHeader.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+    function toggleMenu() {
+      const navList = document.querySelector('.nav_bar_list');
+      if (navList.style.display === 'flex') {
+        navList.style.display = 'none';
+      } else {
+        navList.style.display = 'flex';
+      }
+    }
+
+    function checkQuiz() {
+      // Correct answers
+      const answers = {
+        q1: "c",
+        q2: "b",
+        q3: "b",
+        q4: "b"
+      };
+
+      for (let q in answers) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const feedback = document.getElementById(`feedback-${q}`);
+
+        if (!selected) {
+          feedback.textContent = "Please select an answer.";
+          feedback.style.color = "orange";
+        } else if (selected.value === answers[q]) {
+          feedback.textContent = "Correct!";
+          feedback.style.color = "green";
+        } else {
+          feedback.textContent = "Incorrect. Try reviewing the chapter.";
+          feedback.style.color = "red";
+        }
+      }
+    }
+
+  </script>
+
+  </script>
+  <style>
+    .feedback {
+      font-weight: bold;
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
+    }
+  </style>
 
 </body>
-
