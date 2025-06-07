@@ -321,5 +321,10 @@ cursor: pointer;
     display: block;
   }
 }
-
+.chapter-status{
+  font-family: 'Nunito';
+  font-size: 14px;
+  padding-top: 3px;
+  padding-left: 19px;
+}
 

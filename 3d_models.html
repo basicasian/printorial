@@ -233,18 +233,14 @@
           } else {
             arrow.classList.add('rotated');
           }
-        }
-
-        window.addEventListener('DOMContentLoaded', () => {
-    const hash = window.location.hash.substring(1); // remove the '#' symbol
-    if (hash) {
-      const targetHeader = document.querySelector(`[onclick*="${hash}"]`);
-      if (targetHeader) {
-        toggleContent(hash, targetHeader);
-        targetHeader.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  });
+           // Save chapter interaction to localStorage
+    let interaction = JSON.parse(localStorage.getItem('3d_models_interaction')) || {};
+    interaction[id] = true;
+    localStorage.setItem('3d_models_interaction', JSON.stringify(interaction));
+    
+    updateStatus();
+  };
+    
 
 
 
@@ -257,6 +253,8 @@
       q2: "c",
       q3: "b"
     };
+
+    let allCorrect = true;
 
     for (let q in answers) {
       const selected = document.querySelector(`input[name="${q}"]:checked`);
@@ -273,25 +271,31 @@
         feedback.style.color = "red";
       }
     }
-  }
-
-  function toggleMenu() {
-  const navList = document.querySelector('.nav_bar_list');
-  if (navList.style.display === 'flex') {
-    navList.style.display = 'none';
-  } else {
-    navList.style.display = 'flex';
-  }
+    localStorage.setItem('3d_models_quiz_completed', allCorrect);
+  updateStatus();
 }
 
+function updateStatus() {
+  const interaction = JSON.parse(localStorage.getItem('3d_models_interaction')) || {};
+  const quizCompleted = localStorage.getItem('3d_models_quiz_completed') === 'true';
+
+  let status = 'not_started';
+  if (quizCompleted) {
+    status = 'completed';
+  } else if (Object.keys(interaction).length > 0) {
+    status = 'in_progress';
+  }
+
+  localStorage.setItem('3d_models_status', status);
+}
         
-        </script>
+</script>
+
 <style> .feedback {
     font-weight: bold;
     margin-top: 0.25rem;
     margin-bottom: 1rem;
   }
-
   
   </style>
 </body>
