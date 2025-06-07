@@ -33,6 +33,8 @@
     </div>
     <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
   </div>
+
+
   <p class="title">Get to know 3D printers</p>
   <div class="subtitle">
     <p>By the end of this chapter, you will be able to:
@@ -43,6 +45,8 @@
     </ul>
     </p>
   </div>
+
+
   <!--Chapter 1 -->
   <div class="content_flex">
     <div class="content-container">
@@ -101,8 +105,9 @@
       </div>
       <div id="printer2" class="collapsible-content">
 
-
-        <div style="display: flex; align-items: flex-start; gap: 2em;">
+        
+        <!-- Subsection 1 -->
+        <div class="subsection">
           <!-- Left: Text content -->
           <div style="flex: 1;">
             <h2>Load the Filament in the Extruder</h2>
@@ -128,12 +133,12 @@
               </li>
             </ul>
 
-            <div style="background-color: #f9f9f9; border-left: 4px solid green; padding: 0.5em; margin: 1em 0;">
+            <div class="tip" style="background-color: #f9f9f9; border-left: 4px solid green; padding: 0.5rem 1rem; margin: 1rem 0;">
               <strong>Pro Tip 1:</strong> Never let go of the filament end when removing a spool! It could cause a knot
               and jam future prints.
             </div>
 
-            <div style="background-color: #f9f9f9; border-left: 4px solid green; padding: 0.5em;">
+            <div class="tip" style="background-color: #f9f9f9; border-left: 4px solid green; padding: 0.5rem 1rem; margin: 1rem 0;">
               <strong>Pro Tip 2:</strong> Always check that the filament is clean and dry. Dust or moisture can cause
               clogging.
             </div>
@@ -147,17 +152,11 @@
         </div>
 
 
-
-
-
-
-
-
-        <div style="display: flex; align-items: flex-start; gap: 2em; margin-top: 2em;">
-
+        <!-- Subsection 2 -->
+        <div class="subsection">
           <!-- Left: Text -->
           <div style="flex: 1;">
-            <h2>First Calibration</h2>
+            <h2>Calibration</h2>
             <h4>What is it?</h4>
             <p>
               Calibration routines ensure that the printer is operating correctly.
@@ -168,7 +167,8 @@
 
             <h4>Steps</h4>
             <ul>
-              <li>On the touchscreen, go to <strong>Settings → Calibration → First Time Setup</strong> (or similar).
+              <li>On the touchscreen, go to <strong>Settings → Maintenance → Calibration → Start </strong> (for the
+                Bambu Lab A1 mini).
               </li>
               <li>The printer will:
                 <ul>
@@ -203,9 +203,8 @@
         </div>
 
 
-
-        <div style="display: flex; align-items: flex-start; gap: 2em; margin-top: 2em;">
-
+        <!-- Subsection 3 -->
+        <div class="subsection">
           <!-- Left: Text content -->
           <div style="flex: 1;">
             <h2>Bed Leveling</h2>
@@ -231,7 +230,7 @@
             <h4>Manual Leveling (Advanced)</h4>
             <p>
               If needed, you can manually level using bed knobs and a piece of paper to match nozzle distance at each
-              corner.
+              corner. <br>
               <a href="https://wiki.bambulab.com/en/a1-mini/maintenance/manual-bed-tramming" target="_blank">
                 Here to manual bed leveling guide for Bambu A1 mini
               </a>.
@@ -239,7 +238,7 @@
 
             <h4>Steps</h4>
             <ul>
-              <li>On the touchscreen, go to <strong>Settings → Calibration → Bed Leveling</strong></li>
+              <li>In the Calibration settings, as above, <strong>select Auto Bed Leveling</strong></li>
               <li>The printer will probe the bed at multiple points</li>
               <li>It stores this data and compensates for any unevenness during printing</li>
             </ul>
@@ -251,26 +250,30 @@
           </div>
 
           <!-- Right: Two stacked images -->
-          <div style="display: flex; flex-direction: column; gap: 1em; flex-shrink: 0;">
+          <div style="display: flex; flex-direction: column; gap: 1em; flex-shrink: 0; margin-top: 1em">
             <img src="3d_printer_resources/calibration3.jpg" alt="Calibration Step 3"
               style="width: 280px; border-radius: 6px;">
             <img src="3d_printer_resources/calibration4.jpg" alt="Calibration Step 4"
               style="width: 280px; border-radius: 6px;">
           </div>
-
         </div>
 
-        <div style="gap: 2em; margin-bottom: 2em;">
+        
+        <!-- Subsection 4 -->
+        <div class="subsection">
 
-          <h2>Maintenance Tips During Setup</h2>
-          <ul>
-            <li>Clean the bed surface before the first print using isopropyl alcohol (IPA). Finger oils can prevent good
-              adhesion.</li>
-            <li>Keep the nozzle clean. If old filament is stuck, use a cold pull or the built-in cleaning cycle.</li>
-            <li>Check the firmware: update via the touchscreen if a new version is available. It may include
-              improvements
-              to calibration or printing.</li>
-          </ul>
+          <div style="flex: 1;">
+            <h2>Maintenance Tips During Setup</h2>
+            <ul>
+              <li>Clean the bed surface before the first print using isopropyl alcohol (IPA). Finger oils can prevent
+                good
+                adhesion.</li>
+              <li>Keep the nozzle clean. If old filament is stuck, use a cold pull or the built-in cleaning cycle.</li>
+              <li>Check the firmware: update via the touchscreen if a new version is available. It may include
+                improvements
+                to calibration or printing.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -325,7 +328,37 @@
         Chapter 4: Summary of Terms
       </div>
       <div id='printer4' class="collapsible-content">
-        <p>This is the content for Subchapter 3.</p>
+
+        <table style="width: 100%; border-collapse: collapse;" class="glossary-table">
+          <tbody>
+            <tr>
+              <td><input type="checkbox" style="transform: scale(1.5);"></td>
+              <td><b>Calibration</b></td>
+              <td>Test routine to optimize print accuracy</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" style="transform: scale(1.5);"></td>
+              <td><b>Bed leveling</b></td>
+              <td>Ensuring the print surface is flat relative to the nozzle</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" style="transform: scale(1.5);"></td>
+              <td><b>Extruder</b></td>
+              <td>Mechanism that feeds and melts the filament</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" style="transform: scale(1.5);"></td>
+              <td><b>Nozzle</b></td>
+              <td>Tip that extrudes the melted filament</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" style="transform: scale(1.5);"></td>
+              <td><b>Build Plate</b></td>
+              <td>Flat surface where prints are made</td>
+            </tr>
+          </tbody>
+        </table>
+
       </div>
     </div>
 

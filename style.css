@@ -35,7 +35,8 @@
   text-align: left;
   font-family: 'Nunito';
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  margin-left: 20px;
   padding-left: 50px;
 }
 
@@ -114,7 +115,8 @@ font-family: 'Nunito';
 display: none;
 font-size: 18px;
 color: rgb(56, 56, 56);
-padding-top: 13px;
+padding-top: 10px;
+padding-bottom: 25px;
 padding-left: 80px;
 padding-right: 80px;
 text-align: justify;
@@ -126,6 +128,7 @@ text-align: justify;
   color: rgb(56, 56, 56);
   padding-top: 13px;
   padding-left: 35px;
+  padding-bottom: 13px;
   }
 
 .content-header {
@@ -139,16 +142,14 @@ text-align: justify;
   align-items: center;
   gap: 8px; /* space between arrow and text */
   user-select: none;
-  font-family: 'Nunito';
+  font-family: 'Nunito'; 
 }
 
 .content-container {
-  padding-bottom: 10px;
   margin-right: 50px;
   border-radius: 10px;
   border: 1px solid grey;
-  margin-left: 50px;
-
+  margin-left: 50px;  
 }
 
 .content_flex {
@@ -199,6 +200,8 @@ text-align: right;
   font-size: 25px;
   margin-right: 20px;
   line-height: 2;
+  padding-left: 2px;
+  padding-bottom: 2px;
 }
 
 .arrow_intro.rotated {
@@ -335,5 +338,14 @@ cursor: pointer;
 
 
 .subsection {
-  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 3em; /* increase this value to make the spacing wider */
 }
+
+
+.glossary-table td {
+  padding: 0.5em;
+  vertical-align: top;
+}
+
