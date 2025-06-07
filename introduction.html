@@ -186,8 +186,9 @@
             arrow.classList.remove('rotated');
           } else {
             arrow.classList.add('rotated');
+  }
           }
-        }
+      
 
         window.addEventListener('DOMContentLoaded', () => {
     const hash = window.location.hash.substring(1); // remove the '#' symbol
@@ -209,6 +210,8 @@
       q3: "d"
     };
 
+
+
     for (let q in answers) {
       const selected = document.querySelector(`input[name="${q}"]:checked`);
       const feedback = document.getElementById(`feedback-${q}`);
@@ -225,6 +228,7 @@
       }
     }
   }
+
 
   function toggleMenu() {
   const navList = document.querySelector('.nav_bar_list');
