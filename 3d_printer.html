@@ -366,11 +366,11 @@
 
     <!-- Interactive Quiz-->
     <div class="content-container">
-      <div class="content-header" onclick="toggleContent('quiz5', this)">
+      <div class="content-header" onclick="toggleContent('printer5', this)">
         <span class="arrow_intro">&gt;</span>
         Quiz: About 3D Printers
       </div>
-      <div id="quiz5" class="collapsible-content">
+      <div id="printer5" class="collapsible-content">
         <p>Test the knowledge you have accumulated from this chapter by completing this interactive Quiz Test!</p><br>
         <form id="quiz-form">
 
@@ -423,7 +423,7 @@
         arrow.classList.remove('rotated');
       } else {
         arrow.classList.add('rotated');
-        markInteraction('3d_printer', id === 'quiz5');
+        markInteraction('3d_printer', id === 'printer5');
       }
     }
 

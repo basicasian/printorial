@@ -159,11 +159,11 @@
   
 <!-- Interactive Quiz: Using 3D Models -->
 <div class="content-container">
-  <div class="content-header" onclick="toggleContent('quiz3', this)">
+  <div class="content-header" onclick="toggleContent('model3', this)">
     <span class="arrow_intro">&gt;</span>
     Quiz: Using 3D Models
   </div>
-  <div id="quiz3" class="collapsible-content">
+  <div id="model3" class="collapsible-content">
   <p>Test the knowledge you have accumulated from this chapter by completing this interactive Quiz Test!</p><br>
     <form id="quiz-form">
       <h3>1. What is the primary file type used for 3D printing?</h3>
@@ -232,7 +232,7 @@
             arrow.classList.remove('rotated');
           } else {
             arrow.classList.add('rotated');
-            markInteraction('3d_models', id === 'quiz3');
+            markInteraction('3d_models', id === 'model3');
           }
         
     
