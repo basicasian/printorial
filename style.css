@@ -142,14 +142,14 @@ text-align: justify;
   align-items: center;
   gap: 8px; /* space between arrow and text */
   user-select: none;
-  font-family: 'Nunito';
+  font-family: 'Nunito'; 
 }
 
 .content-container {
   margin-right: 50px;
   border-radius: 10px;
   border: 1px solid grey;
-  margin-left: 50px;
+  margin-left: 50px;  
 }
 
 .content_flex {
