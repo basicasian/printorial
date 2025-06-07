@@ -232,7 +232,9 @@
             arrow.classList.remove('rotated');
           } else {
             arrow.classList.add('rotated');
+            markInteraction('3d_models', id === 'quiz3');
           }
+        
     
   };
 
@@ -246,7 +248,7 @@
       q3: "b"
     };
 
-    
+    let allCorrect = true;
     for (let q in answers) {
       const selected = document.querySelector(`input[name="${q}"]:checked`);
       const feedback = document.getElementById(`feedback-${q}`);
@@ -260,12 +262,15 @@
       } else {
         feedback.textContent = "Incorrect. Try reviewing the chapter.";
         feedback.style.color = "red";
+        allCorrect = false;
       }
     }
+    // Mark quiz as completed only if all correct
+  markQuizCompleted('3d_models', allCorrect);
 }
-
         
 </script>
+<script src="progress.js"></script>
 
 <style> .feedback {
     font-weight: bold;

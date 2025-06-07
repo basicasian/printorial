@@ -269,5 +269,21 @@
         }
 
       </script>
+
+<script src="progress.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.chapter-status').forEach(p => {
+      const chapterId = p.getAttribute('data-chapter');
+      const status = getChapterStatus(chapterId);
+      const span = p.querySelector('.status-text');
+      if (span) {
+        span.textContent = status.text;
+        span.style.color = status.color;
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
