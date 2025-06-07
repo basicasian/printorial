@@ -233,16 +233,8 @@
           } else {
             arrow.classList.add('rotated');
           }
-           // Save chapter interaction to localStorage
-    let interaction = JSON.parse(localStorage.getItem('3d_models_interaction')) || {};
-    interaction[id] = true;
-    localStorage.setItem('3d_models_interaction', JSON.stringify(interaction));
     
-    updateStatus();
   };
-    
-
-
 
 
 
@@ -254,8 +246,7 @@
       q3: "b"
     };
 
-    let allCorrect = true;
-
+    
     for (let q in answers) {
       const selected = document.querySelector(`input[name="${q}"]:checked`);
       const feedback = document.getElementById(`feedback-${q}`);
@@ -271,23 +262,8 @@
         feedback.style.color = "red";
       }
     }
-    localStorage.setItem('3d_models_quiz_completed', allCorrect);
-  updateStatus();
 }
 
-function updateStatus() {
-  const interaction = JSON.parse(localStorage.getItem('3d_models_interaction')) || {};
-  const quizCompleted = localStorage.getItem('3d_models_quiz_completed') === 'true';
-
-  let status = 'not_started';
-  if (quizCompleted) {
-    status = 'completed';
-  } else if (Object.keys(interaction).length > 0) {
-    status = 'in_progress';
-  }
-
-  localStorage.setItem('3d_models_status', status);
-}
         
 </script>
 
