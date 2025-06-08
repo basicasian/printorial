@@ -183,19 +183,21 @@
        <p>Test the knowledge you have accumulated from this chapter by completing this interactive Quiz Test!</p><br>
       
                 <form id="quiz-form">
-      <h3>1. Is the following statement true or false? Before designing a digital 3d model
-      with the help of a CAD software, it is important to slice the artifact you want to design
-      with the help of a slicing software.</h3>
-      <label><input type="radio" name="q1" value="a"> a) True</label><br>
-      <label><input type="radio" name="q1" value="b"> b) False</label><br>
+      <h3>1. Which of the follwing is the most frequently used type of filament in 3D Printing?</h3>
+      <label><input type="radio" name="q1" value="a"> a) ABS</label><br>
+      <label><input type="radio" name="q1" value="b"> b) TPU</label><br>
+      <label><input type="radio" name="q1" value="c"> c) PLA</label><br>
+      <label><input type="radio" name="q1" value="d"> d) PETG</label><br>
+                  
      
       <p id="feedback-q1" class="feedback"></p><br>
 
-      <h3>2. Select the correct answers from below with regard to additive manufacturing:</h3>
-      <label><input type="radio" name="q2" value="a"> a) Additive manufacturing is also named formative manufacturing.</label><br>
-      <label><input type="radio" name="q2" value="b"> b) The only existing additive manufacturing procedure is 3D Printing.</label><br>
-      <label><input type="radio" name="q2" value="c"> c) 3D Prining is an innovative manufacturing method belonging to the family of additive manufacturing methods.</label><br>
-      <label><input type="radio" name="q2" value="d"> d) The manufacturing process in 3D Printing is based on adding 3 layers of material at a time and bonding each 3 adjacent layers.</label><br>
+      <h3>2. Select the correct answers from below with regard to the different types of filaments used for 3D Printing:</h3>
+      <label><input type="radio" name="q2" value="a"> a) One of the advantages of ABS is the fact that it is heat resistant.</label><br>
+      <label><input type="radio" name="q2" value="b"> b) PLA and ABS can be used interchangeably, since they have extrmely similar properties.</label><br>
+      <label><input type="radio" name="q2" value="c"> c) PETG is by far the best type of filament to use in any use case.</label><br>
+      <label><input type="radio" name="q2" value="d"> d) When printing an object wiht parts that can bend, the most appopriate to use filament is PLA.</label><br>
+                  
       <p id="feedback-q2" class="feedback"></p><br>
 
       <h3>3. Which of the following statements are correct with regard to the different types of 3D Printing?</h3>
@@ -203,6 +205,7 @@
       <label><input type="radio" name="q3" value="b"> b) Resin 3D Printing is one of the oldest and simplest 3D Printing technologies.</label><br>
       <label><input type="radio" name="q3" value="c"> c) Resin Printers are usually cheaper than FDM Printers.</label><br>
       <label><input type="radio" name="q3" value="d"> d) When producing objects that require extraordinary detail, Resin 3D Printing is a suitbale procedure.</label><br>
+                  
       <p id="feedback-q3" class="feedback"></p><br>
 
       <button type="button" onclick="checkQuiz()">Submit Answers</button>
@@ -231,8 +234,8 @@
                        function checkQuiz() {
     // Correct answers
     const answers = {
-      q1: "b",
-      q2: "c",
+      q1: "c",
+      q2: "a",
       q3: "d"
     };
 
