@@ -181,7 +181,32 @@
     </div>
     <div id='filament5' class="collapsible-content">
        <p>Test the knowledge you have accumulated from this chapter by completing this interactive Quiz Test!</p><br>
-      <p>This is the content for Subchapter 5.</p>
+      
+                <form id="quiz-form">
+      <h3>1. Is the following statement true or false? Before designing a digital 3d model
+      with the help of a CAD software, it is important to slice the artifact you want to design
+      with the help of a slicing software.</h3>
+      <label><input type="radio" name="q1" value="a"> a) True</label><br>
+      <label><input type="radio" name="q1" value="b"> b) False</label><br>
+     
+      <p id="feedback-q1" class="feedback"></p><br>
+
+      <h3>2. Select the correct answers from below with regard to additive manufacturing:</h3>
+      <label><input type="radio" name="q2" value="a"> a) Additive manufacturing is also named formative manufacturing.</label><br>
+      <label><input type="radio" name="q2" value="b"> b) The only existing additive manufacturing procedure is 3D Printing.</label><br>
+      <label><input type="radio" name="q2" value="c"> c) 3D Prining is an innovative manufacturing method belonging to the family of additive manufacturing methods.</label><br>
+      <label><input type="radio" name="q2" value="d"> d) The manufacturing process in 3D Printing is based on adding 3 layers of material at a time and bonding each 3 adjacent layers.</label><br>
+      <p id="feedback-q2" class="feedback"></p><br>
+
+      <h3>3. Which of the following statements are correct with regard to the different types of 3D Printing?</h3>
+      <label><input type="radio" name="q3" value="a"> a) FDM Printing comes from Filament Deposition Modeling.</label><br>
+      <label><input type="radio" name="q3" value="b"> b) Resin 3D Printing is one of the oldest and simplest 3D Printing technologies.</label><br>
+      <label><input type="radio" name="q3" value="c"> c) Resin Printers are usually cheaper than FDM Printers.</label><br>
+      <label><input type="radio" name="q3" value="d"> d) When producing objects that require extraordinary detail, Resin 3D Printing is a suitbale procedure.</label><br>
+      <p id="feedback-q3" class="feedback"></p><br>
+
+      <button type="button" onclick="checkQuiz()">Submit Answers</button>
+    </form>
     </div>
   </div>
 </div>
