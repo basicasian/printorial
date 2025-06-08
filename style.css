@@ -154,10 +154,10 @@ text-align: justify;
 }
 
 .content-container_small {
-  margin-right: 30px;
+  margin-right: 50px;
   border-radius: 10px;
   border: 1px solid grey;
-  margin-left: 30px;  
+  margin-left: 50px;  
 }
 
 .content_flex {
