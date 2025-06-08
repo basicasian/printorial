@@ -173,6 +173,7 @@
         </table>
     </div>
   </div>
+  
   <!--Interactive Quiz -->
 <div class="content-container">
     <div  class="content-header" onclick="toggleContent('filament5',this)">
@@ -192,7 +193,7 @@
      
       <p id="feedback-q1" class="feedback"></p><br>
 
-      <h3>2. Select the correct answers from below with regard to the different types of filaments used for 3D Printing:</h3>
+      <h3>2. Select the correct answer from below with regard to the different types of filaments used for 3D Printing:</h3>
       <label><input type="radio" name="q2" value="a"> a) One of the advantages of ABS is the fact that it is heat resistant.</label><br>
       <label><input type="radio" name="q2" value="b"> b) PLA and ABS can be used interchangeably, since they have extrmely similar properties.</label><br>
       <label><input type="radio" name="q2" value="c"> c) PETG is by far the best type of filament to use in any use case.</label><br>
@@ -200,11 +201,11 @@
                   
       <p id="feedback-q2" class="feedback"></p><br>
 
-      <h3>3. Which of the following statements are correct with regard to the different types of 3D Printing?</h3>
-      <label><input type="radio" name="q3" value="a"> a) FDM Printing comes from Filament Deposition Modeling.</label><br>
-      <label><input type="radio" name="q3" value="b"> b) Resin 3D Printing is one of the oldest and simplest 3D Printing technologies.</label><br>
-      <label><input type="radio" name="q3" value="c"> c) Resin Printers are usually cheaper than FDM Printers.</label><br>
-      <label><input type="radio" name="q3" value="d"> d) When producing objects that require extraordinary detail, Resin 3D Printing is a suitbale procedure.</label><br>
+      <h3>3. Select the correct answer from below:</h3>
+      <label><input type="radio" name="q3" value="a"> a) A brim is the internal structure within a printed object that supports the outer walls and affects its strength, weight, and material usage.</label><br>
+      <label><input type="radio" name="q3" value="b"> b) A support is a flat, single-layer area printed around the base of a model, acting as a border to improve adhesion and reduce warping.</label><br>
+      <label><input type="radio" name="q3" value="c"> c) A support is an auxiliary structure printed along with a model to ensure successful printing of overhangs, bridges, and other complex features.</label><br>
+      <label><input type="radio" name="q3" value="d"> d) An infill is a temporary, extra layer of material placed between the build plate and the 3D printed object.</label><br>
                   
       <p id="feedback-q3" class="feedback"></p><br>
 
@@ -236,7 +237,7 @@
     const answers = {
       q1: "c",
       q2: "a",
-      q3: "d"
+      q3: "c"
     };
 
 
