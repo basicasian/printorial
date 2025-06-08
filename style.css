@@ -153,6 +153,13 @@ text-align: justify;
   margin-left: 50px;  
 }
 
+.content-container_small {
+  margin-right: 30px;
+  border-radius: 10px;
+  border: 1px solid grey;
+  margin-left: 30px;  
+}
+
 .content_flex {
   display: flex;
   flex-direction: column;
