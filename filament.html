@@ -227,6 +227,34 @@
           }
         }
 
+        
+                       function checkQuiz() {
+    // Correct answers
+    const answers = {
+      q1: "b",
+      q2: "c",
+      q3: "d"
+    };
+
+
+
+    for (let q in answers) {
+      const selected = document.querySelector(`input[name="${q}"]:checked`);
+      const feedback = document.getElementById(`feedback-${q}`);
+
+      if (!selected) {
+        feedback.textContent = "Please select an answer.";
+        feedback.style.color = "orange";
+      } else if (selected.value === answers[q]) {
+        feedback.textContent = "Correct!";
+        feedback.style.color = "green";
+      } else {
+        feedback.textContent = "Incorrect. Try reviewing the chapter.";
+        feedback.style.color = "red";
+      }
+    }
+  }
+
         window.addEventListener('DOMContentLoaded', () => {
     const hash = window.location.hash.substring(1); // remove the '#' symbol
     if (hash) {
