@@ -327,8 +327,9 @@
               <li>Explore, tap the 3D buttons, and simulate a 3D print!</li>
             </ul>
             <br>
-            <p><strong><a href="https://basicasian.itch.io/printorial" target="_blank">Download here</a></strong> (Android
-                  only) or scan the QR Code on the right on your phone directly</p>
+            <p><strong><a href="https://basicasian.itch.io/printorial" target="_blank">Download here</a></strong>
+              (Android
+              only) or scan the QR Code on the right on your phone directly</p>
           </div>
 
           <!-- Right: Two Images Side by Side -->
@@ -435,9 +436,59 @@
 
       </div>
     </div>
+
+    <!--Chapter 5 -->
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('printer6',this)">
+        <span class="arrow_intro">&gt;</span>
+        Chapter 5: Deep Dive of 3D Printing settings | <span style="color: red;font-weight: bold;">advanced</span>
+      </div>
+      <div id="printer6" class="collapsible-content">
+
+        <!-- FLEX CONTAINER -->
+        <div style="display: flex; align-items: flex-start; gap: 2em; margin-bottom: 1em;">
+
+          <!-- Left: Text content -->
+          <div style="flex: 1;">
+            <h2>Try it yourself!</h2>
+            <p>Want to walk around the printer virtually and learn setup steps interactively?</p>
+
+            <br>
+            <h4>How to use</h4>
+            <ul>
+              <li>Print the included <span class="term-tooltip">Hiro Marker<span class="tooltip-text">A Hiro marker is a
+                    black-and-white square used in AR (Augmented Reality) to help cameras recognize position and
+                    orientation in 3D space.</span></span></li>
+              <li>Place the marker on a flat surface</li>
+              <li>Open the app and point your camera at the marker</li>
+              <li>Explore, tap the 3D buttons, and simulate a 3D print!</li>
+            </ul>
+            <br>
+            <p><strong><a href="https://basicasian.itch.io/printorial" target="_blank">Download here</a></strong>
+              (Android
+              only) or scan the QR Code on the right on your phone directly</p>
+          </div>
+
+          <!-- Right: Two Images Side by Side -->
+          <div style="display: flex; flex-direction: row; gap: 1em; flex-shrink: 0;">
+            <a href="https://basicasian.itch.io/printorial" target="_blank">
+              <img src="3d_printer_resources/printorial.png" alt="Bambu Lab A1 AR demo"
+                style="height: 300px; border-radius: 8px;">
+            </a>
+            <a href="https://basicasian.itch.io/printorial" target="_blank">
+              <img src="3d_printer_resources/qr-itchio-printorial.png" alt="QR Code for AR App"
+                style="height: 300px; border-radius: 8px;">
+            </a>
+          </div>
+
+
+        </div>
+        <!-- END FLEX CONTAINER -->
+
+      </div>
+    </div>
+
   </div>
-
-
 
   <script>
     function toggleContent(id, headerElement) {
@@ -452,7 +503,7 @@
         arrow.classList.remove('rotated');
       } else {
         arrow.classList.add('rotated');
-        markInteraction('3d_printer', id === 'printer5');
+        markInteraction('3d_printer', id === 'printer6');
       }
     }
 
