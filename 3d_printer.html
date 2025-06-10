@@ -230,10 +230,11 @@
 
             <h4>What is it?</h4>
             <p>
-              Bed leveling ensures the nozzle is at the correct and even distance from the build plate across the entire
-              print area.
-              If the bed is uneven, prints may not stick properly or the nozzle may crash into the bed. It is one of the
-              most important calibrations.
+              Bed leveling is the process of ensuring that the build plate is perfectly parallel to the plane of the
+              printer’s nozzle movement.
+              If the nozzle is too close to the bed, filament can get squished or not extruded at all. If it’s too far,
+              the first layer won’t stick, causing the print to fail early.
+              It is one of the most important calibrations.
             </p>
 
             <h4>Automatic Leveling (Recommended – Built-in)</h4>
@@ -251,10 +252,8 @@
             <h4>Manual Leveling (Advanced)</h4>
             <p>
               If needed, you can manually level using bed knobs and a piece of paper to match nozzle distance at each
-              corner. <br>
-              <a href="https://wiki.bambulab.com/en/a1-mini/maintenance/manual-bed-tramming" target="_blank">
-                Here to manual bed leveling guide for Bambu A1 mini
-              </a>.
+              corner. Please go to <a href="3d_printer.html#printer6">Chapter 5 "Deep Dive of 3D Printing settings" </a>
+              for more details.
             </p>
 
             <h4>Steps</h4>
@@ -437,53 +436,149 @@
       </div>
     </div>
 
+
     <!--Chapter 5 -->
     <div class="content-container">
       <div class="content-header" onclick="toggleContent('printer6',this)">
         <span class="arrow_intro">&gt;</span>
-        Chapter 5: Deep Dive of 3D Printing settings | <span style="color: red;font-weight: bold;">advanced</span>
+        Chapter 5: Deep Dive of 3D Printing Settings | <span style="color: red;font-weight: bold;">advanced</span>
       </div>
       <div id="printer6" class="collapsible-content">
 
-        <!-- FLEX CONTAINER -->
-        <div style="display: flex; align-items: flex-start; gap: 2em; margin-bottom: 1em;">
 
+        <!-- Subsection 1 -->
+        <div class="subsection">
           <!-- Left: Text content -->
           <div style="flex: 1;">
-            <h2>Try it yourself!</h2>
-            <p>Want to walk around the printer virtually and learn setup steps interactively?</p>
+            <h2>Manual bed levelling</h2>
+            <h4>What is it?</h4>
+            <p>
+              Manual leveling requires the user to adjust the bed using mechanical knobs or screws located underneath
+              the build plate.
+              The process usually involves moving the print head to various corners of the bed and inserting a leveling
+              aid such as a sheet of paper to gauge the distance between the nozzle and the plate.
+            </p>
 
-            <br>
-            <h4>How to use</h4>
+            <h4>Steps</h4>
             <ul>
-              <li>Print the included <span class="term-tooltip">Hiro Marker<span class="tooltip-text">A Hiro marker is a
-                    black-and-white square used in AR (Augmented Reality) to help cameras recognize position and
-                    orientation in 3D space.</span></span></li>
-              <li>Place the marker on a flat surface</li>
-              <li>Open the app and point your camera at the marker</li>
-              <li>Explore, tap the 3D buttons, and simulate a 3D print!</li>
+              <li>Heat the nozzle and bed to printing temperature.
+              </li>
+              <li>Move the nozzle to each corner and center. </li>
+              <li>Slide a sheet of paper between the nozzle and bed. </li>
+              <li>Adjust the bed until there is slight resistance on the paper.</li>
+              <li>Repeat the process until the nozzle is equidistant at all points. </li>
             </ul>
-            <br>
-            <p><strong><a href="https://basicasian.itch.io/printorial" target="_blank">Download here</a></strong>
-              (Android
-              only) or scan the QR Code on the right on your phone directly</p>
+            <p>Here to <a href="https://wiki.bambulab.com/en/a1-mini/maintenance/manual-bed-tramming" target="_blank">
+                manual bed leveling guide </a>specific for the Bambu A1 mini.</p>
+
+
+
+            <table style="width: 100%; border-collapse: collapse;">
+              <tbody>
+                <tr>
+                  <td><b>Feature</b></td>
+                  <td><b>Manual Leveling </b></td>
+                  <td><b>Automatic Leveling </b></td>
+                </tr>
+                <tr>
+                  <td>User Control</td>
+                  <td>Full</td>
+                  <td>Limited</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" style="transform: scale(1.5);"></td>
+                  <td><b>Extruder</b></td>
+                  <td>Mechanism that feeds and melts the filament</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" style="transform: scale(1.5);"></td>
+                  <td><b>Nozzle</b></td>
+                  <td>Tip that extrudes the melted filament</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox" style="transform: scale(1.5);"></td>
+                  <td><b>Build Plate</b></td>
+                  <td>Flat surface where prints are made</td>
+                </tr>
+              </tbody>
+            </table>
+
+
+
+            <div class="tip"
+              style="background-color: #f9f9f9; border-left: 4px solid green; padding: 0.5rem 1rem; margin: 1rem 0;">
+              <strong>Pro Tip 1:</strong> Never let go of the filament end when removing a spool! It could cause a knot
+              and jam future prints.
+            </div>
+
+            <div class="tip"
+              style="background-color: #f9f9f9; border-left: 4px solid green; padding: 0.5rem 1rem; margin: 1rem 0;">
+              <strong>Pro Tip 2:</strong> Always check that the filament is clean and dry. Dust or moisture can cause
+              clogging.
+            </div>
           </div>
 
-          <!-- Right: Two Images Side by Side -->
-          <div style="display: flex; flex-direction: row; gap: 1em; flex-shrink: 0;">
-            <a href="https://basicasian.itch.io/printorial" target="_blank">
-              <img src="3d_printer_resources/printorial.png" alt="Bambu Lab A1 AR demo"
-                style="height: 300px; border-radius: 8px;">
-            </a>
-            <a href="https://basicasian.itch.io/printorial" target="_blank">
-              <img src="3d_printer_resources/qr-itchio-printorial.png" alt="QR Code for AR App"
-                style="height: 300px; border-radius: 8px;">
-            </a>
+          <!-- Right: Image -->
+          <div style="flex-shrink: 0;">
+            <img src="3d_printer_resources/loadfilament.jpg" alt="Loading filament"
+              style="width: 300px; border-radius: 8px;">
           </div>
-
-
         </div>
-        <!-- END FLEX CONTAINER -->
+
+
+        <!-- Subsection 2 -->
+        <div class="subsection">
+          <!-- Left: Text -->
+          <div style="flex: 1;">
+            <h2>Changing filament for multi-colour printing</h2>
+            <h4>What is it?</h4>
+            <p>
+              Calibration routines ensure that the printer is operating correctly.
+              On modern printers (like the Bambu Lab A1 mini), important settings like bed leveling, nozzle height,
+              <span class="term-tooltip">vibration compensation<span class="tooltip-text">Reduces printer vibrations for
+                  smoother and more accurate prints.</span></span>, and motor noise tuning are handled automatically
+              using internal sensors.
+              <a href="https://wiki.bambulab.com/en/general/printer-calibration" target="_blank">More infos here.</a>
+            </p>
+
+            <h4>Steps</h4>
+            <ul>
+              <li>On the touchscreen, go to <strong>Settings → Maintenance → Calibration → Start </strong> (for the
+                Bambu Lab A1 mini).
+              </li>
+              <li>The printer will:
+                <ul>
+                  <li>Check bed level and compensate as needed</li>
+                  <li>Test nozzle flow by extruding a small line</li>
+                  <li>Perform a test print pattern to confirm proper adhesion and alignment</li>
+                </ul>
+              </li>
+            </ul>
+
+            <h4>What to watch for during the test pattern:</h4>
+            <ul>
+              <li>The first layer should be slightly squished onto the plate — not too high, not scraping</li>
+              <li>The lines should be continuous and clean</li>
+              <li>No skipping, gaps, or blobs</li>
+            </ul>
+
+            <div class="tip"
+              style="background-color:#f9f9f9; border-left:4px solid #4CAF50; padding: 0.5rem 1rem; margin: 1rem 0;">
+              <strong>Pro Tip:</strong> If the first layer doesn’t look right, re-run the calibration or try <span
+                class="term-tooltip">“Z-offset adjustment”<span class="tooltip-text">Fine-tunes the nozzle’s height
+                  relative to the print bed for optimal first layer.</span></span> in the printer menu.
+            </div>
+          </div>
+
+          <!-- Right: Two stacked images -->
+          <div style="display: flex; flex-direction: column; gap: 1em; flex-shrink: 0;">
+            <img src="3d_printer_resources/calibration1.jpg" alt="Calibration Step 1"
+              style="width: 280px; border-radius: 6px;">
+            <img src="3d_printer_resources/calibration2.jpg" alt="Calibration Step 2"
+              style="width: 280px; border-radius: 6px;">
+          </div>
+        </div>
+
 
       </div>
     </div>
