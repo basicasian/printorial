@@ -553,9 +553,11 @@
           If the above steps do not work, here are some more tips:
         </p>
         <ul>
-          <li>The bed surface may need to be cleaned, you may need to add some glue to the surface (especially if its cold) </li>
+          <li>The bed surface may need to be cleaned, you may need to add some glue to the surface (especially if its
+            cold) </li>
           <li>The temperature is not right, bed should usually around 60°C and nozzle 200°C for PLA </li>
-          <li>If you have leveled the edges but the center part is too high or too low, your bed may be warped and should be replaced. </li>
+          <li>If you have leveled the edges but the center part is too high or too low, your bed may be warped and
+            should be replaced. </li>
           <li>The speed may be too high, use the slicer default settings.</li>
         </ul>
       </div>
@@ -566,8 +568,7 @@
     <div class="content-container">
       <div class="content-header" onclick="toggleContent('printer7',this)">
         <span class="arrow_intro">&gt;</span>
-        Chapter 6: Changing Filament for Multi-Colour Printing | <span
-          style="color: red;font-weight: bold;">advanced</span>
+        Chapter 6: Changing Filament Mid Print | <span style="color: red;font-weight: bold;">advanced</span>
       </div>
       <div id="printer7" class="collapsible-content">
 
@@ -576,106 +577,76 @@
         <div class="subsection">
           <!-- Left: Text content -->
           <div style="flex: 1;">
-            <h2>Changing Filament for Multi-Colour Printing </h2>
+            <h2>Changing Filament Mid Print </h2>
             <h4>What is it?</h4>
             <p>
-              Manual leveling requires the user to adjust the bed using mechanical knobs or screws located underneath
-              the build plate.
-              The process usually involves moving the print head to various corners of the bed and inserting a leveling
-              aid such as a sheet of paper to gauge the distance between the nozzle and the plate.
+              Changing <a href="filament.html">Filament</a> mid-print can be useful when you're switching to a different
+              color, the filament runs
+              out or you need a different material for part of the print.
             </p>
 
             <h4>Steps</h4>
             <ul>
-              <li>Heat the nozzle and bed to printing temperature.
+              <li><strong>Pause the print:</strong> Use your printer's touchscreen or control panel to pause the print.
               </li>
-              <li>Move the nozzle to each corner and center. </li>
-              <li>Slide a sheet of paper between the nozzle and bed. </li>
-              <li>Adjust the bed until there is slight resistance on the paper.</li>
-              <li>Repeat the process until the nozzle is equidistant at all points. </li>
+              <li><strong>Move the toolhead (optional):</strong> Some printers allow you to move the head away from the
+                print to make space.</li>
+              <li><strong>Retract the filament:</strong> Use the menu to unload or manually retract the filament while
+                the nozzle is still hot (above 180°C for PLA).</li>
+              <li><strong>Remove the old filament:</strong> After retracting, carefully remove the old filament. Handle
+                this step delicately to avoid damaging the extruder or filament feeder.</li>
+              <li><strong>Insert new filament:</strong> Load the new filament until you see the new color/material come
+                out of the nozzle.</li>
+              <li><strong>Purge:</strong> Before resuming the print, perform a 'purge' by extruding some of the new
+                filament. This helps flush out any remaining old filament from the nozzle, ensuring a clean transition.
+              </li>
+              <li><strong>Resume printing:</strong> Once the new filament is loaded, resume printing. Keep in mind that
+                while the printer should continue from where it paused, there might be minor imperfections or color
+                variations at the transition point.</li>
             </ul>
-            <p>Here is a <a href="https://www.matterhackers.com/articles/3d-printing-essentials-bed-leveling"
-                target="_blank"> tutorial for general printers</a> in more detail and here to <a
-                href="https://wiki.bambulab.com/en/a1-mini/maintenance/manual-bed-tramming" target="_blank">
-                manual bed leveling guide</a> specific for the Bambu A1 mini.</p>
-
             <div class="tip"
               style="background-color: #f9f9f9; border-left: 4px solid green; padding: 0.5rem 1rem; margin: 1rem 0;">
-              <strong>Pro Tip:</strong> When manually leveling, always ensure the nozzle is hot before checking the gap
-              (expansion from heat changes gap).
+              <strong>Pro Tip:</strong> Don’t wait too long between unloading and loading; the nozzle may cool below
+              extrusion temperature and jam.
             </div>
 
-            <h4>Comparison: Manual vs Automatic Leveling</h4>
-            <p> Whether you choose manual or automatic leveling depends on your needs, experience level, and printing
-              environment. <br>
-              Choose Manual Leveling if: you have experience and want full control over the process, have a printer
-              without automatic bed leveling (ABL), print small models where perfect leveling is easier to achieve
-              manually.
-              <br>
-              Choose Autoamtic Leveling if: you are new to 3D printing, you switch between different materias frequently
-              and you want to save setup time before each print.
+            <p>
+              Here is a <a href="https://www.youtube.com/watch?v=EyzJqedfabo"
+                target="_blank"> tutorial for changing filament mid-print</a> specific for the Bambu A1 mini
             </p>
-            <table style="width: 100%; border-collapse: collapse; margin-top: 1em;" class="comparison-table">
-              <thead>
-                <tr>
-                  <th>Feature</th>
-                  <th>Manual Leveling</th>
-                  <th>Automatic Leveling</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>User Control</td>
-                  <td>Full</td>
-                  <td>Limited</td>
-                </tr>
-                <tr>
-                  <td>Ease of Use</td>
-                  <td>Challenging for beginners</td>
-                  <td>Easy and beginner-friendly</td>
-                </tr>
-                <tr>
-                  <td>Accuracy</td>
-                  <td>Depends on skill</td>
-                  <td>Consistently high</td>
-                </tr>
-                <tr>
-                  <td>Setup Time</td>
-                  <td>Slower</td>
-                  <td>Faster after initial configuration</td>
-                </tr>
-                <tr>
-                  <td>Best for</td>
-                  <td>Experienced users</td>
-                  <td>Beginners and advanced users alike</td>
-                </tr>
-              </tbody>
-            </table>
-
-
-
+            <iframe width="100%" src="https://www.youtube.com/embed/EyzJqedfabo" title="Bambu Lab Tutorial"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
           </div>
-
-
-
-          <!-- Right: Image -->
-          <div style="flex-shrink: 0;">
-            <a href="https://www.matterhackers.com/articles/3d-printing-essentials-bed-leveling" target="_blank"> <img
-                src="3d_printer_resources/manual-bedleveling.png" alt="Manual Bed Leveling"
-                style="width: 400px; border-radius: 8px;"></a>
-
-            <a href="https://www.matterhackers.com/articles/3d-printing-essentials-bed-leveling" target="_blank"> <img
-                src="3d_printer_resources/bed-leveling-graphics.jpg" alt="Manual Bed Leveling"
-                style="width: 400px; border-radius: 8px;"></a>
-          </div>
-
-
         </div>
 
 
+        <h2>Tips and Tricks</h2>
+        <h4>Tips for Changing Filaments During the Print</h4>
+        <p>Changing filament mid-print is a 3D printing skill that needs careful attention to ensure a seamless
+          transition. Here's how you can do it effectively:</p>
 
+        <ul>
+          <li><strong>Check Compatibility:</strong> Ensure the new filament is compatible with your printer and previous
+            filament type. Adjust settings accordingly.</li>
+          <li><strong>Prepare in Advance:</strong> Have the new filament ready before pausing the print to reduce
+            downtime.</li>
+          <li><strong>Adjust Temperature:</strong> Set the correct temperature based on the new filament's requirements
+            (e.g., PLA: 190–220°C, ABS: 220–250°C).</li>
+          <li><strong>Clean the Extruder:</strong> Remove any residue from the previous filament to avoid mixing or
+            clogs.</li>
+          <li><strong>Install Firmly:</strong> Insert the new filament securely to ensure even extrusion and print
+            quality.</li>
+          <li><strong>Test Extrusion:</strong> Perform a quick extrusion to verify the filament is flowing properly
+            before resuming the print.</li>
+        </ul>
       </div>
+
+
     </div>
+  </div>
 
 
 

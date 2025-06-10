@@ -164,6 +164,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  margin-bottom: 15px;
 }
 
 .content_flex img {
