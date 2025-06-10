@@ -230,7 +230,8 @@
 
             <h4>What is it?</h4>
             <p>
-              Bed leveling is the process of ensuring that the build plate is perfectly parallel to the plane of the
+              Bed leveling is the foundation of any succesful print, the process of ensuring that the build plate is
+              perfectly parallel to the plane of the
               printer’s nozzle movement.
               If the nozzle is too close to the bed, filament can get squished or not extruded at all. If it’s too far,
               the first layer won’t stick, causing the print to fail early.
@@ -314,8 +315,6 @@
           <div style="flex: 1;">
             <h2>Try it yourself!</h2>
             <p>Want to walk around the printer virtually and learn setup steps interactively?</p>
-
-            <br>
             <h4>How to use</h4>
             <ul>
               <li>Print the included <span class="term-tooltip">Hiro Marker<span class="tooltip-text">A Hiro marker is a
@@ -335,11 +334,11 @@
           <div style="display: flex; flex-direction: row; gap: 1em; flex-shrink: 0;">
             <a href="https://basicasian.itch.io/printorial" target="_blank">
               <img src="3d_printer_resources/printorial.png" alt="Bambu Lab A1 AR demo"
-                style="height: 300px; border-radius: 8px;">
+                style="width: 300px; border-radius: 8px;">
             </a>
             <a href="https://basicasian.itch.io/printorial" target="_blank">
               <img src="3d_printer_resources/qr-itchio-printorial.png" alt="QR Code for AR App"
-                style="height: 300px; border-radius: 8px;">
+                style="width: 220px; border-radius: 8px;">
             </a>
           </div>
 
@@ -441,7 +440,7 @@
     <div class="content-container">
       <div class="content-header" onclick="toggleContent('printer6',this)">
         <span class="arrow_intro">&gt;</span>
-        Chapter 5: Deep Dive of 3D Printing Settings | <span style="color: red;font-weight: bold;">advanced</span>
+        Chapter 5: Manual Bed Leveling | <span style="color: red;font-weight: bold;">advanced</span>
       </div>
       <div id="printer6" class="collapsible-content">
 
@@ -450,7 +449,7 @@
         <div class="subsection">
           <!-- Left: Text content -->
           <div style="flex: 1;">
-            <h2>Manual bed levelling</h2>
+            <h2>Manual Bed Leveling</h2>
             <h4>What is it?</h4>
             <p>
               Manual leveling requires the user to adjust the bed using mechanical knobs or screws located underneath
@@ -468,120 +467,218 @@
               <li>Adjust the bed until there is slight resistance on the paper.</li>
               <li>Repeat the process until the nozzle is equidistant at all points. </li>
             </ul>
-            <p>Here to <a href="https://wiki.bambulab.com/en/a1-mini/maintenance/manual-bed-tramming" target="_blank">
-                manual bed leveling guide </a>specific for the Bambu A1 mini.</p>
+            <p>Here is a <a href="https://www.matterhackers.com/articles/3d-printing-essentials-bed-leveling"
+                target="_blank"> tutorial for general printers</a> in more detail and here to <a
+                href="https://wiki.bambulab.com/en/a1-mini/maintenance/manual-bed-tramming" target="_blank">
+                manual bed leveling guide</a> specific for the Bambu A1 mini.</p>
+
+            <div class="tip"
+              style="background-color: #f9f9f9; border-left: 4px solid green; padding: 0.5rem 1rem; margin: 1rem 0;">
+              <strong>Pro Tip:</strong> When manually leveling, always ensure the nozzle is hot before checking the gap
+              (expansion from heat changes gap).
+            </div>
+
+            <h4>Comparison: Manual vs Automatic Leveling</h4>
+            <p> Whether you choose manual or automatic leveling depends on your needs, experience level, and printing
+              environment. <br>
+              Choose Manual Leveling if: you have experience and want full control over the process, have a printer
+              without automatic bed leveling (ABL), print small models where perfect leveling is easier to achieve
+              manually.
+              <br>
+              Choose Autoamtic Leveling if: you are new to 3D printing, you switch between different materias frequently
+              and you want to save setup time before each print.
 
 
-
-            <table style="width: 100%; border-collapse: collapse;">
-              <tbody>
+            </p>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 1em;" class="comparison-table">
+              <thead>
                 <tr>
-                  <td><b>Feature</b></td>
-                  <td><b>Manual Leveling </b></td>
-                  <td><b>Automatic Leveling </b></td>
+                  <th>Feature</th>
+                  <th>Manual Leveling</th>
+                  <th>Automatic Leveling</th>
                 </tr>
+              </thead>
+              <tbody>
                 <tr>
                   <td>User Control</td>
                   <td>Full</td>
                   <td>Limited</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" style="transform: scale(1.5);"></td>
-                  <td><b>Extruder</b></td>
-                  <td>Mechanism that feeds and melts the filament</td>
+                  <td>Ease of Use</td>
+                  <td>Challenging for beginners</td>
+                  <td>Easy and beginner-friendly</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" style="transform: scale(1.5);"></td>
-                  <td><b>Nozzle</b></td>
-                  <td>Tip that extrudes the melted filament</td>
+                  <td>Accuracy</td>
+                  <td>Depends on skill</td>
+                  <td>Consistently high</td>
                 </tr>
                 <tr>
-                  <td><input type="checkbox" style="transform: scale(1.5);"></td>
-                  <td><b>Build Plate</b></td>
-                  <td>Flat surface where prints are made</td>
+                  <td>Setup Time</td>
+                  <td>Slower</td>
+                  <td>Faster after initial configuration</td>
+                </tr>
+                <tr>
+                  <td>Best for</td>
+                  <td>Experienced users</td>
+                  <td>Beginners and advanced users alike</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Right: Image -->
+          <div style="flex-shrink: 0;">
+            <a href="https://www.matterhackers.com/articles/3d-printing-essentials-bed-leveling" target="_blank"> <img
+                src="3d_printer_resources/manual-bedleveling.png" alt="Manual Bed Leveling"
+                style="width: 400px; border-radius: 8px;"></a>
+          </div>
+        </div>
+
+        <h2>Tips and Tricks</h2>
+        <h4>Incorrect Bed Leveling Examples & Live Leveling</h4>
+        <p>Here is a graphic made by <a href="https://www.billieruben.info/post/my-3d-printing-posters-1">Billie
+            Ruben</a>, showing some examples of what happens when the bed is not leveled correctly and how to fix it
+          with live leveling:</p>
+        <div style="display: flex; gap: 1em; margin-top: 1em;">
+          <img src="3d_printer_resources/bed-leveling-graphics-1.jpg" alt="Incorrect Bed Leveling"
+            style="width: 45%; border-radius: 8px;">
+          <img src="3d_printer_resources/bed-leveling-graphics-2.jpg" alt="Live Leveling"
+            style="width: 55%; border-radius: 8px;">
+        </div>
+
+        <h4>Further Help</h4>
+        <p>
+          If the above steps do not work, here are some more tips:
+        </p>
+        <ul>
+          <li>The bed surface may need to be cleaned, you may need to add some glue to the surface (especially if its cold) </li>
+          <li>The temperature is not right, bed should usually around 60°C and nozzle 200°C for PLA </li>
+          <li>If you have leveled the edges but the center part is too high or too low, your bed may be warped and should be replaced. </li>
+          <li>The speed may be too high, use the slicer default settings.</li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!--Chapter 6 -->
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('printer7',this)">
+        <span class="arrow_intro">&gt;</span>
+        Chapter 6: Changing Filament for Multi-Colour Printing | <span
+          style="color: red;font-weight: bold;">advanced</span>
+      </div>
+      <div id="printer7" class="collapsible-content">
+
+
+        <!-- Subsection 1 -->
+        <div class="subsection">
+          <!-- Left: Text content -->
+          <div style="flex: 1;">
+            <h2>Changing Filament for Multi-Colour Printing </h2>
+            <h4>What is it?</h4>
+            <p>
+              Manual leveling requires the user to adjust the bed using mechanical knobs or screws located underneath
+              the build plate.
+              The process usually involves moving the print head to various corners of the bed and inserting a leveling
+              aid such as a sheet of paper to gauge the distance between the nozzle and the plate.
+            </p>
+
+            <h4>Steps</h4>
+            <ul>
+              <li>Heat the nozzle and bed to printing temperature.
+              </li>
+              <li>Move the nozzle to each corner and center. </li>
+              <li>Slide a sheet of paper between the nozzle and bed. </li>
+              <li>Adjust the bed until there is slight resistance on the paper.</li>
+              <li>Repeat the process until the nozzle is equidistant at all points. </li>
+            </ul>
+            <p>Here is a <a href="https://www.matterhackers.com/articles/3d-printing-essentials-bed-leveling"
+                target="_blank"> tutorial for general printers</a> in more detail and here to <a
+                href="https://wiki.bambulab.com/en/a1-mini/maintenance/manual-bed-tramming" target="_blank">
+                manual bed leveling guide</a> specific for the Bambu A1 mini.</p>
+
+            <div class="tip"
+              style="background-color: #f9f9f9; border-left: 4px solid green; padding: 0.5rem 1rem; margin: 1rem 0;">
+              <strong>Pro Tip:</strong> When manually leveling, always ensure the nozzle is hot before checking the gap
+              (expansion from heat changes gap).
+            </div>
+
+            <h4>Comparison: Manual vs Automatic Leveling</h4>
+            <p> Whether you choose manual or automatic leveling depends on your needs, experience level, and printing
+              environment. <br>
+              Choose Manual Leveling if: you have experience and want full control over the process, have a printer
+              without automatic bed leveling (ABL), print small models where perfect leveling is easier to achieve
+              manually.
+              <br>
+              Choose Autoamtic Leveling if: you are new to 3D printing, you switch between different materias frequently
+              and you want to save setup time before each print.
+            </p>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 1em;" class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Manual Leveling</th>
+                  <th>Automatic Leveling</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>User Control</td>
+                  <td>Full</td>
+                  <td>Limited</td>
+                </tr>
+                <tr>
+                  <td>Ease of Use</td>
+                  <td>Challenging for beginners</td>
+                  <td>Easy and beginner-friendly</td>
+                </tr>
+                <tr>
+                  <td>Accuracy</td>
+                  <td>Depends on skill</td>
+                  <td>Consistently high</td>
+                </tr>
+                <tr>
+                  <td>Setup Time</td>
+                  <td>Slower</td>
+                  <td>Faster after initial configuration</td>
+                </tr>
+                <tr>
+                  <td>Best for</td>
+                  <td>Experienced users</td>
+                  <td>Beginners and advanced users alike</td>
                 </tr>
               </tbody>
             </table>
 
 
 
-            <div class="tip"
-              style="background-color: #f9f9f9; border-left: 4px solid green; padding: 0.5rem 1rem; margin: 1rem 0;">
-              <strong>Pro Tip 1:</strong> Never let go of the filament end when removing a spool! It could cause a knot
-              and jam future prints.
-            </div>
-
-            <div class="tip"
-              style="background-color: #f9f9f9; border-left: 4px solid green; padding: 0.5rem 1rem; margin: 1rem 0;">
-              <strong>Pro Tip 2:</strong> Always check that the filament is clean and dry. Dust or moisture can cause
-              clogging.
-            </div>
           </div>
+
+
 
           <!-- Right: Image -->
           <div style="flex-shrink: 0;">
-            <img src="3d_printer_resources/loadfilament.jpg" alt="Loading filament"
-              style="width: 300px; border-radius: 8px;">
+            <a href="https://www.matterhackers.com/articles/3d-printing-essentials-bed-leveling" target="_blank"> <img
+                src="3d_printer_resources/manual-bedleveling.png" alt="Manual Bed Leveling"
+                style="width: 400px; border-radius: 8px;"></a>
+
+            <a href="https://www.matterhackers.com/articles/3d-printing-essentials-bed-leveling" target="_blank"> <img
+                src="3d_printer_resources/bed-leveling-graphics.jpg" alt="Manual Bed Leveling"
+                style="width: 400px; border-radius: 8px;"></a>
           </div>
+
+
         </div>
 
-
-        <!-- Subsection 2 -->
-        <div class="subsection">
-          <!-- Left: Text -->
-          <div style="flex: 1;">
-            <h2>Changing filament for multi-colour printing</h2>
-            <h4>What is it?</h4>
-            <p>
-              Calibration routines ensure that the printer is operating correctly.
-              On modern printers (like the Bambu Lab A1 mini), important settings like bed leveling, nozzle height,
-              <span class="term-tooltip">vibration compensation<span class="tooltip-text">Reduces printer vibrations for
-                  smoother and more accurate prints.</span></span>, and motor noise tuning are handled automatically
-              using internal sensors.
-              <a href="https://wiki.bambulab.com/en/general/printer-calibration" target="_blank">More infos here.</a>
-            </p>
-
-            <h4>Steps</h4>
-            <ul>
-              <li>On the touchscreen, go to <strong>Settings → Maintenance → Calibration → Start </strong> (for the
-                Bambu Lab A1 mini).
-              </li>
-              <li>The printer will:
-                <ul>
-                  <li>Check bed level and compensate as needed</li>
-                  <li>Test nozzle flow by extruding a small line</li>
-                  <li>Perform a test print pattern to confirm proper adhesion and alignment</li>
-                </ul>
-              </li>
-            </ul>
-
-            <h4>What to watch for during the test pattern:</h4>
-            <ul>
-              <li>The first layer should be slightly squished onto the plate — not too high, not scraping</li>
-              <li>The lines should be continuous and clean</li>
-              <li>No skipping, gaps, or blobs</li>
-            </ul>
-
-            <div class="tip"
-              style="background-color:#f9f9f9; border-left:4px solid #4CAF50; padding: 0.5rem 1rem; margin: 1rem 0;">
-              <strong>Pro Tip:</strong> If the first layer doesn’t look right, re-run the calibration or try <span
-                class="term-tooltip">“Z-offset adjustment”<span class="tooltip-text">Fine-tunes the nozzle’s height
-                  relative to the print bed for optimal first layer.</span></span> in the printer menu.
-            </div>
-          </div>
-
-          <!-- Right: Two stacked images -->
-          <div style="display: flex; flex-direction: column; gap: 1em; flex-shrink: 0;">
-            <img src="3d_printer_resources/calibration1.jpg" alt="Calibration Step 1"
-              style="width: 280px; border-radius: 6px;">
-            <img src="3d_printer_resources/calibration2.jpg" alt="Calibration Step 2"
-              style="width: 280px; border-radius: 6px;">
-          </div>
-        </div>
 
 
       </div>
     </div>
+
+
+
 
   </div>
 
@@ -658,6 +755,26 @@
       font-weight: bold;
       margin-top: 0.25rem;
       margin-bottom: 1rem;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    /* Specific style for table headers */
+    .comparison-table th {
+      font-weight: bold;
+      /* Bold text for headers */
     }
   </style>
 
