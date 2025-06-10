@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="header">
+        <div onclick="window.location.href='index.html'" style="cursor: pointer;">
+            <p class="logo_small">Printorial</p>
+        </div>
+
+        <div class="nav_bar">
+            <ul class="nav_bar_list">
+                <li><a href="introduction.html">Introduction</a></li>
+                <li><a href="3d_models.html">3D Models</a></li>
+                <li><a href="slicing.html">Slicing</a></li>
+                <li><a href="3d_printer.html">3D Printer</a></li>
+                <li><a href="filament.html">Filament</a></li>
+                <li><a href="first_print.html">First Print</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="additional.html">Additional</a></li>
+            </ul>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </div>
+
+    <p class="title">About Printorial</p>
+    <div class="subtitle"
+        style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap;">
+
+        <!-- Left side: text content -->
+        <div style="flex: 1; min-width: 300px;">
+            <p>
+                Printorial is a beginner-friendly tutorial for setting up a 3D printer, starting from the basics of 3D
+                printing to a step-by-step guide on how to print.<br>
+                This project was done in the scope of the course <a
+                    href="https://tiss.tuwien.ac.at/course/courseDetails.xhtml?semester=2025S&courseNr=193067&dsrid=95">
+                    Free and Open Technologies 2025SS</a> of the Technical University of Vienna, overseen by Evropi
+                Stefanidi.
+            </p>
+            <p>Creators:
+            <ul>
+                <li>Alin Düzgün</li>
+                <li>Ani Nejat</li>
+                <li>Diana Kovacs-Barlutiu</li>
+                <li>Khrystyna Borodkina</li>
+                <li>Renate Zhang</li>
+            </ul>
+            </p>
+            <p>In case you want to spread the tutorial, you can print the following QR code to access this website.</p>
+
+        </div>
+
+        <!-- Right side: image -->
+        <div style="flex-shrink: 0;">
+            <img src="about_resources/qr-printorial.png" alt="QR code for Printorial"
+                style="padding-right:20px; height:300px; border-radius: 8px;">
+        </div>
+    </div>
+
+
+
+
+    <!--Chapter 1 -->
+    <div class="content_flex">
+        <div class="content-container">
+            <div class="content-header" onclick="toggleContent('additional1',this)">
+                <span class="arrow_intro">&gt;</span>
+                Chapter 1: Title
+            </div>
+            <div id='additional1' class="collapsible-content">
+                <p>This is the content for Subchapter 1.</p>
+            </div>
+        </div>
+        <!--Chapter 2 -->
+        <div class="content-container">
+            <div class="content-header" onclick="toggleContent('additional2',this)">
+                <span class="arrow_intro">&gt;</span>
+                Chapter 2: Title
+            </div>
+            <div id='additional2' class="collapsible-content">
+                <p>This is the content for Subchapter 2.</p>
+            </div>
+        </div>
+        <!--Chapter 3 -->
+        <div class="content-container">
+            <div class="content-header" onclick="toggleContent('additional3',this)">
+                <span class="arrow_intro">&gt;</span>
+                Chapter 3: Title
+            </div>
+            <div id='additional3' class="collapsible-content">
+                <p>This is the content for Subchapter 3.</p>
+            </div>
+        </div>
+        <!--Chapter 4 -->
+        <div class="content-container">
+            <div class="content-header" onclick="toggleContent('additional4',this)">
+                <span class="arrow_intro">&gt;</span>
+                Chapter 4: Title
+            </div>
+            <div id='additional4' class="collapsible-content">
+                <p>This is the content for Subchapter 3.</p>
+            </div>
+        </div>
+        <!--Chapter 5 -->
+        <div class="content-container">
+            <div class="content-header" onclick="toggleContent('additional5',this)">
+                <span class="arrow_intro">&gt;</span>
+                Chapter 5: Title
+            </div>
+            <div id='additional5' class="collapsible-content">
+                <p>This is the content for Subchapter 5.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleContent(id, headerElement) {
+            const content = document.getElementById(id);
+            const arrow = headerElement.querySelector('.arrow_intro');
+            const isOpen = content.style.display === 'block';
+
+            content.style.display = isOpen ? 'none' : 'block';
+
+            // Toggle the rotated class to rotate the arrow without changing text
+            if (isOpen) {
+                arrow.classList.remove('rotated');
+            } else {
+                arrow.classList.add('rotated');
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.substring(1); // remove the '#' symbol
+            if (hash) {
+                const targetHeader = document.querySelector(`[onclick*="${hash}"]`);
+                if (targetHeader) {
+                    toggleContent(hash, targetHeader);
+                    targetHeader.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+        function toggleMenu() {
+            const navList = document.querySelector('.nav_bar_list');
+            if (navList.style.display === 'flex') {
+                navList.style.display = 'none';
+            } else {
+                navList.style.display = 'flex';
+            }
+        }
+    </script>
+
+</body>

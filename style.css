@@ -273,10 +273,13 @@ color: rgb(87, 87, 87);
   font-size: 13px;
   background-color: rgb(6, 230, 6);
   border-radius: 10px;
-  border-color: rgb(6, 230, 6);
-  display: block;       /* Makes it behave like a block element */
-  margin-right: 0;       /* Align to the left */
-  margin-left: auto; 
+  border: none;
+  color: black;
+  text-decoration: none;
+  display: block;
+  margin-right: 0;
+  margin-left: auto;
+  text-align: center;
 }
 
 .nav_bar_list a {
