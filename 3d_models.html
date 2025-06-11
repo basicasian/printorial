@@ -21,13 +21,13 @@
   <div class="nav_bar">
     <ul class="nav_bar_list">
       <li><a href="introduction.html">Introduction</a></li>
-      <li><a href="3d_models.html">3D Models</a></li>
+      <li><a style="font-weight: bold; color: #4202c1; cursor: pointer;" href="3d_models.html">3D Models</a></li>
       <li><a href="slicing.html">Slicing</a></li>
       <li><a href="3d_printer.html">3D Printer</a></li>
       <li><a href="filament.html">Filament</a></li>
       <li><a href="first_print.html">First Print</a></li>
       <li><a href="faq.html">FAQ</a></li>
-      <li><a style="font-weight: bold; color: #4202c1; cursor: pointer;" href="3d_models.html">3D Models</a></li>
+      <li><a href="additional.html">Additional</a></li>
     </ul>
   </div>
   <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
@@ -150,17 +150,115 @@
     <br><p>In the next chapter, we’ll look deeper into slicer settings and how they affect your final print.</p>
     </div>
   </div>
-  <!--Chapter 5 -->
+
+  
+  <!--Chapter 4 -->
 <div class="content-container">
-    <div  class="content-header" onclick="toggleContent('model5',this)">
-        <span class="arrow_intro">&gt;</span>
-      Chapter 5: Title
-    </div>
-    <div id='model5' class="collapsible-content">
-      <p>This is the content for Subchapter 5.</p>
-    </div>
+  <div class="content-header" onclick="toggleContent('model5', this)">
+    <span class="arrow_intro">&gt;</span>
+    Chapter 4: Fundamentals of 3D Modelling (Experienced)
+  </div>
+  <div id="model5" class="collapsible-content">
+    <h3>Introduction</h3>
+    <p>
+      3D modelling is the process of creating a digital representation of a physical object using specialized software. In this chapter, we’re going to look at how 3D models are built, what terminology you’ll encounter, and how geometry and modeling tools work together to produce printable results. You’ll also get introduced to two commonly used free modeling platforms: TinkerCAD and SketchUp.
+    </p>
+
+    <h3>Common Terms and Definitions</h3>
+    <p>Before we get into practical use, here are essential terms you'll come across:</p>
+    <ul>
+      <li><strong>Vertex</strong> – A single point in 3D space. Multiple vertices connect to form edges.</li>
+      <li><strong>Edge</strong> – A straight line between two vertices.</li>
+      <li><strong>Face</strong> – A flat surface bounded by edges. Most 3D models are made up of triangular or quadrilateral faces.</li>
+      <li><strong>Mesh</strong> – A collection of vertices, edges, and faces that defines the shape of a 3D object.</li>
+      <li><strong>Extrude</strong> – A function that turns a 2D shape (like a circle) into a 3D object (like a cylinder) by giving it depth.</li>
+      <li><strong>Boolean Operations</strong> – Functions that combine objects (union), subtract one from another (difference), or find the shared space (intersection).</li>
+      <li><strong>Manifold (Watertight)</strong> – A 3D model that is completely enclosed, with no holes or non-connected edges. This is required for 3D printing.</li>
+      <li><strong>Normals</strong> – Directions assigned to faces. All normals should point outward for printable objects.</li>
+      <li><strong>Parametric Modeling</strong> – A method of designing where dimensions and constraints can be changed later, updating the model automatically.</li>
+    </ul>
+    <p>
+      Understanding these terms is essential for interpreting software commands and fixing issues during modeling or slicing.
+    </p>
+
+    <h3>Free Modelling Software: Pros and Cons</h3>
+    <p>You don't need to start with expensive software. There are several free 3D modeling tools available that are fully capable of producing printable models:</p>
+    <ul>
+      <li><strong>TinkerCAD</strong><br>
+          Pros: Very easy to use, browser-based, perfect for beginners and quick prototyping. Shape-based modeling with drag-and-drop.<br>
+          Cons: Limited in precision and complexity. Difficult to manage advanced shapes or curved surfaces.
+      </li>
+      <li><strong>SketchUp (Free Web Version)</strong><br>
+          Pros: Good for architectural and spatial design, clean interface, simple tools for accurate line and surface control.<br>
+          Cons: Not designed for engineering or mechanical design. Managing small components can be tricky. STL export requires a plugin.
+      </li>
+      <li><strong>FreeCAD</strong><br>
+          Pros: Full parametric modeling, excellent for mechanical parts, open-source and regularly updated.<br>
+          Cons: Steeper learning curve, interface less polished, occasional bugs.
+      </li>
+      <li><strong>Blender</strong><br>
+          Pros: Powerful mesh and sculpting tools, great for artistic and organic shapes.<br>
+          Cons: Overkill for simple mechanical parts, complex UI, and not focused on precision CAD-style modeling.
+      </li>
+    </ul>
+    <p>
+      Each tool has a role, depending on whether you’re designing art, prototypes, or mechanical components. For this tutorial, we’ll focus on TinkerCAD and SketchUp for their balance of simplicity and power.
+    </p>
+
+    <h3>Geometry and Its Relevance in 3D Modelling</h3>
+    <p>
+      All 3D models are built from geometric primitives—shapes like cubes, spheres, and cylinders—and then modified into more complex forms.
+      Geometry is not just visual; it determines how your model behaves during slicing and printing.
+    </p>
+    <p>
+      A solid object in modeling software must be “watertight.” If your shape has gaps or disconnected faces, your slicer won’t generate a correct toolpath.
+    </p>
+    <p>
+      The complexity of geometry also affects print time and model stability. Overly detailed meshes with thousands of faces may slow down processing and printing unnecessarily.
+    </p>
+    <p>
+      Flat surfaces and clean edges are ideal for accurate fitting parts.
+    </p>
+    <p>
+      Curved or sculpted surfaces require more careful modeling and slicing settings to preserve detail without overloading your printer.
+    </p>
+    <p>
+      Understanding how to construct geometry effectively leads to more reliable prints and makes post-processing easier.
+    </p>
+
+    <h3>Using TinkerCAD and SketchUp</h3>
+    <h4>TinkerCAD</h4>
+    <p>
+      Start by combining basic shapes: drag a box and cylinder onto the workplane, resize them, and use the group function to merge them into a single object.
+      Try subtracting a cylinder from a cube to make a hole using the hole tool.
+    </p>
+    <p>
+      TinkerCAD is especially useful for simple brackets, enclosures, and household tools. Because it works directly in your browser and saves to the cloud, it’s great for fast iterations.
+    </p>
+
+    <h4>SketchUp</h4>
+    <p>
+      Open a new project and begin by drawing a 2D shape using the line or rectangle tool. Use the Push/Pull tool to extrude it into a 3D object.
+      With SketchUp’s snapping and measurement tools, you can quickly align parts, define edges, and control sizes.
+    </p>
+    <p>
+      This environment works well for furniture design, architectural models, or visual layouts.
+      You’ll notice that SketchUp thinks in “faces” and “edges,” which is different from TinkerCAD’s solid-based logic.
+    </p>
+
+    <h3>Summary of Key Terms</h3>
+    <p>
+      To conclude this chapter, here are the most essential takeaways:
+    </p>
+    <ul>
+      <li>3D models are built from geometry—faces, edges, and vertices forming solid, manifold shapes.</li>
+      <li>Modeling software varies by purpose: TinkerCAD is ideal for beginners; SketchUp excels in architectural design; FreeCAD is strong for engineering.</li>
+      <li>Terms like “extrude,” “boolean,” “mesh,” and “manifold” are not just definitions—they are tools you’ll use in nearly every project.</li>
+    </ul>
   </div>
 </div>
+
+
       <script>
         function toggleContent(id, headerElement) {
           const content = document.getElementById(id);
