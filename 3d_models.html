@@ -387,7 +387,7 @@
 </div>
 
 
-      <script>
+          <script>
         function toggleContent(id, headerElement) {
           const content = document.getElementById(id);
           const arrow = headerElement.querySelector('.arrow_intro');
@@ -400,27 +400,11 @@
             arrow.classList.remove('rotated');
           } else {
             arrow.classList.add('rotated');
-            markInteraction('first_print', id === 'quiz3');
+            markInteraction('3d_models', id === 'model3');
           }
-        }
-        window.addEventListener('DOMContentLoaded', () => {
-    const hash = window.location.hash.substring(1); // remove the '#' symbol
-    if (hash) {
-      const targetHeader = document.querySelector(`[onclick*="${hash}"]`);
-      if (targetHeader) {
-        toggleContent(hash, targetHeader);
-        targetHeader.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  });
-  function toggleMenu() {
-  const navList = document.querySelector('.nav_bar_list');
-  if (navList.style.display === 'flex') {
-    navList.style.display = 'none';
-  } else {
-    navList.style.display = 'flex';
-  }
-}
+        
+    
+  };
 
 
 
@@ -434,8 +418,8 @@
 
     let allCorrect = true;
     for (let q in answers) {
-      const selected = document.querySelector(`input[name="${q}"]:checked`);
-      const feedback = document.getElementById(`feedback-${q}`);
+      const selected = document.querySelector(input[name="${q}"]:checked);
+      const feedback = document.getElementById(feedback-${q});
 
       if (!selected) {
         feedback.textContent = "Please select an answer.";
@@ -452,9 +436,7 @@
     // Mark quiz as completed only if all correct
   markQuizCompleted('3d_models', allCorrect);
 }
-    }
-  }
-        
+
 </script>
 <script src="progress.js"></script>
 
@@ -466,4 +448,3 @@
   
   </style>
 </body>
-
