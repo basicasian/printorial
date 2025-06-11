@@ -177,33 +177,45 @@
       <li><strong>Normals</strong> – Directions assigned to faces. All normals should point outward for printable objects.</li>
       <li><strong>Parametric Modeling</strong> – A method of designing where dimensions and constraints can be changed later, updating the model automatically.</li>
     </ul>
-    <p>
-      Understanding these terms is essential for interpreting software commands and fixing issues during modeling or slicing.
-    </p>
-
-    <h3>Free Modelling Software: Pros and Cons</h3>
-    <p>You don't need to start with expensive software. There are several free 3D modeling tools available that are fully capable of producing printable models:</p>
-    <ul>
-      <li><strong>TinkerCAD</strong><br>
-          Pros: Very easy to use, browser-based, perfect for beginners and quick prototyping. Shape-based modeling with drag-and-drop.<br>
-          Cons: Limited in precision and complexity. Difficult to manage advanced shapes or curved surfaces.
-      </li>
-      <li><strong>SketchUp (Free Web Version)</strong><br>
-          Pros: Good for architectural and spatial design, clean interface, simple tools for accurate line and surface control.<br>
-          Cons: Not designed for engineering or mechanical design. Managing small components can be tricky. STL export requires a plugin.
-      </li>
-      <li><strong>FreeCAD</strong><br>
-          Pros: Full parametric modeling, excellent for mechanical parts, open-source and regularly updated.<br>
-          Cons: Steeper learning curve, interface less polished, occasional bugs.
-      </li>
-      <li><strong>Blender</strong><br>
-          Pros: Powerful mesh and sculpting tools, great for artistic and organic shapes.<br>
-          Cons: Overkill for simple mechanical parts, complex UI, and not focused on precision CAD-style modeling.
-      </li>
-    </ul>
-    <p>
-      Each tool has a role, depending on whether you’re designing art, prototypes, or mechanical components. For this tutorial, we’ll focus on TinkerCAD and SketchUp for their balance of simplicity and power.
-    </p>
+    
+ <h2>Free 3D Modeling Software: Advantages & Disadvantages</h2>
+      <p>There are several excellent free tools available for creating 3D models. Here’s an overview of the most popular ones used in the 3D printing community:</p>
+        <table>
+          <thead class="table-light">
+            <tr>
+              <th>Software</th>
+              <th>Type</th>
+              <th>Strengths</th>
+              <th>Weaknesses</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>TinkerCAD</strong></td>
+              <td>Web-based</td>
+              <td>Beginner-friendly, drag-and-drop, cloud-based, fast prototyping</td>
+              <td>Limited geometry control, lacks advanced tools</td>
+            </tr>
+            <tr>
+              <td><strong>SketchUp Free</strong></td>
+              <td>Web/Desktop</td>
+              <td>Great for architectural/spatial work, easy extrusion, measurement tools</td>
+              <td>Not ideal for organic/precision work, STL export setup needed</td>
+            </tr>
+            <tr>
+              <td><strong>FreeCAD</strong></td>
+              <td>Desktop (Open-source)</td>
+              <td>Parametric, professional-grade mechanical design</td>
+              <td>Steep learning curve, outdated interface</td>
+            </tr>
+            <tr>
+              <td><strong>Blender</strong></td>
+              <td>Desktop (Open-source)</td>
+              <td>Advanced mesh/organic modeling, sculpting tools</td>
+              <td>Complex interface, not ideal for mechanical parts</td>
+            </tr>
+          </tbody>
+        </table>
 
     <h3>Geometry and Its Relevance in 3D Modelling</h3>
     <p>
@@ -226,25 +238,8 @@
       Understanding how to construct geometry effectively leads to more reliable prints and makes post-processing easier.
     </p>
 
-    <h3>Using TinkerCAD and SketchUp</h3>
-    <h4>TinkerCAD</h4>
-    <p>
-      Start by combining basic shapes: drag a box and cylinder onto the workplane, resize them, and use the group function to merge them into a single object.
-      Try subtracting a cylinder from a cube to make a hole using the hole tool.
-    </p>
-    <p>
-      TinkerCAD is especially useful for simple brackets, enclosures, and household tools. Because it works directly in your browser and saves to the cloud, it’s great for fast iterations.
-    </p>
-
-    <h4>SketchUp</h4>
-    <p>
-      Open a new project and begin by drawing a 2D shape using the line or rectangle tool. Use the Push/Pull tool to extrude it into a 3D object.
-      With SketchUp’s snapping and measurement tools, you can quickly align parts, define edges, and control sizes.
-    </p>
-    <p>
-      This environment works well for furniture design, architectural models, or visual layouts.
-      You’ll notice that SketchUp thinks in “faces” and “edges,” which is different from TinkerCAD’s solid-based logic.
-    </p>
+  <h2>Getting to Know the Software: TinkerCAD & SketchUp</h2>
+    
 
     <h3>Summary of Key Terms</h3>
     <p>
@@ -258,97 +253,7 @@
   </div>
 </div>
 
-  <!--Chapter 5 -->
-<div class="content-container">
-  <div class="content-header" onclick="toggleContent('model6', this)">
-    <span class="arrow_intro">&gt;</span>
-    Chapter 5: From Sketching to Full Model | <span style="color: red;font-weight: bold;">advanced</span>
-  </div>
-  <div id="model6" class="collapsible-content">
-    <h3>Introduction</h3>
-    <p>
-      Now that you’re familiar with the basics, it’s time to dive into one of the most important stages of 3D modeling: sketching.
-      Whether you're designing a mechanical part, a custom enclosure, or a piece of art, almost every 3D model begins with a 2D sketch.
-      This chapter will guide you through the sketching process using both external tools and the built-in features of the software included in this tutorial.
-    </p>
-    <p>
-      We’ll cover how to create precise, purposeful sketches using dimensions and constraints, and then explore how to transform those 2D shapes into full 3D models using common techniques.
-      Finally, you’ll try it yourself with a simple sketching exercise inside the software.
-    </p>
-
-    <h3>What is Sketching & What Can You Do With It?</h3>
-    <p>
-      Sketching is the foundation of most 3D models. It involves drawing flat shapes—like rectangles, circles, or custom profiles—that define the outline of your part.
-      These shapes are then used to build up your 3D model.
-    </p>
-    <p>A good sketch can:</p>
-    <ul>
-      <li>Define the overall shape of your object</li>
-      <li>Determine key features like holes, edges, and thickness</li>
-      <li>Serve as a base for operations like extrusion, lofting, or cutting</li>
-    </ul>
-    <p>
-      Sketches don’t have to be perfect at first—but learning how to control them makes the modeling process faster and more accurate.
-    </p>
-
-    <h3>Sketching Tools: External & In the Software</h3>
-    <p>
-      There are two main ways to start sketching:
-    </p>
-    <ul>
-      <li><strong>External Tools</strong> – Paper and pencil or digital sketch apps (like Concepts or Procreate) are great for roughing out ideas before moving into CAD.</li>
-      <li><strong>In-Software Sketch Tools</strong> – The software provided in this tutorial includes a full set of sketching tools: lines, arcs, rectangles, splines, and more. These tools allow for precise control and are designed to be the starting point for creating solid geometry.</li>
-    </ul>
-    <p>We'll be focusing on the in-software tools going forward.</p>
-
-    <h3>Dimensions & Constraints When Sketching</h3>
-    <p>
-      To make your sketches functional and parametric, you'll need to apply:
-    </p>
-    <ul>
-      <li><strong>Dimensions:</strong> Set the exact size of sketch elements (lengths, angles, diameters).</li>
-      <li><strong>Constraints:</strong> Lock sketch elements into place relative to each other (e.g., make two lines perpendicular, or make a circle concentric with another shape).</li>
-    </ul>
-    <p>
-      Using dimensions and constraints makes your sketches robust and easier to modify later.
-    </p>
-
-    <h3>Turning Your 2D Sketch into a 3D Model: Methods</h3>
-    <p>
-      Once your 2D sketch is complete, you can turn it into a 3D object using various modeling techniques:
-    </p>
-    <ul>
-      <li><strong>Extrude:</strong> Extend the sketch into 3D space by giving it thickness.</li>
-      <li><strong>Revolve:</strong> Spin a sketch around an axis to create circular parts.</li>
-      <li><strong>Sweep:</strong> Move a sketch along a path (great for pipes or wires).</li>
-      <li><strong>Loft:</strong> Blend multiple sketches to create smooth transitions.</li>
-    </ul>
-    <p>
-      Each method adds a different dimension to your design process.
-    </p>
-
-    <h3>Let’s Try It Out: Sketching Exercise</h3>
-    <p><strong>Objective:</strong> Create a base plate with a centered hole.</p>
-    <p><strong>Steps:</strong></p>
-    <ol>
-      <li>Open the sketching workspace and select a flat plane to draw on.</li>
-      <li>Draw a rectangle (100mm x 60mm).</li>
-      <li>Use dimension tools to set the exact width and height.</li>
-      <li>Draw a circle in the center of the rectangle (diameter: 20mm).</li>
-      <li>Apply constraints to center the circle both horizontally and vertically.</li>
-      <li>Once complete, extrude the sketch to a thickness of 10mm.</li>
-    </ol>
-    <p>
-      You now have a simple but complete 3D model—great for practice and easy to print!
-    </p>
-    <p>
-      This exercise builds on everything we’ve covered: creating shapes, applying precision, and transforming a sketch into a printable object.
-      With practice, this process becomes second nature and unlocks a whole new level of creativity in your 3D printing workflow.
-    </p>
-
-    <p><strong>Let’s get sketching!</strong></p>
-  </div>
-</div>
+  
 
 
       <script>
