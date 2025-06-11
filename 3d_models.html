@@ -151,7 +151,42 @@
     </div>
   </div>
 
-  
+  <!-- Interactive Quiz: Using 3D Models -->
+<div class="content-container">
+  <div class="content-header" onclick="toggleContent('model4', this)">
+    <span class="arrow_intro">&gt;</span>
+    Quiz: Using 3D Models
+  </div>
+  <div id="model4" class="collapsible-content">
+  <p>Test the knowledge you have accumulated from this chapter by completing this interactive Quiz Test!</p><br>
+    <form id="quiz-form">
+      <h3>1. What is the primary file type used for 3D printing?</h3>
+      <label><input type="radio" name="q1" value="a"> a) .PDF</label><br>
+      <label><input type="radio" name="q1" value="b"> b) .JPEG</label><br>
+      <label><input type="radio" name="q1" value="c"> c) .STL</label><br>
+      <label><input type="radio" name="q1" value="d"> d) .MP4</label><br>
+      <p id="feedback-q1" class="feedback"></p>
+
+      <h3>2. What does a slicer program do?</h3>
+      <label><input type="radio" name="q2" value="a"> a) Slices the filament into pieces</label><br>
+      <label><input type="radio" name="q2" value="b"> b) Cuts the model into smaller models</label><br>
+      <label><input type="radio" name="q2" value="c"> c) Converts 3D models into instructions for a 3D printer</label><br>
+      <label><input type="radio" name="q2" value="d"> d) Removes color from the model</label><br>
+      <p id="feedback-q2" class="feedback"></p>
+
+      <h3>3. Which website is a community-driven platform for free printable models?</h3>
+      <label><input type="radio" name="q3" value="a"> a) YouTube</label><br>
+      <label><input type="radio" name="q3" value="b"> b) Thingiverse</label><br>
+      <label><input type="radio" name="q3" value="c"> c) Google Drive</label><br>
+      <label><input type="radio" name="q3" value="d"> d) Facebook</label><br>
+      <p id="feedback-q3" class="feedback"></p>
+
+      <button type="button" onclick="checkQuiz()">Submit Answers</button>
+    </form>
+
+  </div>
+</div>
+
   <!--Chapter 4 -->
 <div class="content-container">
   <div class="content-header" onclick="toggleContent('model5', this)">
@@ -312,6 +347,36 @@
     navList.style.display = 'flex';
   }
 }
+
+
+        function checkQuiz() {
+      // Correct answers
+      const answers = {
+        q1: "c",
+        q2: "c",
+        q3: "b",
+      };
+      let allCorrect = true;
+      for (let q in answers) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const feedback = document.getElementById(`feedback-${q}`);
+
+        if (!selected) {
+          feedback.textContent = "Please select an answer.";
+          feedback.style.color = "orange";
+        } else if (selected.value === answers[q]) {
+          feedback.textContent = "Correct!";
+          feedback.style.color = "green";
+        } else {
+          feedback.textContent = "Incorrect. Try reviewing the chapter.";
+          feedback.style.color = "red";
+          allCorrect = false;
+        }
+      }
+      // Mark quiz as completed only if all correct
+      markQuizCompleted('3d_printer', allCorrect);
+    }
+
         </script>
 
 </body>
