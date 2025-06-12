@@ -34,13 +34,7 @@
   </div>
 
     <p class="title">Get to know 3D Models</p> 
-<p class="subtitle">By the end of this chapter, you will be able to:
-<ul>
-  <li>Understand what a 3D model is and its role in 3D printing;</li>
-  <li>Identify different sources to find 3D models online;</li>
-  <li>Learn how to prepare and modify 3D models for 3D printing;</li>
-  <li>Recognize key modelling terms and concepts.</li>
-</ul> </p>
+<p class="subtitle">Explore the world of 3D models! Learn what they are, where to find them, and how to get them ready for 3D printing success </p>
   
 <!--Chapter 1 -->
 <div class="content_flex">
@@ -58,7 +52,7 @@
             or <strong>.3MF </strong>(modern format designed for 3D printing, storing more detailed information like color, materials, and print settings).</p> 
         </div>
       </div>
-  
+
 <!--Chapter 2 -->
 <div class="content-container">
     <div  class="content-header" onclick="toggleContent('model2',this)">
@@ -102,7 +96,8 @@
     </div>
     </div>
   </div>
-  
+
+
   <!--Chapter 3 -->
 <div class="content-container">
     <div  class="content-header" onclick="toggleContent('model3',this)">
@@ -156,8 +151,7 @@
     </div>
   </div>
 
-  
-<!-- Interactive Quiz: Using 3D Models -->
+  <!-- Interactive Quiz: Using 3D Models -->
 <div class="content-container">
   <div class="content-header" onclick="toggleContent('model4', this)">
     <span class="arrow_intro">&gt;</span>
@@ -195,29 +189,165 @@
 
   <!--Chapter 4 -->
 <div class="content-container">
-    <div  class="content-header" onclick="toggleContent('model5',this)">
-        <span class="arrow_intro">&gt;</span>
-      Chapter 4: Fundamentals of 3D Modeling (advanced)
-    </div>
-    <div id='model5' class="collapsible-content">
-      <p>Text</p>
-       </div>
+  <div class="content-header" onclick="toggleContent('model5', this)">
+    <span class="arrow_intro">&gt;</span>
+    Chapter 4: Fundamentals of 3D Modelling | <span style="color: red;font-weight: bold;">advanced</span>
+  </div>
+  <div id="model5" class="collapsible-content">
+    <h3>Introduction</h3>
+    <p>
+      3D modelling is the process of creating a digital representation of a physical object using specialized software. In this chapter, we’re going to look at how 3D models are built, what terminology you’ll encounter, and how geometry and modeling tools work together to produce printable results. You’ll also get introduced to two commonly used free modeling platforms: TinkerCAD and SketchUp.
+    </p>
+
+    <h3>Common Terms and Definitions</h3>
+    <p>Before we get into practical use, here are essential terms you'll come across:</p>
+    <ul>
+      <li><strong>Vertex</strong> – a single point in 3D space. Multiple vertices connect to form edges.</li>
+      <li><strong>Edge</strong> – a straight line between two vertices.</li>
+      <li><strong>Face</strong> – a flat surface bounded by edges. Most 3D models are made up of triangular or quadrilateral faces.</li>
+      <li><strong>Mesh</strong> – a collection of vertices, edges, and faces that defines the shape of a 3D object.</li>
+      <li><strong>Extrude</strong> – a function that turns a 2D shape (like a circle) into a 3D object (like a cylinder) by giving it depth.</li>
+      <li><strong>Boolean Operations</strong> – functions that combine objects (union), subtract one from another (difference), or find the shared space (intersection).</li>
+      <li><strong>Manifold (Watertight)</strong> – a 3D model that is completely enclosed, with no holes or non-connected edges. This is required for 3D printing.</li>
+      <li><strong>Normals</strong> – directions assigned to faces. All normals should point outward for printable objects.</li>
+      <li><strong>Parametric Modeling</strong> – a method of designing where dimensions and constraints can be changed later, updating the model automatically.</li>
+    </ul>
+    
+<br><h3>Free 3D Modeling Software:<span style="color: green;"> Advantages</span> & <span style="color: red;"> Disadvantages </span></h3>
+<p>There are several excellent free tools available for creating 3D models. Here’s an overview of the most popular ones used in the 3D printing community:</p>
+
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%; max-width: 900px;">
+  <thead style="background-color: #f2f2f2;">
+    <tr>
+      <th>Software</th>
+      <th>Type</th>
+      <th>Strengths</th>
+      <th>Weaknesses</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>TinkerCAD</strong></td>
+      <td>Web-based</td>
+      <td>Beginner-friendly, drag-and-drop, cloud-based, fast prototyping</td>
+      <td>Limited geometry control, lacks advanced tools</td>
+    </tr>
+    <tr>
+      <td><strong>SketchUp Free</strong></td>
+      <td>Web/Desktop</td>
+      <td>Great for architectural/spatial work, easy extrusion, measurement tools</td>
+      <td>Not ideal for organic/precision work, STL export setup needed</td>
+    </tr>
+    <tr>
+      <td><strong>FreeCAD</strong></td>
+      <td>Desktop (Open-source)</td>
+      <td>Parametric, professional-grade mechanical design</td>
+      <td>Steep learning curve, outdated interface</td>
+    </tr>
+    <tr>
+      <td><strong>Blender</strong></td>
+      <td>Desktop (Open-source)</td>
+      <td>Advanced mesh/organic modeling, sculpting tools</td>
+      <td>Complex interface, not ideal for mechanical parts</td>
+    </tr>
+  </tbody>
+</table>
+
+
+   <br> <h3>Geometry and Its Relevance in 3D Modelling</h3>
+    <p>
+      All 3D models are built from geometric primitives—shapes like cubes, spheres, and cylinders—and then modified into more complex forms.
+      Geometry is not just visual; it determines how your model behaves during slicing and printing.
+    </p>
+    <p>
+      A solid object in modeling software must be “watertight.” If your shape has gaps or disconnected faces, your slicer won’t generate a correct toolpath.
+    </p>
+    <p>
+      The complexity of geometry also affects print time and model stability. Overly detailed meshes with thousands of faces may slow down processing and printing unnecessarily.
+    </p>
+    <p>
+      Flat surfaces and clean edges are ideal for accurate fitting parts.
+    </p>
+    <p>
+      Curved or sculpted surfaces require more careful modeling and slicing settings to preserve detail without overloading your printer.
+    </p>
+    <p>
+      Understanding how to construct geometry effectively leads to more reliable prints and makes post-processing easier.
+    </p>
+
+  
+    <!-- Parent container with flex to align left and right -->
+<div style="display: flex; gap: 20px; align-items: flex-start;">
+
+  <!-- Left: Text content -->
+  <div style="flex: 1; min-width: 0;">
+   <br> <h2>Getting to Know the Software: TinkerCAD & SketchUp</h2>
+<br><h4>SketchUp (Free Version)</h4>
+    <p>
+      SketchUp is commonly used in architecture, interior design, and spatial planning. It uses line-based modeling, where you draw in 2D and use the Push/Pull tool to make things 3D.
+    </p>
+    <p>
+      Features include a clean drawing-based interface, push/pull extrusion, measurement and snapping tools, and the ability to extend functionality with plugins for STL export.
+      It is available as both web-based and desktop versions.
+    </p>
+    <p>
+      Use Case Example: Designing a 3D-printed organizer that fits inside a specific drawer.
+    </p>
+    
+    <br><h4>TinkerCAD</h4>
+    <p>
+      TinkerCAD is one of the most accessible and user-friendly 3D modeling tools available today, especially suited for beginners and those looking to quickly create printable designs. 
+      It is a browser-based application, meaning you don’t need to install any software—simply sign up and start designing directly in your web browser.
+    </p>
+  </div>
+
+  <!-- Right: Videos stacked vertically -->
+<div style="flex-shrink: 0; width: 600px; max-width: 100%; display: flex; flex-direction: column; gap: 20px;">
+  
+  <!-- Video 1 -->
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
+    <iframe 
+      src="https://www.youtube.com/embed/zpdMZK6LlDE" 
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen 
+      title="SketchUp Tutorial">
+    </iframe>
+  </div>
+
+  <!-- Video 2 -->
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px;">
+    <iframe 
+     src="https://www.youtube.com/embed/QIn9c5TjrKk"
+      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowfullscreen 
+      title="TinkerCAD Tutorial">
+    </iframe>
+  </div>
+
 </div>
 
-<!--Chapter 5 -->
-    <div class="content-container">
-        <div  class="content-header" onclick="toggleContent('model6',this)">
-            <span class="arrow_intro">&gt;</span>
-          Chapter 5: From sketching to full model (advanced) 
-    </div>
-    <div id='model6' class="collapsible-content">
-      <h3>Objective of this Chapter</h3>
-      <p>This chapter will provide an overview of essential 3D modelling concepts, introduce commonly used terminology, explore free modelling tools, and guide you through fundamental geometry used in modelling for 3D printing.</p>
+</div>
 
- <br> <h3>Geometry in 3D Modelling</h3>
-      
- </div>
-      </div> 
+
+  
+   <br> <h3>Summary of Key Terms</h3>
+    <p>
+      To conclude this chapter, here are the most essential takeaways:
+    </p>
+    <ul>
+      <li>3D models are built from geometry—faces, edges, and vertices forming solid, manifold shapes.</li>
+      <li>Modeling software varies by purpose: TinkerCAD is ideal for beginners; SketchUp excels in architectural design; FreeCAD is strong for engineering.</li>
+      <li>Terms like “extrude,” “boolean,” “mesh,” and “manifold” are not just definitions—they are tools you’ll use in nearly every project.</li>
+    </ul>
+  </div>
+</div>
+
+  
+
 
       <script>
         function toggleContent(id, headerElement) {
@@ -232,52 +362,57 @@
             arrow.classList.remove('rotated');
           } else {
             arrow.classList.add('rotated');
-            markInteraction('3d_models', id === 'model3');
           }
-        
-    
-  };
+        }
 
+        window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.substring(1); // remove the '#' symbol
+    if (hash) {
+      const targetHeader = document.querySelector(`[onclick*="${hash}"]`);
+      if (targetHeader) {
+        toggleContent(hash, targetHeader);
+        targetHeader.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  });
+  function toggleMenu() {
+  const navList = document.querySelector('.nav_bar_list');
+  if (navList.style.display === 'flex') {
+    navList.style.display = 'none';
+  } else {
+    navList.style.display = 'flex';
+  }
+}
 
 
         function checkQuiz() {
-    // Correct answers
-    const answers = {
-      q1: "c",
-      q2: "c",
-      q3: "b"
-    };
+      // Correct answers
+      const answers = {
+        q1: "c",
+        q2: "c",
+        q3: "b",
+      };
+      let allCorrect = true;
+      for (let q in answers) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const feedback = document.getElementById(`feedback-${q}`);
 
-    let allCorrect = true;
-    for (let q in answers) {
-      const selected = document.querySelector(`input[name="${q}"]:checked`);
-      const feedback = document.getElementById(`feedback-${q}`);
-
-      if (!selected) {
-        feedback.textContent = "Please select an answer.";
-        feedback.style.color = "orange";
-      } else if (selected.value === answers[q]) {
-        feedback.textContent = "Correct!";
-        feedback.style.color = "green";
-      } else {
-        feedback.textContent = "Incorrect. Try reviewing the chapter.";
-        feedback.style.color = "red";
-        allCorrect = false;
+        if (!selected) {
+          feedback.textContent = "Please select an answer.";
+          feedback.style.color = "orange";
+        } else if (selected.value === answers[q]) {
+          feedback.textContent = "Correct!";
+          feedback.style.color = "green";
+        } else {
+          feedback.textContent = "Incorrect. Try reviewing the chapter.";
+          feedback.style.color = "red";
+          allCorrect = false;
+        }
       }
+      // Mark quiz as completed only if all correct
+      markQuizCompleted('3d_printer', allCorrect);
     }
-    // Mark quiz as completed only if all correct
-  markQuizCompleted('3d_models', allCorrect);
-}
-        
-</script>
-<script src="progress.js"></script>
 
-<style> .feedback {
-    font-weight: bold;
-    margin-top: 0.25rem;
-    margin-bottom: 1rem;
-  }
-  
-  </style>
+        </script>
+
 </body>
-
