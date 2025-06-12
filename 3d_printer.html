@@ -59,54 +59,124 @@
       <div id='printer1' class="collapsible-content">
         <div style="display: flex; align-items: flex-start; gap: 20px;">
           <!-- Left: Image -->
-          <a href="https://wiki.bambulab.com/en/a1" target="_blank">
-            <img src="3d_printer_resources/a1_mini_glosssary_1.png" alt="3D Printer">
+          <a href="https://wiki.bambulab.com/en/a1" target="_blank" style="flex: 0 0 45%;">
+            <img src="3d_printer_resources/a1_mini_glosssary_1.png" alt="3D Printer" style="width: 100%; height: auto;">
           </a>
           <!-- Right: Text -->
           <div>
-            <h3>Key Components</h3>
-            <p>This diagram shows all major parts of the Bambu Lab A1 mini
-              <span class="term-tooltip">3D printer<span class="tooltip-text">A machine that builds objects layer by
-                  layer from a digital 3D model.</span>
-              </span>, including:
-            </p>
-            <ul>
-              <li><b>1. Filament Hub:</b> Holds and feeds the filament into the printer </li>
-              <li><b>2. Toolhead:</b> It contains the <span class="term-tooltip">Extruder<span
-                    class="tooltip-text">Pushes and melts filament to create layers during 3D printing.</span>
-                </span> and is the moving unit which melts and lays down the
-                filament </li>
-              <li><b>3. X-axis Linear Rail:</b> Provides smooth motion for the toolhead on the X-axis </li>
-              <li><b>4. Purge Wiper:</b> Helps with removing the <span class="term-tooltip">purged filament<span
-                    class="tooltip-text">Excess filament pushed out of the nozzle to clear old or mixed
-                    material.</span></span> before and during printing </li>
-              <li><b>5. Hotend Silicone Sock:</b> Keeps the nozzle insulated to maintain temperature </li>
-              <li><b>6. Build Plate:</b> Is the surface which magnetically attaches to the Heatbed and the model is
-                printed on. </li>
-              <li><b>7. Heatbed:</b> Provides smooth motion for the Heatbed on the Y-axis during printing </li>
-              <li><b>8. Y-axis Linear Rail:</b> Moves on the Y-axis during printing holding the Build Plate magnetically
-                attached </li>
-              <li><b>9. USB-C Cable:</b> Connects the Toolhead to the Mainboard </li>
-              <li><b>10. Filament Cutter Lever:</b> Cuts filament for clean feeding </li>
-              <li><b>11. Camera:</b> Records prints or assists in monitoring remotely </li>
-              <li><b>12. Z-axis Linear Rail:</b> Provides smooth motion for the X-axis on the Z-axis during printing
-              </li>
-              <li><b>13. Part Cooling Fan:</b> Cools the printed layer lines to solidify the filament quickly </li>
-              <li><b>14. Nozzle:</b> Is melting the filament before the printer lays down the layer lines of the 3D
-                printed model </li>
-              <li><b>15. Touchscreen:</b> Controls printer functions and displays status </li>
-              <li><b>16. AMS Ports:</b> Connects to the <span class="term-tooltip">AMS (Automatic Material System)<span
-                    class="tooltip-text">AMS (Automatic Material System) is an add-on for 3D printers that automatically
-                    loads and switches between multiple filaments during a print.
-                  </span></span> for multicolor printing </li>
-              <li><b>17. Micro SD Card:</b> Used to load print files</li>
-            </ul>
+            <h2>Key Components</h3>
+              <p>This diagram shows all major parts of the Bambu Lab A1 mini
+                <span class="term-tooltip">3D printer<span class="tooltip-text">A machine that builds objects layer by
+                    layer from a digital 3D model.</span>
+                </span>, including:
+              </p>
+
+              <table class="comparison-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1.</td>
+                    <td><b>Filament Hub</b></td>
+                    <td>Holds and feeds the filament into the printer</td>
+                  </tr>
+                  <tr>
+                    <td>2.</td>
+                    <td><b>Toolhead</b></td>
+                    <td>Contains the <span class="term-tooltip">Extruder<span class="tooltip-text">Pushes and melts
+                          filament to create layers during 3D printing.</span></span> and moves to lay down filament
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3.</td>
+                    <td>X-axis Linear Rail</td>
+                    <td>Provides smooth motion for the toolhead on the X-axis</td>
+                  </tr>
+                  <tr>
+                    <td>4.</td>
+                    <td>Purge Wiper</td>
+                    <td>Removes <span class="term-tooltip">purged filament<span class="tooltip-text">Excess filament
+                          pushed out of the nozzle to clear old or mixed material.</span></span> before and during
+                      printing</td>
+                  </tr>
+                  <tr>
+                    <td>5.</td>
+                    <td>Hotend Silicone Sock</td>
+                    <td>Keeps the nozzle insulated to maintain temperature</td>
+                  </tr>
+                  <tr>
+                    <td>6.</td>
+                    <td><b>Build Plate</b></td>
+                    <td>Magnetically attaches to the Heatbed; where the model is printed</td>
+                  </tr>
+                  <tr>
+                    <td>7.</td>
+                    <td><b>Heatbed</b></td>
+                    <td>Moves on the Y-axis and provides a heated surface for printing</td>
+                  </tr>
+                  <tr>
+                    <td>8.</td>
+                    <td>Y-axis Linear Rail</td>
+                    <td>Enables Y-axis movement for the Build Plate</td>
+                  </tr>
+                  <tr>
+                    <td>9.</td>
+                    <td>USB-C Cable</td>
+                    <td>Connects the Toolhead to the Mainboard</td>
+                  </tr>
+                  <tr>
+                    <td>10.</td>
+                    <td>Filament Cutter Lever</td>
+                    <td>Cuts filament for clean feeding</td>
+                  </tr>
+                  <tr>
+                    <td>11.</td>
+                    <td>Camera</td>
+                    <td>Records prints or assists in monitoring remotely</td>
+                  </tr>
+                  <tr>
+                    <td>12.</td>
+                    <td>Z-axis Linear Rail</td>
+                    <td>Moves the X-axis assembly vertically</td>
+                  </tr>
+                  <tr>
+                    <td>13.</td>
+                    <td>Part Cooling Fan</td>
+                    <td>Cools printed layers quickly for better quality</td>
+                  </tr>
+                  <tr>
+                    <td>14.</td>
+                    <td><b>Nozzle</b></td>
+                    <td>Melts and deposits filament to form the print</td>
+                  </tr>
+                  <tr>
+                    <td>15.</td>
+                    <td><b>Touchscreen</b></td>
+                    <td>Controls printer functions and displays status</td>
+                  </tr>
+                  <tr>
+                    <td>16.</td>
+                    <td>AMS Ports</td>
+                    <td>Connect to the <span class="term-tooltip">AMS<span class="tooltip-text">Automatically loads and
+                          switches filaments for multicolor prints.</span></span></td>
+                  </tr>
+                  <tr>
+                    <td>17.</td>
+                    <td>Micro SD Card</td>
+                    <td>Used to load print files</td>
+                  </tr>
+                </tbody>
+              </table>
           </div>
         </div>
 
       </div>
     </div>
-
 
 
     <!--Chapter 2 -->
@@ -299,63 +369,13 @@
       </div>
     </div>
 
-
     <!--Chapter 3 -->
     <div class="content-container">
       <div class="content-header" onclick="toggleContent('printer3',this)">
         <span class="arrow_intro">&gt;</span>
-        Chapter 3: Try it yourself! AR 3D Printer Simulation
+        Chapter 3: Summary of Terms
       </div>
-      <div id="printer3" class="collapsible-content">
-
-        <!-- FLEX CONTAINER -->
-        <div style="display: flex; align-items: flex-start; gap: 2em; margin-bottom: 1em;">
-
-          <!-- Left: Text content -->
-          <div style="flex: 1;">
-            <h2>Try it yourself!</h2>
-            <p>Want to walk around the printer virtually and learn setup steps interactively?</p>
-            <h4>How to use</h4>
-            <ul>
-              <li>Print the included <span class="term-tooltip">Hiro Marker<span class="tooltip-text">A Hiro marker is a
-                    black-and-white square used in AR (Augmented Reality) to help cameras recognize position and
-                    orientation in 3D space.</span></span></li>
-              <li>Place the marker on a flat surface</li>
-              <li>Open the app and point your camera at the marker</li>
-              <li>Explore, tap the 3D buttons, and simulate a 3D print!</li>
-            </ul>
-            <br>
-            <p><strong><a href="https://basicasian.itch.io/printorial" target="_blank">Download here</a></strong>
-              (Android
-              only) or scan the QR Code on the right on your phone directly</p>
-          </div>
-
-          <!-- Right: Two Images Side by Side -->
-          <div style="display: flex; flex-direction: row; gap: 1em; flex-shrink: 0;">
-            <a href="https://basicasian.itch.io/printorial" target="_blank">
-              <img src="3d_printer_resources/printorial.png" alt="Bambu Lab A1 AR demo"
-                style="width: 300px; border-radius: 8px;">
-            </a>
-            <a href="https://basicasian.itch.io/printorial" target="_blank">
-              <img src="3d_printer_resources/qr-itchio-printorial.png" alt="QR Code for AR App"
-                style="width: 220px; border-radius: 8px;">
-            </a>
-          </div>
-
-
-        </div>
-        <!-- END FLEX CONTAINER -->
-
-      </div>
-    </div>
-
-    <!--Chapter 4 -->
-    <div class="content-container">
-      <div class="content-header" onclick="toggleContent('printer4',this)">
-        <span class="arrow_intro">&gt;</span>
-        Chapter 4: Summary of Terms
-      </div>
-      <div id='printer4' class="collapsible-content">
+      <div id='printer3' class="collapsible-content">
 
         <table style="width: 100%; border-collapse: collapse;" class="glossary-table">
           <tbody>
@@ -394,11 +414,11 @@
 
     <!-- Interactive Quiz-->
     <div class="content-container">
-      <div class="content-header" onclick="toggleContent('printer5', this)">
+      <div class="content-header" onclick="toggleContent('printer4', this)">
         <span class="arrow_intro">&gt;</span>
         Quiz: About 3D Printers
       </div>
-      <div id="printer5" class="collapsible-content">
+      <div id="printer4" class="collapsible-content">
         <p>Test the knowledge you have accumulated from this chapter by completing this interactive Quiz Test!</p><br>
         <form id="quiz-form">
 
@@ -438,11 +458,11 @@
 
     <!--Chapter 5 -->
     <div class="content-container">
-      <div class="content-header" onclick="toggleContent('printer6',this)">
+      <div class="content-header" onclick="toggleContent('printer5',this)">
         <span class="arrow_intro">&gt;</span>
         Chapter 5: Manual Bed Leveling | <span style="color: red;font-weight: bold;">advanced</span>
       </div>
-      <div id="printer6" class="collapsible-content">
+      <div id="printer5" class="collapsible-content">
 
 
         <!-- Subsection 1 -->
@@ -478,14 +498,14 @@
               (expansion from heat changes gap).
             </div>
 
-            <h4>Comparison: Manual vs Automatic Leveling</h4>
+            <h4>Comparison: Manual vs. Automatic Leveling</h4>
             <p> Whether you choose manual or automatic leveling depends on your needs, experience level, and printing
               environment. <br>
-              Choose Manual Leveling if: you have experience and want full control over the process, have a printer
+              <b>Choose Manual Leveling if:</b> you have experience and want full control over the process, have a printer
               without automatic bed leveling (ABL), print small models where perfect leveling is easier to achieve
               manually.
               <br>
-              Choose Autoamtic Leveling if: you are new to 3D printing, you switch between different materias frequently
+              <b>Choose Autoamtic Leveling if:</b> you are new to 3D printing, you switch between different materials frequently
               and you want to save setup time before each print.
 
 
@@ -566,11 +586,11 @@
 
     <!--Chapter 6 -->
     <div class="content-container">
-      <div class="content-header" onclick="toggleContent('printer7',this)">
+      <div class="content-header" onclick="toggleContent('printer6',this)">
         <span class="arrow_intro">&gt;</span>
         Chapter 6: Changing Filament Mid Print | <span style="color: red;font-weight: bold;">advanced</span>
       </div>
-      <div id="printer7" class="collapsible-content">
+      <div id="printer6" class="collapsible-content">
 
 
         <!-- Subsection 1 -->
@@ -745,8 +765,8 @@
     .comparison-table th,
     .comparison-table td {
       border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
+      padding: 5px 8px;     /* less vertical padding */
+      line-height: 1.2;     /* tighter line spacing */
     }
 
     /* Specific style for table headers */
