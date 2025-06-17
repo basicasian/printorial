@@ -9,6 +9,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+  <head>
+  <meta charset="UTF-8">
+  <title>3D Printing Table</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+      font-family: sans-serif;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px 16px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+    tr:nth-child(even) td {
+      background-color: #fafafa;
+    }
+  </style>
 </head>
 
 <body>
@@ -166,20 +189,119 @@ Here is what the bottom layer looks like. Now here is the next one. Now the one 
 <div class="content-container">
     <div  class="content-header" onclick="toggleContent('slicing4',this)">
         <span class="arrow_intro">&gt;</span>
-      Chapter 4: Title
+      Chapter 4: Infill & Support Structures
     </div>
     <div id='slicing4' class="collapsible-content">
-      <p>This is the content for Subchapter 3.</p>
+      <p><strong>What is infill?</strong></p>
+      <p>Think of infill as the “inside” of your printed object. Imagine you’re building a wall:</p>
+      <ul>
+        <li>If it’s made of solid bricks = heavy, strong, and uses a lot of material.</li>
+        <li>If it's hollow = light, faster to build, but maybe weaker.</li>
+      </ul>
+      <br> <p><strong>Infill</strong> does the same for your 3D print. Most objects don’t need to be 100% solid, so we only print a solid outer shell and fill the inside with a pattern.</p>
+      <br> <p><strong>Why use infill?</strong></p>
+      <ul>
+        <li>To save filament and speed up printing.</li>
+        <li>To give enough strength without wasting material.</li>
+        <li>To reduce weight (e.g., for flying drones or cosplay props).</li>
+      </ul>
+
+      <br> <p><strong>How does it work in slicing software?</strong></p>
+      <p>In Bambu Studio, you can choose:
+        <ul>
+          <li><strong>Infill percentage</strong> → How “solid” the inside should be.</li>
+          <ul>
+            <li>0% = completely hollow</li>
+            <li>20% = light object, basic strength (good for display items)</li>
+            <li>50%+ = heavy-duty strength (e.g., tool handles)</li>
+          </ul>
+          <li><strong>Infill pattern</strong> → The shape of the structure inside.</li>
+        </ul>
+      </p>
+      <br>
+      <p><strong>What Are Support Structures?</strong></p>
+      <p>Imagine trying to print the letter T: the horizontal line at the top doesn’t have anything underneath it. If you just let the printer go, it would try to print “in the air”— which won’t work!
+Support structures are temporary “scaffolding” that hold up parts of your model that would otherwise sag or fall during printing.</p>
+
+      <br><p><strong>When do you need support</strong></p>
+      <p>Here is one simple rule: If a part of your model overhangs more than 45° from vertical, it probably needs support.</p>
+
+      <br><p><strong>Types of Support in Bambu Studio</strong></p>
+      <ol>
+        <li><strong>Everywhere</strong></li>
+        <ul>
+          <li>Supports are added under any overhang, even if it’s floating in mid-air.</li>
+          <li>Great for complex models but uses more filament.</li>
+          <li>Can be harder to remove.</li>
+        </ul>
+        <li><strong>Touching Build Plate Only</strong></li>
+        <ul>
+          <li>Supports are only added if they can stand on the print bed.</li>
+          <li>Easier to remove and uses less material.</li>
+          <li>May not help for supports high up inside a model.</li>
+        </ul>
+        <li><strong>Tree Supports</strong></li>
+        <ul>
+          <li>Branch-like supports that grow under overhangs.</li>
+          <li>Use less material and are easier to break off.</li>
+          <li>Great for figurines and organic shapes.</li>
+        </ul>
+      </ol>
     </div>
   </div>
   <!--Chapter 5 -->
 <div class="content-container">
     <div  class="content-header" onclick="toggleContent('slicing5',this)">
         <span class="arrow_intro">&gt;</span>
-      Chapter 5: Title
+      Chapter 5: Glossary of Useful Terms
     </div>
     <div id='slicing5' class="collapsible-content">
-      <p>This is the content for Subchapter 5.</p>
+      <p><strong>Slicer: </strong> The software that prepares your model for the printer</p>
+      <p><strong>G-Code: </strong> The instructions your printer follows to build your model</p>
+      <p><strong>Layer Height:</strong> The thickness of each layer—smaller = finer detail.</p>
+      <p><strong>Infill:</strong> Interior structure density (0–100%).</p>
+      <p><strong>Support: </strong> Temporary scaffolding under overhangs.</p>
+      
+    </div>
+  </div>
+</div>
+
+  <!--Chapter 6 -->
+<div class="content-container">
+    <div  class="content-header" onclick="toggleContent('slicing5',this)">
+        <span class="arrow_intro">&gt;</span>
+      Chapter 6: Quiz
+    </div>
+    <div id='slicing5' class="collapsible-content">
+
+      <p>Test the knowledge you have accumulated from this chapter by completing this interactive Quiz Test!</p><br>
+    <form id="quiz-form">
+      <h3>1. What does a slicer do?</h3>
+      <label><input type="radio" name="q1" value="a"> a) Draws a 3D model from scratch</label><br>
+      <label><input type="radio" name="q1" value="b"> b) Adds color to your object</label><br>
+      <label><input type="radio" name="q1" value="c"> c) Translates a 3D model into step-by-step printable layers</label><br>
+      <label><input type="radio" name="q1" value="d"> d) Controls the speed of the printer motor</label><br>
+      <p id="feedback-q1" class="feedback"></p>
+
+      <h3>2. What does “infill” control?</h3>
+      <label><input type="radio" name="q2" value="a"> a) The outer color of your print</label><br>
+      <label><input type="radio" name="q2" value="b"> b) The type of filament you use</label><br>
+      <label><input type="radio" name="q2" value="c"> c) How solid the inside of your print is</label><br>
+      <label><input type="radio" name="q2" value="d"> d) The speed of your printer’s fan</label><br>
+      <p id="feedback-q2" class="feedback"></p>
+
+      <h3>3. What file format does a slicer produce for the printer?</h3>
+      <label><input type="radio" name="q3" value="a"> a) .JPEG</label><br>
+      <label><input type="radio" name="q3" value="b"> b) .STL</label><br>
+      <label><input type="radio" name="q3" value="c"> c) .GCODE</label><br>
+      <label><input type="radio" name="q3" value="d"> d) .PDF</label><br>
+      <p id="feedback-q3" class="feedback"></p>
+
+      <button type="button" onclick="checkQuiz()">Submit Answers</button>
+    </form>
+
+
+      
     </div>
   </div>
 </div>
