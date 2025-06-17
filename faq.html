@@ -143,36 +143,47 @@
     <li>Use adhesive aids if needed</li>
   </ul>
 
-  <h4>Under- or Over-Extrusion</h4>
-  <h5>Under-extrusion</h5>
-  <p><strong>What it looks like:</strong> Gaps, thin layers, incomplete print walls.</p>
-  <p><strong>What causes it:</strong></p>
+  <h4>Under-Extrusion</h4>
+  <p><strong>What it looks like:</strong> Gaps between printed lines, weak walls, missing layers, or inconsistent filament flow.</p>
+
+  <p><strong>Possible Causes:</strong></p>
   <ul>
-    <li>Clogged nozzle</li>
-    <li>Low nozzle temperature</li>
-    <li>Filament tangled or stuck</li>
-    <li>Old or low-quality filament</li>
-  </ul>
-  <p><strong>Fixes:</strong></p>
-  <ul>
-    <li>Do a cold pull or nozzle clean</li>
-    <li>Raise nozzle temperature slightly (+5–10°C)</li>
-    <li>Check filament path and spool movement</li>
-    <li>Use dry, fresh filament</li>
+    <li>Clogged or partially blocked nozzle</li>
+    <li>Nozzle temperature too low</li>
+    <li>Filament spool tangled or feeding inconsistently</li>
+    <li>Extruder motor skipping steps or grinding</li>
+    <li>Filament is old or has absorbed moisture</li>
   </ul>
 
-  <h5>Over-extrusion</h5>
-  <p><strong>What it looks like:</strong> Blobs, oozing, thick layers.</p>
-  <p><strong>What causes it:</strong></p>
+  <p><strong>How to fix it:</strong></p>
   <ul>
-    <li>Extrusion multiplier (flow rate) too high</li>
-    <li>Nozzle too close to bed</li>
+    <li>Clean the nozzle (try a cold pull or use a nozzle cleaning needle)</li>
+    <li>Increase the nozzle temperature slightly (5–10°C)</li>
+    <li>Ensure filament moves freely on the spool and through the extruder</li>
+    <li>Dry filament using a filament dryer or airtight container with silica gel</li>
+    <li>Check for gear grinding or loose extruder tension</li>
   </ul>
-  <p><strong>Fixes:</strong></p>
+</section>
+
+<section>
+  <h4>Over-Extrusion</h4>
+  <p><strong>What it looks like:</strong> Blobby prints, excess filament, thick lines, rough surface finish, or dimensional inaccuracy.</p>
+
+  <p><strong>Possible Causes:</strong></p>
   <ul>
-    <li>Lower flow rate to 95–98%</li>
-    <li>Raise Z-offset slightly</li>
+    <li>Extrusion multiplier (flow rate) set too high in the slicer</li>
+    <li>Nozzle too close to the bed causing excess squish</li>
+    <li>Incorrect filament diameter set in slicer</li>
   </ul>
+
+  <p><strong>How to fix it:</strong></p>
+  <ul>
+    <li>Lower the flow rate to around 95–98% in slicer settings</li>
+    <li>Check and adjust Z-offset if first layer is too compressed</li>
+    <li>Ensure filament diameter matches what is set in the slicer (usually 1.75 mm)</li>
+    <li>Use calibration prints to fine-tune extrusion settings</li>
+  </ul>
+
 
   <h4>Stringing</h4>
   <p><strong>What it looks like:</strong> Thin, wispy strings between parts of the print.</p>
@@ -281,7 +292,7 @@
     </tbody>
   </table>
 
-  <h4>ips for Asking Questions</h4>
+  <h4>Tips for Asking Questions</h4>
   <p>When you ask for help online, try to include the following:</p>
   <ul>
     <li>Your printer model</li>
