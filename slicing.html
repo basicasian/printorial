@@ -268,7 +268,7 @@ Support structures are temporary “scaffolding” that hold up parts of your mo
 
   <!--Chapter 6 -->
 <div class="content-container">
-    <div  class="content-header" onclick="toggleContent('slicing5',this)">
+    <div  class="content-header" onclick="toggleContent('slicing6',this)">
         <span class="arrow_intro">&gt;</span>
       Chapter 6: Quiz
     </div>
@@ -341,6 +341,33 @@ Support structures are temporary “scaffolding” that hold up parts of your mo
     navList.style.display = 'flex';
   }
 }
+        function checkQuiz() {
+      // Correct answers
+      const answers = {
+        q1: "c",
+        q2: "c",
+        q3: "c",
+      };
+      let allCorrect = true;
+      for (let q in answers) {
+        const selected = document.querySelector(`input[name="${q}"]:checked`);
+        const feedback = document.getElementById(`feedback-${q}`);
+
+        if (!selected) {
+          feedback.textContent = "Please select an answer.";
+          feedback.style.color = "orange";
+        } else if (selected.value === answers[q]) {
+          feedback.textContent = "Correct!";
+          feedback.style.color = "green";
+        } else {
+          feedback.textContent = "Incorrect. Try reviewing the chapter.";
+          feedback.style.color = "red";
+          allCorrect = false;
+        }
+      }
+      // Mark quiz as completed only if all correct
+      markQuizCompleted('3d_printer', allCorrect);
+    }
         </script>
         <script src="progress.js"></script>
 
