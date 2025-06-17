@@ -32,7 +32,9 @@
   </div>
 
     <p class="title">How to: Slicing </p>
-    <p class="subtitle"> By the end of this chapter, you’ll understand what slicing is, why it is essential, and how to prepare your 3D model for printing using slicing software. We will use Bambu Studio as our example, but the basics apply to nearly all slicers.  
+    <p class="subtitle"> By the end of this chapter, you’ll understand what slicing is, why it is essential, and how to prepare 
+      your 3D model for printing using slicing software. We will use Bambu Studio as our example, but the basics apply to nearly 
+      all slicers.  
     </p> 
 <!--Chapter 1 -->
 <div class="content_flex">
@@ -124,9 +126,42 @@ Here is what the bottom layer looks like. Now here is the next one. Now the one 
     </div>
     <div id='slicing3' class="collapsible-content">
       <p><strong>TIP:</strong> Bambu Studio usually chooses great defaults. You don’t have to touch every setting at first!</p>
-      
+      <p>
+        <table border="1" cellspacing="0" cellpadding="8">
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>What it Means</th>
+      <th>What to Pick</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Layer Height</strong></td>
+      <td>How thick each printed layer is</td>
+      <td>0.2 mm for beginners (balance between quality & speed)</td>
+    </tr>
+    <tr>
+      <td><strong>Infill</strong></td>
+      <td>How solid the inside of your print is</td>
+      <td>15–20% is fine for most objects</td>
+    </tr>
+    <tr>
+      <td><strong>Support</strong></td>
+      <td>Extra material added underneath overhangs</td>
+      <td>Off (if your model doesn’t need it); On if your model has floating parts</td>
+    </tr>
+    <tr>
+      <td><strong>Brim</strong></td>
+      <td>A flat “skirt” around your print to help it stick</td>
+      <td>On (helps avoid first layer failures)</td>
+    </tr>
+  </tbody>
+</table>
+      </p>
     </div>
   </div>
+  
   <!--Chapter 4 -->
 <div class="content-container">
     <div  class="content-header" onclick="toggleContent('slicing4',this)">
