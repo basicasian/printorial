@@ -61,16 +61,15 @@
     <div class="content-container">
       <div class="content-header" onclick="toggleContent('faq1', this)">
         <span class="arrow_intro">&gt;</span>
-        Chapter 1: What Could Go Wrong (and What Might Just Look Strange)
+        Chapter 1: What Might Just Look Strange but are okay
       </div>
       <div id='faq1' class="collapsible-content">
         <p>3D printers are mechanical, noisy, and sometimes dramatic machines. Not everything that looks “off” is a real problem.</p>
         <table>
-  <caption>✅ Examples of things that <em>look weird but are okay:</em></caption>
   <thead>
     <tr>
-      <th>🤔 What You See</th>
-      <th>✅ What It Actually Is</th>
+      <th>What You See</th>
+      <th>What It Actually Is</th>
     </tr>
   </thead>
   <tbody>
@@ -105,10 +104,108 @@
     <div class="content-container">
       <div class="content-header" onclick="toggleContent('faq2', this)">
         <span class="arrow_intro">&gt;</span>
-        Chapter 2: Title
+        Chapter 2: Most Common Problems (And What to Do)
       </div>
       <div id='faq2' class="collapsible-content">
-        <p>This is the content for Subchapter 2.</p>
+
+        <h4>Spaghetti Prints (Print came loose or collapsed mid-print)</h4>
+  <p><strong>What it looks like:</strong> A tangle of filament in mid-air—looks like cooked spaghetti all over your print bed.</p>
+  <p><strong>What causes it:</strong></p>
+  <ul>
+    <li>Poor bed adhesion</li>
+    <li>Incorrect bed leveling or Z-offset</li>
+    <li>Printing too fast for tall/narrow objects</li>
+  </ul>
+  <p><strong>How to fix it:</strong></p>
+  <ul>
+    <li>Clean the bed thoroughly (use isopropyl alcohol)</li>
+    <li>Re-level the bed and adjust Z-offset</li>
+    <li>Use a brim or raft for better grip</li>
+    <li>Reduce first layer speed to ~15–20 mm/s</li>
+    <li>Try glue stick, painter’s tape, or other adhesion aids</li>
+  </ul>
+
+  <h4>Filament Not Sticking to Bed</h4>
+  <p><strong>What it looks like:</strong> First layer peels up, shifts, or never sticks properly.</p>
+  <p><strong>What causes it:</strong></p>
+  <ul>
+    <li>Dirty bed surface</li>
+    <li>Nozzle too far from the bed (bad Z-offset)</li>
+    <li>Incorrect first-layer settings in slicer</li>
+  </ul>
+  <p><strong>How to fix it:</strong></p>
+  <ul>
+    <li>Clean the print bed with IPA (90%+)</li>
+    <li>Recheck Z-offset—ensure filament slightly squishes into bed</li>
+    <li>Use a brim for better contact</li>
+    <li>Use correct bed temp (e.g. 60°C for PLA)</li>
+    <li>Slow down first layer speed</li>
+    <li>Use adhesive aids if needed</li>
+  </ul>
+
+  <h4>Under- or Over-Extrusion</h4>
+  <h5>Under-extrusion</h5>
+  <p><strong>What it looks like:</strong> Gaps, thin layers, incomplete print walls.</p>
+  <p><strong>What causes it:</strong></p>
+  <ul>
+    <li>Clogged nozzle</li>
+    <li>Low nozzle temperature</li>
+    <li>Filament tangled or stuck</li>
+    <li>Old or low-quality filament</li>
+  </ul>
+  <p><strong>Fixes:</strong></p>
+  <ul>
+    <li>Do a cold pull or nozzle clean</li>
+    <li>Raise nozzle temperature slightly (+5–10°C)</li>
+    <li>Check filament path and spool movement</li>
+    <li>Use dry, fresh filament</li>
+  </ul>
+
+  <h5>Over-extrusion</h5>
+  <p><strong>What it looks like:</strong> Blobs, oozing, thick layers.</p>
+  <p><strong>What causes it:</strong></p>
+  <ul>
+    <li>Extrusion multiplier (flow rate) too high</li>
+    <li>Nozzle too close to bed</li>
+  </ul>
+  <p><strong>Fixes:</strong></p>
+  <ul>
+    <li>Lower flow rate to 95–98%</li>
+    <li>Raise Z-offset slightly</li>
+  </ul>
+
+  <h4>Stringing</h4>
+  <p><strong>What it looks like:</strong> Thin, wispy strings between parts of the print.</p>
+  <p><strong>What causes it:</strong></p>
+  <ul>
+    <li>Low or no retraction settings</li>
+    <li>Nozzle too hot</li>
+  </ul>
+  <p><strong>Fixes:</strong></p>
+  <ul>
+    <li>Increase retraction distance and speed</li>
+    <li>Lower nozzle temperature slightly</li>
+    <li>Enable combing or travel optimization settings</li>
+  </ul>
+
+  <h4>Filament Not Loading / Jammed Nozzle</h4>
+  <p><strong>What it looks like:</strong> No filament comes out, or the printer reports no filament.</p>
+  <p><strong>What causes it:</strong></p>
+  <ul>
+    <li>Clog in the nozzle</li>
+    <li>Wrong or improperly loaded filament</li>
+    <li>Moisture in filament</li>
+    <li>Extruder gear slipping</li>
+  </ul>
+  <p><strong>Fixes:</strong></p>
+  <ul>
+    <li>Heat up nozzle and manually unload filament</li>
+    <li>Reload filament carefully via printer menu</li>
+    <li>Inspect gear for filament dust or grinding</li>
+    <li>Store filament in dry box or with silica gel</li>
+  </ul>
+</section>
+        
       </div>
     </div>
 
@@ -116,10 +213,26 @@
     <div class="content-container">
       <div class="content-header" onclick="toggleContent('faq3', this)">
         <span class="arrow_intro">&gt;</span>
-        Chapter 3: Title
+        Chapter 3: Tips & Tricks
       </div>
       <div id='faq3' class="collapsible-content">
-        <p>This is the content for Subchapter 3.</p>
+      <section>
+        <h4>Print Smart</h4>
+  <ul>
+    <li>Start with <strong>pre-sliced test models</strong> (often included on the printer's SD card) to check if everything is working correctly.</li>
+    <li><strong>Orient your model</strong> in a way that reduces overhangs. For example, lay flat objects on their back rather than standing them upright.</li>
+    <li>If a part is complex, consider <strong>splitting it into smaller pieces</strong> that are easier to print and then assemble them after printing.</li>
+  </ul>
+
+  <h4>Tune One Setting at a Time</h4>
+  <p>When something goes wrong, avoid changing everything at once. Instead, change only one setting (like temperature or speed), then reprint and compare the result. This makes it easier to understand what actually made a difference.</p>
+
+  <h4>Use Reliable Presets</h4>
+  <p>Most slicers (like Bambu Studio) come with tested, manufacturer-provided profiles. Start with a <strong>default profile</strong> like "Standard Quality - PLA" and adjust slowly. These profiles are usually well-balanced for quality and speed.</p>
+
+  <h4>Print Benchmarks</h4>
+  <p>Use known test models like <strong>3DBenchy</strong> (a small boat) to test your printer’s performance. It includes overhangs, bridges, curves, and fine details—so you can spot multiple issues at once and practice your setup skills.</p>
+</section>
       </div>
     </div>
 
@@ -127,29 +240,69 @@
     <div class="content-container">
       <div class="content-header" onclick="toggleContent('faq4', this)">
         <span class="arrow_intro">&gt;</span>
-        Chapter 4: Title
+        Chapter 4: Where to Ask for Help
       </div>
       <div id='faq4' class="collapsible-content">
-        <p>This is the content for Subchapter 4.</p>
+        <p>You’re not alone—everyone runs into issues while 3D printing, especially in the beginning. The good news is: there’s a large, helpful community of makers who love to assist! Here are some of the best and most beginner-friendly places to ask for help or get inspiration.</p>
+     <section>
+       <h4>Recommended Forums & Communities</h4>
+  <table>
+    <thead>
+      <tr>
+        <th>Platform</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Reddit: <a href="https://www.reddit.com/r/FixMyPrint" target="_blank">r/FixMyPrint</a></strong></td>
+        <td>Upload photos of failed prints and get direct help. Very beginner-friendly.</td>
+      </tr>
+      <tr>
+        <td><strong>Reddit: <a href="https://www.reddit.com/r/3Dprinting" target="_blank">r/3Dprinting</a></strong></td>
+        <td>Large general community. Great for sharing prints, advice, news, and guides.</td>
+      </tr>
+      <tr>
+        <td><strong><a href="https://wiki.bambulab.com/" target="_blank">Bambu Lab Wiki</a> & <a href="https://forum.bambulab.com/" target="_blank">Forum</a></strong></td>
+        <td>Official support and documentation for Bambu printers and software.</td>
+      </tr>
+      <tr>
+        <td><strong><a href="https://www.printables.com/" target="_blank">Printables.com</a></strong></td>
+        <td>Not just for models—many model pages include helpful print settings and tips.</td>
+      </tr>
+      <tr>
+        <td><strong>YouTube Channels</strong></td>
+        <td>Try <em>CHEP</em>, <em>Teaching Tech</em>, or <em>Maker’s Muse</em> for visual walkthroughs and troubleshooting.</td>
+      </tr>
+      <tr>
+        <td><strong>Discord Servers</strong></td>
+        <td>Search for “3D printing” servers with beginner channels—fast replies and active chats.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h4>ips for Asking Questions</h4>
+  <p>When you ask for help online, try to include the following:</p>
+  <ul>
+    <li>Your printer model</li>
+    <li>The slicer you're using (e.g., Bambu Studio)</li>
+    <li>Filament type (e.g., PLA, PETG)</li>
+    <li>Clear photos of the issue</li>
+    <li>What you've already tried</li>
+  </ul>
+
+  <p>The more info you give, the quicker and more accurate the help will be!</p>
+     </section>
       </div>
     </div>
 
-    <!-- Chapter 5 -->
-    <div class="content-container">
-      <div class="content-header" onclick="toggleContent('faq5', this)">
-        <span class="arrow_intro">&gt;</span>
-        Chapter 5: Title
-      </div>
-      <div id='faq5' class="collapsible-content">
-        <p>This is the content for Subchapter 5.</p>
-      </div>
-    </div>
 
-    <!-- Chapter 6: FAQ Troubleshooting  -->
+
+    <!-- Chapter 5: FAQ Troubleshooting  -->
     <div class="content-container">
       <div class="content-header" onclick="toggleContent('faqModelIssues', this)">
         <span class="arrow_intro">&gt;</span>
-        FAQ: Troubleshooting 3D Models
+        FAQ: Troubleshooting
       </div>
       <div id="faqModelIssues" class="collapsible-content">
 
