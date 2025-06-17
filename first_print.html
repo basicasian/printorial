@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,196 +8,207 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <div class="header">
     <div onclick="window.location.href='index.html'" style="cursor: pointer;">
-    <p class="logo_small">Printorial</p> 
-  </div>
-  
-  <div class="nav_bar">
-    <ul class="nav_bar_list">
-      <li><a href="introduction.html">Introduction</a></li>
-      <li><a href="3d_models.html">3D Models</a></li>
-      <li><a href="slicing.html">Slicing</a></li>
-      <li><a href="3d_printer.html">3D Printer</a></li>
-      <li><a href="filament.html">Filament</a></li>
-      <li><a style="font-weight: bold; color: #4202c1; cursor: pointer;" href="first_print.html">First Print</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="additional.html">Additional</a></li>
-    </ul>
-  </div>
-  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-  </div>
-
-    <p class="title">Ready to test your skills?</p> 
-    <p class="subtitle">In this chapter you will be guided through your first printing experience!</p> 
-<!--Chapter 1 -->
-<div class="content_flex">
-    <div class="content-container">
-        <div  class="content-header" onclick="toggleContent('first1',this)">
-            <span class="arrow_intro">&gt;</span>
-          Chapter 1: Get your 3D Model
-        </div>
-<div id="first1" class="collapsible-content">
-  <p>
-    To test your skills and provide you with hands-on experience, you will print your first model:
-    <strong>The Piranha</strong>. Don’t worry — all instructions will be provided!
-  </p>
-
-  <ol style="padding-left: 20px">
-    <li>
-      <strong>Navigate to the model:</strong> Visit 
-      <a href="https://www.thingiverse.com/thing:1734347/files" target="_blank" rel="noopener">
-        PIRANHAZ
-      </a>
-      (opens in a new tab).
-    </li>
-
-    <li>
-      <strong>Download the STL file:</strong> Scroll down and locate the two STL files. 
-      Download the first file as shown below:
-      <figure style="margine-top: 5px; margin-bottom: 5px">
-        <img src="first_print_resources/Step2_img.PNG" alt="Screenshot showing the STL file download section">
-      </figure>
-    </li>
-
-    <li>
-      <strong>Locate the file:</strong> You should now see the file in your <em>Downloads</em> folder on your desktop.
-    </li>
-  </ol>
-</div>
-      </div>
-<!--Chapter 2 -->
-<div class="content-container">
-    <div  class="content-header" onclick="toggleContent('first2',this)">
-        <span class="arrow_intro">&gt;</span>
-      Chapter 2: Sclicing your model
+      <p class="logo_small">Printorial</p>
     </div>
-    <div id="first2" class="collapsible-content">
-  <h2>Preparing Your Model for Printing</h2>
-  <p>
-    Now that you’ve downloaded your model, it’s time to import it into your slicer and prepare it for printing.
-  </p>
 
-  <p>
-    <strong>Preparation:</strong> If you don’t already have Bambu Studio, you can download it 
-    <a href="https://www.bambulab.com/en/software/studio" target="_blank" rel="noopener">here</a>.
-    It’s also recommended to review the <em>“3D Printer”</em> chapter in advance.
-  </p>
-
-  <ol style="padding-left: 20px">
-    <li>
-      <strong>Open Bambu Studio.</strong>
-    </li>
-
-    <li>
-      <strong>Import your model:</strong> Go to <em>File &gt; Import</em> and select your downloaded STL file.
-      <!-- NOTE TO SELF: Insert image showing the file import process -->
-    </li>
-
-    <li>
-      <strong>Set your parameters:</strong> Choose the correct settings such as layer height, infill density, and supports.
-      <!-- NOTE TO SELF: Insert image and short explanation of key print parameters -->
-    </li>
-
-    <li>
-      <strong>Final Check:</strong> Make sure the print preview looks correct, the model is placed on the bed properly, and all settings are accurate.
-      <!-- NOTE TO SELF: Add checklist image or mockup -->
-    </li>
-  </ol>
-
-  <p>
-    Your model is now ready for printing! The next chapter will walk you through the actual print process.
-  </p>
-</div>
-
-  </div>
-  <!--Chapter 3 -->
-<div class="content-container">
-    <div  class="content-header" onclick="toggleContent('first3',this)">
-        <span class="arrow_intro">&gt;</span>
-      Chapter 3: Preparing Your Printer for the Print
-    </div>
-<div id="first3" class="collapsible-content">
-  <p>
-    Before you can start your print, it’s important to ensure your <strong>Bambu Lab A1 Mini</strong> is properly prepared.
-    This includes basic setup, maintenance checks, and confirming the connection between your slicer (Bambu Studio) and the printer.
-  </p>
-
-  <ol style="padding-left: 20px">
-    <li>
-      <strong>Power on and update firmware:</strong><br>
-      Make sure the printer is plugged in and turned on. Check for any available firmware updates via the touchscreen interface.
-      <!-- NOTE TO SELF: Insert image of touchscreen showing firmware update option -->
-    </li>
-
-    <li>
-      <strong>Load filament:</strong><br>
-      Use the automatic filament loading system. Insert the filament into the AMS unit (if available) or directly into the extruder.
-      Follow on-screen prompts on the printer’s display.
-      <!-- NOTE TO SELF: Add step-by-step image or GIF of filament loading process -->
-    </li>
-
-    <li>
-      <strong>Level the bed:</strong><br>
-      The Bambu Lab A1 Mini features automatic bed leveling. You can initiate this from the printer menu under "Prepare > Level Bed."
-      It’s recommended to perform this before your first print or after moving the printer.
-      <!-- NOTE TO SELF: Add image of leveling process in action -->
-    </li>
-
-    <li>
-      <strong>Check Wi-Fi or USB connection:</strong><br>
-      Ensure the printer is connected to the same Wi-Fi network as your computer for seamless slicing and remote printing.
-      Alternatively, use a microSD card or USB drive to transfer the sliced file.
-    </li>
-
-    <li>
-      <strong>Preheat if necessary:</strong><br>
-      While Bambu Studio will typically handle this, you can manually preheat the nozzle and bed if needed via the touchscreen.
-    </li>
-
-    <li>
-      <strong>Double-check materials and bed:</strong><br>
-      Confirm that:
-      <ul>
-        <li>The filament is loaded and extruding correctly</li>
-        <li>The print bed is clean and free of debris</li>
-        <li>You’re using the correct build plate for your material type</li>
+    <div class="nav_bar">
+      <ul class="nav_bar_list">
+        <li><a href="introduction.html">Introduction</a></li>
+        <li><a href="3d_models.html">3D Models</a></li>
+        <li><a href="slicing.html">Slicing</a></li>
+        <li><a href="3d_printer.html">3D Printer</a></li>
+        <li><a href="filament.html">Filament</a></li>
+        <li><a style="font-weight: bold; color: #4202c1; cursor: pointer;" href="first_print.html">First Print</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="additional.html">Additional</a></li>
       </ul>
-    </li>
-  </ol>
-
-  <p>
-    Once your printer is ready and connected, you can move on to sending the file from Bambu Studio and starting the print!
-  </p>
-</div>
-
-  </div>
-  <!--Chapter 4 -->
-<div class="content-container">
-    <div  class="content-header" onclick="toggleContent('first4',this)">
-        <span class="arrow_intro">&gt;</span>
-      Chapter 4: Printing & Refining
     </div>
-    <div id='first4' class="collapsible-content">
-      <p>This is the content for Subchapter 3.</p>
-    </div>
+    <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
   </div>
 
-
-  <!--Chapter 5 -->
-<div class="content-container">
-    <div  class="content-header" onclick="toggleContent('first5',this)">
+  <p class="title">Ready to test your skills?</p>
+  <p class="subtitle">In this chapter you will be guided through your first printing experience!</p>
+  <!--Chapter 1 -->
+  <div class="content_flex">
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('first1',this)">
         <span class="arrow_intro">&gt;</span>
-        Chapter 5: No Printer available? Try it with our AR 3D Printer Simulation (Note: thought this would make more sense here than in 3D printer section)
+        Chapter 1: Get your 3D Model
+      </div>
+      <div id="first1" class="collapsible-content">
+        <p>
+          To test your skills and provide you with hands-on experience, you will print your first model:
+          <strong>The Piranha</strong>. Don’t worry — all instructions will be provided!
+        </p>
+
+        <ol style="padding-left: 20px">
+          <li>
+            <strong>Navigate to the model:</strong> Visit
+            <a href="https://www.thingiverse.com/thing:1734347/files" target="_blank" rel="noopener">
+              PIRANHAZ
+            </a>
+            (opens in a new tab).
+          </li>
+
+          <li>
+            <strong>Download the STL file:</strong> Scroll down and locate the two STL files.
+            Download the first file as shown below:
+            <figure style="margine-top: 5px; margin-bottom: 5px">
+              <img src="first_print_resources/Step2_img.PNG" alt="Screenshot showing the STL file download section">
+            </figure>
+          </li>
+
+          <li>
+            <strong>Locate the file:</strong> You should now see the file in your <em>Downloads</em> folder on your
+            desktop.
+          </li>
+        </ol>
+      </div>
     </div>
-    <div id='first5' class="collapsible-content">
-              <!-- FLEX CONTAINER -->
+    <!--Chapter 2 -->
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('first2',this)">
+        <span class="arrow_intro">&gt;</span>
+        Chapter 2: Sclicing your model
+      </div>
+      <div id="first2" class="collapsible-content">
+        <h2>Preparing Your Model for Printing</h2>
+        <p>
+          Now that you’ve downloaded your model, it’s time to import it into your slicer and prepare it for printing.
+        </p>
+
+        <p>
+          <strong>Preparation:</strong> If you don’t already have Bambu Studio, you can download it
+          <a href="https://www.bambulab.com/en/software/studio" target="_blank" rel="noopener">here</a>.
+          It’s also recommended to review the <em>“3D Printer”</em> chapter in advance.
+        </p>
+
+        <ol style="padding-left: 20px">
+          <li>
+            <strong>Open Bambu Studio.</strong>
+          </li>
+
+          <li>
+            <strong>Import your model:</strong> Go to <em>File &gt; Import</em> and select your downloaded STL file.
+            <!-- NOTE TO SELF: Insert image showing the file import process -->
+          </li>
+
+          <li>
+            <strong>Set your parameters:</strong> Choose the correct settings such as layer height, infill density, and
+            supports.
+            <!-- NOTE TO SELF: Insert image and short explanation of key print parameters -->
+          </li>
+
+          <li>
+            <strong>Final Check:</strong> Make sure the print preview looks correct, the model is placed on the bed
+            properly, and all settings are accurate.
+            <!-- NOTE TO SELF: Add checklist image or mockup -->
+          </li>
+        </ol>
+
+        <p>
+          Your model is now ready for printing! The next chapter will walk you through the actual print process.
+        </p>
+      </div>
+
+    </div>
+    <!--Chapter 3 -->
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('first3',this)">
+        <span class="arrow_intro">&gt;</span>
+        Chapter 3: Preparing Your Printer for the Print
+      </div>
+      <div id="first3" class="collapsible-content">
+        <p>
+          Before you can start your print, it’s important to ensure your <strong>Bambu Lab A1 Mini</strong> is properly
+          prepared.
+          This includes basic setup, maintenance checks, and confirming the connection between your slicer (Bambu
+          Studio) and the printer.
+        </p>
+
+        <ol style="padding-left: 20px">
+          <li>
+            <strong>Power on and update firmware:</strong><br>
+            Make sure the printer is plugged in and turned on. Check for any available firmware updates via the
+            touchscreen interface.
+            <!-- NOTE TO SELF: Insert image of touchscreen showing firmware update option -->
+          </li>
+
+          <li>
+            <strong>Load filament:</strong><br>
+            Use the automatic filament loading system. Insert the filament into the AMS unit (if available) or directly
+            into the extruder.
+            Follow on-screen prompts on the printer’s display.
+            <!-- NOTE TO SELF: Add step-by-step image or GIF of filament loading process -->
+          </li>
+
+          <li>
+            <strong>Level the bed:</strong><br>
+            The Bambu Lab A1 Mini features automatic bed leveling. You can initiate this from the printer menu under
+            "Prepare > Level Bed."
+            It’s recommended to perform this before your first print or after moving the printer.
+            <!-- NOTE TO SELF: Add image of leveling process in action -->
+          </li>
+
+          <li>
+            <strong>Check Wi-Fi or USB connection:</strong><br>
+            Ensure the printer is connected to the same Wi-Fi network as your computer for seamless slicing and remote
+            printing.
+            Alternatively, use a microSD card or USB drive to transfer the sliced file.
+          </li>
+
+          <li>
+            <strong>Preheat if necessary:</strong><br>
+            While Bambu Studio will typically handle this, you can manually preheat the nozzle and bed if needed via the
+            touchscreen.
+          </li>
+
+          <li>
+            <strong>Double-check materials and bed:</strong><br>
+            Confirm that:
+            <ul>
+              <li>The filament is loaded and extruding correctly</li>
+              <li>The print bed is clean and free of debris</li>
+              <li>You’re using the correct build plate for your material type</li>
+            </ul>
+          </li>
+        </ol>
+
+        <p>
+          Once your printer is ready and connected, you can move on to sending the file from Bambu Studio and starting
+          the print!
+        </p>
+      </div>
+
+    </div>
+    <!--Chapter 4 -->
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('first4',this)">
+        <span class="arrow_intro">&gt;</span>
+        Chapter 4: Printing & Refining
+      </div>
+      <div id='first4' class="collapsible-content">
+        <p>This is the content for Subchapter 3.</p>
+      </div>
+    </div>
+
+
+    <!--Chapter 5 -->
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('first5',this)">
+        <span class="arrow_intro">&gt;</span>
+        Chapter 5: No Printer available? Try it with our AR 3D Printer Simulation
+      </div>
+      <div id='first5' class="collapsible-content">
+        <!-- FLEX CONTAINER -->
         <div style="display: flex; align-items: flex-start; gap: 2em; margin-bottom: 1em;">
 
           <!-- Left: Text content -->
@@ -216,6 +228,18 @@
             <p><strong><a href="https://basicasian.itch.io/printorial" target="_blank">Download here</a></strong>
               (Android
               only) or scan the QR Code on the right on your phone directly</p>
+
+            <h4>Preview</h4>
+
+            <p>Here is a demo of the AR app with all its features!</p>
+            <!-- Embedded YouTube video -->
+            <div style="margin-top: 1em; margin-bottom: 1em;">
+              <iframe width="100%" height="500px" style="max-width: 80%; border-radius: 8px;"
+                src="https://www.youtube.com/watch?v=T8NpoQ2tnII" title="AR Printorial Demo" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
           </div>
 
           <!-- Right: Two Images Side by Side -->
@@ -229,52 +253,52 @@
                 style="width: 220px; border-radius: 8px;">
             </a>
           </div>
-
-
         </div>
         <!-- END FLEX CONTAINER -->
+
+
+
+      </div>
     </div>
+
+
   </div>
+  <script>
+    function toggleContent(id, headerElement) {
+      const content = document.getElementById(id);
+      const arrow = headerElement.querySelector('.arrow_intro');
+      const isOpen = content.style.display === 'block';
 
+      content.style.display = isOpen ? 'none' : 'block';
 
-</div>
-      <script>
-        function toggleContent(id, headerElement) {
-          const content = document.getElementById(id);
-          const arrow = headerElement.querySelector('.arrow_intro');
-          const isOpen = content.style.display === 'block';
-        
-          content.style.display = isOpen ? 'none' : 'block';
-        
-          // Toggle the rotated class to rotate the arrow without changing text
-          if (isOpen) {
-            arrow.classList.remove('rotated');
-          } else {
-            arrow.classList.add('rotated');
-            markInteraction('first_print', id === 'quiz3');
-          }
-        }
-        window.addEventListener('DOMContentLoaded', () => {
-    const hash = window.location.hash.substring(1); // remove the '#' symbol
-    if (hash) {
-      const targetHeader = document.querySelector(`[onclick*="${hash}"]`);
-      if (targetHeader) {
-        toggleContent(hash, targetHeader);
-        targetHeader.scrollIntoView({ behavior: 'smooth' });
+      // Toggle the rotated class to rotate the arrow without changing text
+      if (isOpen) {
+        arrow.classList.remove('rotated');
+      } else {
+        arrow.classList.add('rotated');
+        markInteraction('first_print', id === 'quiz3');
       }
     }
-  });
-  function toggleMenu() {
-  const navList = document.querySelector('.nav_bar_list');
-  if (navList.style.display === 'flex') {
-    navList.style.display = 'none';
-  } else {
-    navList.style.display = 'flex';
-  }
-}
-        </script>
-        <script src="progress.js"></script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash.substring(1); // remove the '#' symbol
+      if (hash) {
+        const targetHeader = document.querySelector(`[onclick*="${hash}"]`);
+        if (targetHeader) {
+          toggleContent(hash, targetHeader);
+          targetHeader.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    });
+    function toggleMenu() {
+      const navList = document.querySelector('.nav_bar_list');
+      if (navList.style.display === 'flex') {
+        navList.style.display = 'none';
+      } else {
+        navList.style.display = 'flex';
+      }
+    }
+  </script>
+  <script src="progress.js"></script>
 
 
 </body>
-
