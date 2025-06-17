@@ -33,13 +33,11 @@
 
     <p class="title">How to: Slicing </p>
     <p class="subtitle"> By the end of this chapter, you’ll 
-      <ul class="subtitle_list">
-        <li>Understand what slicing really means and why it's essential.</li>
-        <li>Learn to use Bambu Studio from setup to slicing.</li>
-        <li>Explore basic and advanced slicing settings—layer height, infill, supports, and more.</li>
-        <li>Build a helpful slicing glossary.</li>
-        <li>Test your skills with a small quiz.</li>
-      </ul>
+      Understand what slicing really means and why it's essential.
+      Learn to use Bambu Studio from setup to slicing.
+      Explore basic and advanced slicing settings—layer height, infill, supports, and more.
+      Build a helpful slicing glossary.
+      Test your skills with a small quiz.   
     </p> 
 <!--Chapter 1 -->
 <div class="content_flex">
@@ -57,16 +55,71 @@ Slicing is the process of turning your 3D model into layers and generating a ste
 But here is the catch: Your 3D printer cannot look at the whole cake and understand how to build it all at once. It needs instructions that say:
 Here is what the bottom layer looks like. Now here is the next one. Now the one above that.</p>
 
+  
+  <p>The Step-by-Step Cake Analogy</p>
+  <ol>
+    <li>
+      <strong>The 3D Model = The Whole Cake</strong><br>
+      A complete object but too complex for the printer to handle directly.
+    </li>
+    <li>
+      <strong>Slicing = Cutting the Cake into Thin Layers</strong><br>
+      You take that full cake and slice it horizontally into super-thin layers – say 0.2 millimeters thick. 
+      Each slice is flat and simple, and the stack of slices recreates the full shape.
+    </li>
+    <li>
+      <strong>G-code = The Recipe for Rebuilding the Cake</strong><br>
+      The slicer software then creates a file (G-code) that tells the printer:
+      <ul>
+        <li>How to draw each layer</li>
+        <li>Where to move</li>
+        <li>How fast to go</li>
+        <li>When to heat up the filament</li>
+        <li>How much filament to push out</li>
+      </ul>
+    </li>
+    <li>
+      <strong>The 3D Printer = Cake Builder</strong><br>
+      Your printer follows these instructions layer by layer – from the bottom up – to rebuild the full object, just like restacking all those cake slices.
+    </li>
+  </ol>
+
+
         </div>
       </div>
 <!--Chapter 2 -->
 <div class="content-container">
     <div  class="content-header" onclick="toggleContent('slicing2',this)">
         <span class="arrow_intro">&gt;</span>
-      Chapter 2: Title
+      Chapter 2: Introduction to Bambu Studio
     </div>
     <div id='slicing2' class="collapsible-content">
       <p>This is the content for Subchapter 2.</p>
+      <p>Bambu Studio is a free slicer software designed to work perfectly with Bambu Lab printers. Even if you’re using another printer, the layout and features are very similar to other slicers like Cura or PrusaSlicer.
+</p>
+      <p>Why choose it?
+        <ul>
+          <li>User-friendly interface with project workflows.</li>
+          <li>Automatically optimized settings for quality and speed.</li>
+          <li>Supports multicolor printing, advanced cooling, and remote print control.</li>
+        </ul>
+      </p>
+      <p>Quick start steps
+        <ol>
+          <li><strong>Install</strong> from Bambu Lab (Windows, Mac, Linux).</li>
+          <li>On first launch:
+            <ul>
+              <li>Select region, printer, nozzle, and filament presets.</li>
+              <li>Optional network login for remote features.</li>
+            </ul>
+            
+          </li>
+          <li><strong>Create a project</strong> → <strong>Add your model</strong> (supported: STL, OBJ, 3MF, AMF).</li>
+          <li>Choose printer, filament, and process settings (like layer height).</li>
+          <li>Click Slice → preview → Print or export G-code</li>
+        </ol>
+      </p>
+      <p>Text</p>
     </div>
   </div>
   <!--Chapter 3 -->
