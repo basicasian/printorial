@@ -147,6 +147,8 @@
     
     </div>
   </div>
+
+
   
   <!--Interactive Quiz: Basics of 3D Printing -->
 <div class="content-container">
@@ -185,6 +187,39 @@
 
 
 </div>
+
+
+
+   <!--Chapter 3 -->
+    <div class="content-container">
+      <div class="content-header" onclick="toggleContent('printer3',this)">
+        <span class="arrow_intro">&gt;</span>
+        Glossary of Useful Terms
+      </div>
+      <div id='printer3' class="collapsible-content">
+
+        <table style="width: 100%; border-collapse: collapse;" class="glossary-table">
+          <tbody>
+            <tr>
+              <td><input type="checkbox" style="transform: scale(1.5);"></td>
+              <td><b>Additive Manufacturing Methods</b></td>
+              <td>A variety of techniques for building 3 dimensional objects layer by layer from digital designs</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" style="transform: scale(1.5);"></td>
+              <td><b>CAD (Computer Aided Design)</b></td>
+              <td>The use of computers to aid in the creation, modification, analysis or optimization of a design, e.g. Blender, Tinkercad etc.</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" style="transform: scale(1.5);"></td>
+              <td><b>Digital 3D Model</b></td>
+              <td>A computer-generated representation of an object or shape in 3 dimensions (height, width and depth)</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>  
       <script>
         function toggleContent(id, headerElement) {
           const content = document.getElementById(id);
