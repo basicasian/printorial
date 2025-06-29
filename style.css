@@ -406,3 +406,49 @@ h4 {
   margin-top: 0.5em;
   margin-bottom: 0.2em;
 }
+
+/* === Table shell === */
+.print-checklist {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Nunito', sans-serif;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.print-checklist thead tr {
+  background-color: #f0f4f8;
+  color: #2c3e50;
+  border-bottom: 2px solid #ccc;
+}
+
+.print-checklist th,
+.print-checklist td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.print-checklist tbody tr:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+/* === Content layout inside the "What to Do" column === */
+.cell-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cell-content img {
+  width: 100%;           /* responsive */
+  max-width: 250px;      /* keep images from getting too wide */
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cell-content figure {
+  margin: 0;             /* remove default figure margin */
+}

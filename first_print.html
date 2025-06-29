@@ -77,7 +77,7 @@
     <div class="content-container">
       <div class="content-header" onclick="toggleContent('first2',this)">
         <span class="arrow_intro">&gt;</span>
-        Chapter 2: Sclicing your model
+        Chapter 2: Slicing your model
       </div>
       <div id="first2" class="collapsible-content">
         <h2>Preparing Your Model for Printing</h2>
@@ -98,7 +98,7 @@
 
           <li>
             <strong>Import your model:</strong> You can drag and drop your file into Bambu Studio <strong>OR</strong> Go to <em>File &gt; Import</em> and select your downloaded STL file.
-            <div style="display: flex; gap: 10px; margin-top: 10px; margin-bottom: 10px;">
+            <div style="display: flex; gap: 10px; margin-top: 1rem; margin-bottom: 1rem;">
               <img src="first_print_resources/import_Pir.png" alt="Manual Import" style="width: 500px; height: auto;">
               <img src="first_print_resources/imported_Pir.png" alt="Imported File" style="width: 500px; height: auto;">
             </div>
@@ -107,6 +107,142 @@
           <li>
             <strong>Set your parameters:</strong> Choose the correct settings such as layer height, infill density, and
             supports.
+            <div style="margin: 1rem 0;">
+              <table class="print-checklist">
+                <thead>
+                  <tr>
+                    <th>⚙️ Setting</th>
+                    <th>✅ What to Do</th>
+                    <th>ℹ️ Why It Matters</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Printer row -->
+                  <tr>
+                    <td>🖨️ Printer</td>
+                    <td>
+                      <div class="cell-content">
+                        <div>Select <strong>Bambu Lab A1 mini</strong></div>
+                        <figure>
+                          <img src="first_print_resources/printer_select.png" alt="Printer setting in Bambu Studio" />
+                        </figure>
+                      </div>
+                    </td>
+                    <td>Ensures settings match your printer’s size and features.</td>
+                  </tr>
+            
+                  <!-- Filament row -->
+                  <tr>
+                    <td>🎞️ Filament Type</td>
+                    <td>
+                      <div class="cell-content">
+                        <div>Choose <strong>PLA</strong> or other compatible filament</div>
+                        <figure>
+                          <img src="first_print_resources/pla_select.png" alt="Printer setting in Bambu Studio" />
+                        </figure>
+                      </div>
+                    </td>
+                    <td>PLA is easy to print and ideal for models like PIRANHAZ.</td>
+                  </tr>
+            
+                  <!-- Layer Height row -->
+                  <tr>
+                    <td>📏 Layer Height</td>
+                    <td>
+                      <div class="cell-content">
+                        <div><strong>0.20&nbsp;mm</strong> for standard<br /><strong>0.16&nbsp;mm</strong> for more detail</div>
+                        <figure>
+                          <img src="first_print_resources/layer_select.png" alt="Layer height setting in Bambu Studio" />
+                        </figure>
+                      </div>
+                    </td>
+                    <td>Lower height = smoother finish, but takes longer.</td>
+                  </tr>
+            
+                  <!-- Infill row -->
+                  <tr>
+                    <td>🏗️ Infill</td>
+                    <td>
+                      <div class="cell-content">
+                        <div>Set to <strong>15–20%</strong> (Grid or Gyroid)</div>
+                        <figure>
+                          <img src="first_print_resources/infill_select.png" alt="Printer setting in Bambu Studio" />
+                        </figure>
+                      </div>
+                    </td>
+                    <td>Keeps the model light and strong.</td>
+                  </tr>
+            
+                  <!-- Supports row -->
+                  <tr>
+                    <td>🚫 Supports</td>
+                    <td>
+                      <div class="cell-content">
+                        <div><strong>Disable</strong> completely</div>
+                        <figure>
+                          <img src="first_print_resources/support_select.png" alt="Printer setting in Bambu Studio" />
+                        </figure>
+                      </div>
+                    </td>
+                    <td>Not needed for PIRANHAZ when oriented correctly.</td>
+                  </tr>
+            
+                  <!-- Adhesion row -->
+                  <tr>
+                    <td>🧲 Adhesion</td>
+                    <td>
+                      <div class="cell-content">
+                        <div>Enable a <strong>Brim</strong> (3–6 lines)</div>
+                      </div>
+                    </td>
+                    <td>Prevents lifting; improves bed adhesion.</td>
+                  </tr>
+            
+                  <!-- Orientation row -->
+                  <tr>
+                    <td>🧭 Orientation</td>
+                    <td>
+                      <div class="cell-content">
+                        <div><strong>Lay Flat</strong> (belly on plate)</div>
+                        <figure>
+                          <img src="first_print_resources/orient_select.png" alt="Printer setting in Bambu Studio" />
+                        </figure>
+                      </div>
+                    </td>
+                    <td>Optimizes print without needing supports.</td>
+                  </tr>
+            
+                  <!-- Scale row -->
+                  <tr>
+                    <td>📐 Scale</td>
+                    <td>
+                      <div class="cell-content">
+                        <div>Keep at <strong>100%</strong></div>
+                        <figure>
+                          <img src="first_print_resources/scale_select.png" alt="Printer setting in Bambu Studio" />
+                        </figure>
+                      </div>
+                    </td>
+                    <td>Fits well on A1 mini print bed.</td>
+                  </tr>
+            
+                  <!-- Preview row -->
+                  <tr>
+                    <td>🔍 Preview</td>
+                    <td>
+                      <div class="cell-content">
+                        <div>Use <strong>Preview Slice</strong></div>
+                        <figure>
+                          <img src="first_print_resources/preview_select.png" alt="Printer setting in Bambu Studio" />
+                        </figure>
+                      </div>
+                    </td>
+                    <td>Check layers and potential issues before printing.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
             <!-- NOTE TO SELF: Insert image and short explanation of key print parameters -->
           </li>
 
