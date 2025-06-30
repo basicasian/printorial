@@ -454,10 +454,3 @@ h4 {
   margin: 0;             /* remove default figure margin */
 }
 
-.print-checklist .tooltip-text {
-  top: 50%;
-  left: 100%;
-  transform: translateY(-50%);
-  margin-left: 8px; /* some space between term and tooltip */
-  white-space: nowrap; /* prevent wrapping */
-}
