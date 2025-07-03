@@ -33,16 +33,11 @@
   <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
   </div>
 
-    <p class="title">Additional Information</p> 
+    <p class="title">Sustainability Tips</p> 
     
 <!--Chapter 1 -->
-<div class="content_flex">
-    <div class="content-container">
-        <div  class="content-header" onclick="toggleContent('additional1',this)">
-            <span class="arrow_intro">&gt;</span>
-          Chapter 1: 3D Printing in Vienna - Where to go 
-        </div>
-        <div id='additional1' class="collapsible-content">
+<div class="sustainable_content">
+       <p>There are several places in Vienna where you can access <span style="font-weight:bold">3D printing services</span>. This not only saves you the cost of buying your own printer but also helps support local maker communities:</p> 
           <ul>
             <ul>
               <li><a href="https://www.technischesmuseum.at/exhibition/techlab" target="_blank">techLAB at Technisches Museum</a>: Museum‑run makerspace with open‑access 3D printers (free with museum ticket/annual pass)</li>
@@ -53,16 +48,10 @@
 
           </ul>
         </div>
-      </div>
 <!--Chapter 2 -->
-<div class="content-container">
-    <div  class="content-header" onclick="toggleContent('additional2',this)">
-        <span class="arrow_intro">&gt;</span>
-      Chapter 2: Reycling your Filament left-overs
-    </div>
-    <div id='additional2' class="collapsible-content">
-      <p>
-  If you have leftover filament, you can collect it and recycle it at 
+<div class="sustainable_content">
+  <p>
+  In addition, if you have leftover filament, you can collect it and recycle it at 
   <a href="https://preciousplastic.wien/Aktiv-Werden" target="_blank">Precious Plastic Vienna</a>. 
   You can drop off small quantities (up to 10 kg) at the WUK info desk (Währinger Straße 59, 1080 Vienna) during opening hours (Mon–Fri 9:00–20:00, Sat/Sun 15:00–20:00), packed in a bag or box.
 </p>
@@ -72,9 +61,7 @@
 </p>
 
     </div>
-  </div>
-  </div>
-</div>
+ 
       <script>
         function toggleContent(id, headerElement) {
           const content = document.getElementById(id);
