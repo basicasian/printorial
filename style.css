@@ -247,6 +247,12 @@ p {
 
 }
 
+.chapter_note {
+  font-size: 12px;
+  font-family: 'Nunito';
+  text-align: justify;
+  }
+
 .header {
   height: 70px;
   display: flex;
