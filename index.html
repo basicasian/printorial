@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,253 +8,264 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kavoon&display=swap" rel="stylesheet">
 </head>
-    <body>
-      <div class="header_v2">      
-      <a href="about.html" class="button_about">About Printorial</a>          
-        
-      </div>
 
-      <p class="brand_name">Printorial</p>
-      <div class="marketing">
-        <div class="marketing_head">
-          Welcome to this interactive tutorial
+<body>
+  <div class="header_v2">
+    <a href="about.html" class="button_about">About Printorial</a>
+
+  </div>
+
+  <p class="brand_name">Printorial</p>
+  <div class="marketing">
+    <div class="marketing_head">
+      Welcome to this interactive tutorial
+    </div>
+    <div class="marketing_sub">
+      Whether you are just starting off or already have some previous experience with 3d printing, there is certainly
+      something interesting for you here.
+    </div>
+    <div class="chapter_note">
+      <p><strong>Note:</strong> You can explore the chapters in any order. However, following them in numerical order is
+        helpful if you're new to 3D printing, as the content builds up progressively. If you're already familiar with
+        the basics, feel free to jump directly to specific topics. For example, the <strong>First Print</strong>
+        chapter offers a quick hands-on guide for getting started with printing.</p>
+    </div>
+  </div>
+
+
+
+  <div class="card-container">
+    <!-- Card 1 -->
+    <div class="card">
+      <img src="index_resources/introduction.jpg" />
+      <div class="Main nunito">
+
+        <div class="hover-bold">
+          <!-- makes the whole box clickable not only the text -->
+          <div onclick="window.location.href='introduction.html'" style="cursor: pointer;">
+            <p>1. Introduction</p>
+          </div>
         </div>
-        <div class="marketing_sub">
-          Whether you are just starting off or already have some previous experience with 3d printing, there is certainly something interesting for you here.
+        <div class="summary" onclick="toggleContent('content1', this)">
+          <span class="arrow">&gt;</span> 5 chapters
         </div>
-        <div class="chapter_note">
-          Note: You don't need to follow the chapters in numerical order, but doing so is recommended.
+        <p class="chapter-status" data-chapter="introduction"><span class="status-text">Not Started</span></p>
+        <!-- <button onclick="localStorage.clear(); location.reload();">Reset Progress</button> -->
+        <div id="content1" class="collapsible-chapter">
+          <ol class="subchapter_list">
+            <li><a href="introduction.html#intro1">What is 3D Printing?</a></li>
+            <li><a href="introduction.html#intro2">Obtaining a physical object from a CAD model</a></li>
+            <li><a href="introduction.html#intro3">Pros and Cons of 3D Printing</a></li>
+            <li><a href="introduction.html#intro4">Types of 3D printers</a></li>
+            <li><a href="introduction.html#intro5">Quiz: Basics of 3D Printing</a></li>
+            <li><a href="introduction.html#intro6">Glossary of Useful Terms</a></li>
+          </ol>
         </div>
-      </div>
-      
-      
-    
-      <div class="card-container">
-        <!-- Card 1 -->
-        <div class="card">
-          <img src="index_resources/introduction.jpg"/>
-          <div class="Main nunito">
-            
-            <div class="hover-bold">
-                <!-- makes the whole box clickable not only the text -->
-             <div onclick="window.location.href='introduction.html'" style="cursor: pointer;">
-                <p>1. Introduction</p>
-             </div>
-            </div>
-            <div class="summary" onclick="toggleContent('content1', this)">
-              <span class="arrow">&gt;</span> 5 chapters
-            </div>
-            <p class="chapter-status" data-chapter="introduction"><span class="status-text">Not Started</span></p>
-              <!-- <button onclick="localStorage.clear(); location.reload();">Reset Progress</button> -->
-            <div id="content1" class="collapsible-chapter">
-              <ol class="subchapter_list">
-                <li><a href="introduction.html#intro1">What is 3D Printing?</a></li>
-                <li><a href="introduction.html#intro2">Obtaining a physical object from a CAD model</a></li>
-                <li><a href="introduction.html#intro3">Pros and Cons of 3D Printing</a></li>
-                <li><a href="introduction.html#intro4">Types of 3D printers</a></li>
-                <li><a href="introduction.html#intro5">Quiz: Basics of 3D Printing</a></li>
-                 <li><a href="introduction.html#intro6">Glossary of Useful Terms</a></li>
-              </ol>
-            </div>
-            <!-- <div class="progress-container">
+        <!-- <div class="progress-container">
                 <div class="progress-bar" style="width: 60%;"></div>
               </div>
               <p class="progress-text">3 of 5 chapters completed</p>-->
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card">
+      <img src="index_resources/3d_models.jpg" />
+      <div class="Main nunito">
+        <div class="hover-bold">
+          <div onclick="window.location.href='3d_models.html'" style="cursor: pointer;">
+            <p>2. 3D Models</p>
           </div>
         </div>
-    
-        <!-- Card 2 -->
-        <div class="card">
-          <img src="index_resources/3d_models.jpg"/>
-          <div class="Main nunito">
-            <div class="hover-bold">
-                <div onclick="window.location.href='3d_models.html'" style="cursor: pointer;">
-                <p>2. 3D Models</p>
-            </div>
-            </div>
-            <div class="summary" onclick="toggleContent('content2', this)">
-              <span class="arrow">&gt;</span> 6 chapters
-            </div>
-            <p class="chapter-status" data-chapter="3d_models"><span class="status-text">Not Started</span></p>
-             <!-- <button onclick="localStorage.clear(); location.reload();">Reset Progress</button> -->
-            <div id="content2" class="collapsible-chapter">
-              <ol class="subchapter_list">
-                <li><a href="3d_models.html#model1">What is a 3D Model?</a></li>
-                <li><a href="3d_models.html#model2">Finding 3D Models to print</a></li>
-                <li><a href="3d_models.html#model3">How to use 3D Models</a></li>
-                <li><a href="3d_models.html#model4">Quiz: Using 3D Models</a></li>
-                <li><a href="3d_models.html#model5">Fundamentals of 3D Modeling</a> | <span style="color: red;font-weight: bold;">advanced</span></li>
-                <li><a href="3d_models.html#model6">3D Scanners and Smartphone Apps</a> | <span style="color: red;font-weight: bold;">advanced</span></li>
-                <li><a href="3d_models.html#model7">Glossary of Useful Terms</a></li>
-              </ol>
-            </div>
-            <!--<div class="progress-container">
+        <div class="summary" onclick="toggleContent('content2', this)">
+          <span class="arrow">&gt;</span> 6 chapters
+        </div>
+        <p class="chapter-status" data-chapter="3d_models"><span class="status-text">Not Started</span></p>
+        <!-- <button onclick="localStorage.clear(); location.reload();">Reset Progress</button> -->
+        <div id="content2" class="collapsible-chapter">
+          <ol class="subchapter_list">
+            <li><a href="3d_models.html#model1">What is a 3D Model?</a></li>
+            <li><a href="3d_models.html#model2">Finding 3D Models to print</a></li>
+            <li><a href="3d_models.html#model3">How to use 3D Models</a></li>
+            <li><a href="3d_models.html#model4">Quiz: Using 3D Models</a></li>
+            <li><a href="3d_models.html#model5">Fundamentals of 3D Modeling</a> | <span
+                style="color: red;font-weight: bold;">advanced</span></li>
+            <li><a href="3d_models.html#model6">3D Scanners and Smartphone Apps</a> | <span
+                style="color: red;font-weight: bold;">advanced</span></li>
+            <li><a href="3d_models.html#model7">Glossary of Useful Terms</a></li>
+          </ol>
+        </div>
+        <!--<div class="progress-container">
                   <div class="progress-bar" style="width: 10%;"></div>
               </div>-->
-            
-            </div>   
-        </div>
-    
-        <!-- Card 3 -->
-        <div class="card">
-          <img src="index_resources/slicing.jpg" />
-          <div class="Main nunito">
-            <div class="hover-bold">
-                <div onclick="window.location.href='slicing.html'" style="cursor: pointer;">
-                <p>3. Slicing</p>
-            </div>
-            </div>
-            <div class="summary" onclick="toggleContent('content3', this)">
-              <span class="arrow">&gt;</span> 6 chapters
-            </div>
-            <p class="chapter-status" data-chapter="slicing"><span class="status-text">Not Started</span></p>
-             <!-- <button onclick="localStorage.clear(); location.reload();">Reset Progress</button> -->
-            <div id="content3" class="collapsible-chapter">
-              <ol class="subchapter_list">
-                <li> <a href="slicing.html#slicing1">What is Slicing?</a></li>
-                <li><a href="slicing.html#slicing2">Introduction Bambu Software</a></li>
-                <li><a href="slicing.html#slicing3">Basic Settings and Functions</a></li>
-                <li><a href="slicing.html#slicing4">Infill & Support Structures</a> | <span style="color: red;font-weight: bold;">advanced</span></li>
-                <li><a href="slicing.html#slicing5">Glossary of Useful Terms</a></li>
-                <li><a href="slicing.html#slicing6">Quiz: All about slicing</a></li>
-              </ol>
-            </div>
-            <!--<div class="progress-container">
-                <div class="progress-bar" style="width: 0%;"></div>
-              </div>-->
-        
+
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card">
+      <img src="index_resources/slicing.jpg" />
+      <div class="Main nunito">
+        <div class="hover-bold">
+          <div onclick="window.location.href='slicing.html'" style="cursor: pointer;">
+            <p>3. Slicing</p>
           </div>
         </div>
-    
-        <!-- Card 4 -->
-        <div class="card">
-          <img src="index_resources/3d_printer.jpg" />
-          <div class="Main nunito">
-            <div class="hover-bold">
-                <div onclick="window.location.href='3d_printer.html'" style="cursor: pointer;">
-                <p>4. 3D Printer Hardware</p>
-            </div>
-            </div>
-            <div class="summary" onclick="toggleContent('content4', this)">
-              <span class="arrow">&gt;</span> 6 chapters
-            </div>
-            <p class="chapter-status" data-chapter="3d_printer"><span class="status-text">Not Started</span></p>
-            <!-- <button onclick="localStorage.clear(); location.reload();">Reset Progress</button> -->
-            <div id="content4" class="collapsible-chapter">
-              <ol class="subchapter_list">
-                <li><a href="3d_printer.html#printer1">Hardware of a 3D Printer</a></li>
-                <li><a href="3d_printer.html#printer2">Setting up your 3D Printer</a></li>
-                <li><a href="3d_printer.html#printer3">Summary of Terms</a></li>
-                <li><a href="3d_printer.html#printer4">Quiz: About 3D Printers</a></li>
-                <li><a href="3d_printer.html#printer5">Manual Bed Leveling | <span style="color: red;font-weight: bold;">advanced</span></a> </li>
-                <li><a href="3d_printer.html#printer6">Changing Filament for Mid Print | <span style="color: red;font-weight: bold;">advanced</span></a> </li>
-              </ol>
-            </div>
-            <!-- <div class="progress-container">
+        <div class="summary" onclick="toggleContent('content3', this)">
+          <span class="arrow">&gt;</span> 6 chapters
+        </div>
+        <p class="chapter-status" data-chapter="slicing"><span class="status-text">Not Started</span></p>
+        <!-- <button onclick="localStorage.clear(); location.reload();">Reset Progress</button> -->
+        <div id="content3" class="collapsible-chapter">
+          <ol class="subchapter_list">
+            <li> <a href="slicing.html#slicing1">What is Slicing?</a></li>
+            <li><a href="slicing.html#slicing2">Introduction Bambu Software</a></li>
+            <li><a href="slicing.html#slicing3">Basic Settings and Functions</a></li>
+            <li><a href="slicing.html#slicing4">Infill & Support Structures</a> | <span
+                style="color: red;font-weight: bold;">advanced</span></li>
+            <li><a href="slicing.html#slicing5">Glossary of Useful Terms</a></li>
+            <li><a href="slicing.html#slicing6">Quiz: All about slicing</a></li>
+          </ol>
+        </div>
+        <!--<div class="progress-container">
                 <div class="progress-bar" style="width: 0%;"></div>
               </div>-->
-              
+
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card">
+      <img src="index_resources/3d_printer.jpg" />
+      <div class="Main nunito">
+        <div class="hover-bold">
+          <div onclick="window.location.href='3d_printer.html'" style="cursor: pointer;">
+            <p>4. 3D Printer Hardware</p>
           </div>
         </div>
-        <!-- Card 5 -->
-        <div class="card">
-            <img src="index_resources/filament.jpg" />
-            <div class="Main nunito">
-              <div class="hover-bold">
-                <div onclick="window.location.href='filament.html'" style="cursor: pointer;">
-                <p>5. Filament</p>
-            </div>
-            </div>
-              <div class="summary" onclick="toggleContent('content5', this)">
-                <span class="arrow">&gt;</span> 5 chapters
-              </div>
-              <p class="chapter-status" data-chapter="filament"><span class="status-text">Not Started</span></p>
-              <!-- <button onclick="localStorage.clear(); location.reload();">Reset Progress</button> -->
-              <div id="content5" class="collapsible-chapter">
-                <ol class="subchapter_list">
-                  <li><a href="filament.html#filament1">What are filaments?</a></li>
-                  <li><a href="filament.html#filament2">Use cases for different filaments</a></li>
-                  <li><a href="filament.html#filament3">Swapping filaments within one model </a></li>
-                  <li><a href="filament.html#filament4">Glossary of Useful Terms</a></li>
-                  <li><a href="filament.html#filament5">Quiz: All about filaments</a></li>
-                </ol>
-              </div>
-               <!-- <div class="progress-container">
+        <div class="summary" onclick="toggleContent('content4', this)">
+          <span class="arrow">&gt;</span> 6 chapters
+        </div>
+        <p class="chapter-status" data-chapter="3d_printer"><span class="status-text">Not Started</span></p>
+        <!-- <button onclick="localStorage.clear(); location.reload();">Reset Progress</button> -->
+        <div id="content4" class="collapsible-chapter">
+          <ol class="subchapter_list">
+            <li><a href="3d_printer.html#printer1">Hardware of a 3D Printer</a></li>
+            <li><a href="3d_printer.html#printer2">Setting up your 3D Printer</a></li>
+            <li><a href="3d_printer.html#printer3">Summary of Terms</a></li>
+            <li><a href="3d_printer.html#printer4">Quiz: About 3D Printers</a></li>
+            <li><a href="3d_printer.html#printer5">Manual Bed Leveling | <span
+                  style="color: red;font-weight: bold;">advanced</span></a> </li>
+            <li><a href="3d_printer.html#printer6">Changing Filament for Mid Print | <span
+                  style="color: red;font-weight: bold;">advanced</span></a> </li>
+          </ol>
+        </div>
+        <!-- <div class="progress-container">
                 <div class="progress-bar" style="width: 0%;"></div>
               </div>-->
-            
-            </div>
+
+      </div>
+    </div>
+    <!-- Card 5 -->
+    <div class="card">
+      <img src="index_resources/filament.jpg" />
+      <div class="Main nunito">
+        <div class="hover-bold">
+          <div onclick="window.location.href='filament.html'" style="cursor: pointer;">
+            <p>5. Filament</p>
           </div>
-        <!-- Card 6 -->
-        <div class="card">
-            <img src="index_resources/firstprint.jpg" />
-            <div class="Main nunito">
-              <div class="hover-bold">
-                <div onclick="window.location.href='first_print.html'" style="cursor: pointer;">
-                <p>6. First Print</p>
-            </div>
-            </div>
-              <div class="summary" onclick="toggleContent('content6', this)">
-                <span class="arrow">&gt;</span> 5 chapters
-              </div>
-              <p class="chapter-status" data-chapter="first_print"><span class="status-text">Not Started</span></p>
-              <!-- <button onclick="localStorage.clear(); location.reload();">Reset Progress</button> -->
-              <div id="content6" class="collapsible-chapter">
-                <ol class="subchapter_list">
-                  <li><a href="first_print.html#first1">Get your 3D Model</a></li>
-                  <li><a href="first_print.html#first2">Slicing your 3D Model</a></li>
-                  <li><a href="first_print.html#first3">Preparing your printer for the print</a></li>
-                  <li><a href="first_print.html#first4">Printing & Refining</a></li>
-                  <li><a href="first_print.html#first5">No printer available? Try it with our AR 3D Printer Simulation</a></li>
-                </ol>
-              </div>
-              <!-- <div class="progress-container">
+        </div>
+        <div class="summary" onclick="toggleContent('content5', this)">
+          <span class="arrow">&gt;</span> 5 chapters
+        </div>
+        <p class="chapter-status" data-chapter="filament"><span class="status-text">Not Started</span></p>
+        <!-- <button onclick="localStorage.clear(); location.reload();">Reset Progress</button> -->
+        <div id="content5" class="collapsible-chapter">
+          <ol class="subchapter_list">
+            <li><a href="filament.html#filament1">What are filaments?</a></li>
+            <li><a href="filament.html#filament2">Use cases for different filaments</a></li>
+            <li><a href="filament.html#filament3">Swapping filaments within one model </a></li>
+            <li><a href="filament.html#filament4">Glossary of Useful Terms</a></li>
+            <li><a href="filament.html#filament5">Quiz: All about filaments</a></li>
+          </ol>
+        </div>
+        <!-- <div class="progress-container">
                 <div class="progress-bar" style="width: 0%;"></div>
               </div>-->
-              
-            </div>
+
+      </div>
+    </div>
+    <!-- Card 6 -->
+    <div class="card">
+      <img src="index_resources/firstprint.jpg" />
+      <div class="Main nunito">
+        <div class="hover-bold">
+          <div onclick="window.location.href='first_print.html'" style="cursor: pointer;">
+            <p>6. First Print</p>
           </div>
-        <!-- Card 7 -->
-        <div class="card">
-            <img src="index_resources/faq.jpg" />
-            <div class="Main nunito">
-              <div class="hover-bold">
-                <div onclick="window.location.href='faq.html'" style="cursor: pointer;">
-                <p>7. FAQs & Troubleshooting</p>
-            </div>
-            </div>
-              <div class="summary" onclick="toggleContent('content7', this)">
-                <span class="arrow">&gt;</span> 5 chapters
-              </div>
-              <div id="content7" class="collapsible-chapter">
-                <ol class="subchapter_list">
-                  <li><a href="faq.html#faq1">What Might Just Look Strange But Is Okay</a></li>
-                  <li><a href="faq.html#faq2">Most Common Problems (And What to Do)</a></li>
-                  <li><a href="faq.html#faq3">Tips & Tricks</a></li>
-                  <li><a href="faq.html#faq4">Where to Ask for Help</a></li>
-                  <li><a href="faq.html#faq5">FAQ Troubleshooting</a></li>
-                  <!-- <li><a href="faq.html#faq3">Third Topic </a>| <span style="color: red;font-weight: bold;">advanced</span></li> -->
-                </ol>
-              </div>
-             <!--  <div class="progress-container">
+        </div>
+        <div class="summary" onclick="toggleContent('content6', this)">
+          <span class="arrow">&gt;</span> 5 chapters
+        </div>
+        <p class="chapter-status" data-chapter="first_print"><span class="status-text">Not Started</span></p>
+        <!-- <button onclick="localStorage.clear(); location.reload();">Reset Progress</button> -->
+        <div id="content6" class="collapsible-chapter">
+          <ol class="subchapter_list">
+            <li><a href="first_print.html#first1">Get your 3D Model</a></li>
+            <li><a href="first_print.html#first2">Slicing your 3D Model</a></li>
+            <li><a href="first_print.html#first3">Preparing your printer for the print</a></li>
+            <li><a href="first_print.html#first4">Printing & Refining</a></li>
+            <li><a href="first_print.html#first5">No printer available? Try it with our AR 3D Printer Simulation</a>
+            </li>
+          </ol>
+        </div>
+        <!-- <div class="progress-container">
                 <div class="progress-bar" style="width: 0%;"></div>
               </div>-->
-              
-            </div>
+
+      </div>
+    </div>
+    <!-- Card 7 -->
+    <div class="card">
+      <img src="index_resources/faq.jpg" />
+      <div class="Main nunito">
+        <div class="hover-bold">
+          <div onclick="window.location.href='faq.html'" style="cursor: pointer;">
+            <p>7. FAQs & Troubleshooting</p>
           </div>
-        <!-- Card 8 -->
-        <div class="card">
-            <img src="index_resources/additionalfeatures.jpg"/>
-            <div class="Main nunito">
-              <div class="hover-bold">
-                <div onclick="window.location.href='additional.html'" style="cursor: pointer;">
-                <p>8. Sustainability Tips</p>
-            </div>
-            </div>
-             <!-- <div class="summary" onclick="toggleContent('content8', this)">
+        </div>
+        <div class="summary" onclick="toggleContent('content7', this)">
+          <span class="arrow">&gt;</span> 5 chapters
+        </div>
+        <div id="content7" class="collapsible-chapter">
+          <ol class="subchapter_list">
+            <li><a href="faq.html#faq1">What Might Just Look Strange But Is Okay</a></li>
+            <li><a href="faq.html#faq2">Most Common Problems (And What to Do)</a></li>
+            <li><a href="faq.html#faq3">Tips & Tricks</a></li>
+            <li><a href="faq.html#faq4">Where to Ask for Help</a></li>
+            <li><a href="faq.html#faq5">FAQ Troubleshooting</a></li>
+            <!-- <li><a href="faq.html#faq3">Third Topic </a>| <span style="color: red;font-weight: bold;">advanced</span></li> -->
+          </ol>
+        </div>
+        <!--  <div class="progress-container">
+                <div class="progress-bar" style="width: 0%;"></div>
+              </div>-->
+
+      </div>
+    </div>
+    <!-- Card 8 -->
+    <div class="card">
+      <img src="index_resources/additionalfeatures.jpg" />
+      <div class="Main nunito">
+        <div class="hover-bold">
+          <div onclick="window.location.href='additional.html'" style="cursor: pointer;">
+            <p>8. Sustainability Tips</p>
+          </div>
+        </div>
+        <!-- <div class="summary" onclick="toggleContent('content8', this)">
                 <span class="arrow">&gt;</span> 2 chapters
               </div>
               <div id="content8" class="collapsible-chapter">
@@ -267,38 +279,39 @@
                 <div class="progress-bar" style="width: 0%;"></div>
               </div>
               <p class="progress-text">not started</p>-->
-            </div>
-          </div>
-
       </div>
-    
-      <script>
-        function toggleContent(id, summaryElement) {
-          const content = document.getElementById(id);
-          const arrow = summaryElement.querySelector('.arrow');
-          const isOpen = content.style.display === 'block';
-    
-          content.style.display = isOpen ? 'none' : 'block';
-          arrow.textContent = isOpen ? '>' : '⌄';
+    </div>
 
+  </div>
+
+  <script>
+    function toggleContent(id, summaryElement) {
+      const content = document.getElementById(id);
+      const arrow = summaryElement.querySelector('.arrow');
+      const isOpen = content.style.display === 'block';
+
+      content.style.display = isOpen ? 'none' : 'block';
+      arrow.textContent = isOpen ? '>' : '⌄';
+
+    }
+
+  </script>
+
+  <script src="progress.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.chapter-status').forEach(p => {
+        const chapterId = p.getAttribute('data-chapter');
+        const status = getChapterStatus(chapterId);
+        const span = p.querySelector('.status-text');
+        if (span) {
+          span.textContent = status.text;
+          span.style.color = status.color;
         }
-
-      </script>
-
-<script src="progress.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.chapter-status').forEach(p => {
-      const chapterId = p.getAttribute('data-chapter');
-      const status = getChapterStatus(chapterId);
-      const span = p.querySelector('.status-text');
-      if (span) {
-        span.textContent = status.text;
-        span.style.color = status.color;
-      }
+      });
     });
-  });
-</script>
+  </script>
 
 </body>
+
 </html>
